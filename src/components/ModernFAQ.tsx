@@ -1,8 +1,12 @@
 import { Plus, Minus } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getTranslation } from "@/translations";
 
 const ModernFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { language } = useLanguage();
+  const t = getTranslation(language).faq;
 
   const faqs = [
     {
@@ -40,15 +44,13 @@ const ModernFAQ = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-block bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium text-primary">Questions Fréquentes</span>
+            <span className="text-sm font-medium text-primary">{t.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Tout Ce Que Vous
-            <br />
-            <span className="text-primary">Devez Savoir</span>
+            {t.title}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Découvrez comment nos solutions IA peuvent transformer votre entreprise
+            {t.subtitle}
           </p>
         </div>
 

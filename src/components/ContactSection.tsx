@@ -5,10 +5,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getTranslation } from "@/translations";
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const { language } = useLanguage();
+  const t = getTranslation(language).contact;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -38,15 +42,13 @@ const ContactSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium text-primary">Contactez-nous</span>
+            <span className="text-sm font-medium text-primary">{t.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Parlons De Votre
-            <br />
-            <span className="text-primary">Projet IA</span>
+            {t.title}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Prêt à transformer votre entreprise ? Discutons de vos besoins et objectifs.
+            {t.subtitle}
           </p>
         </div>
 

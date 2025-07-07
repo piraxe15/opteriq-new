@@ -71,6 +71,57 @@ export interface Translations {
     features: string;
     disclaimer: string;
   };
+  // Footer
+  footer: {
+    description: string;
+    quickLinks: string;
+    contact: string;
+    followUs: string;
+    rights: string;
+  };
+  // Process Section
+  process: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    steps: {
+      consultation: {
+        title: string;
+        description: string;
+      };
+      development: {
+        title: string;
+        description: string;
+      };
+      deployment: {
+        title: string;
+        description: string;
+      };
+      support: {
+        title: string;
+        description: string;
+      };
+    };
+  };
+  // FAQ Section
+  faq: {
+    badge: string;
+    title: string;
+    subtitle: string;
+  };
+  // Contact Section
+  contact: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    formButton: string;
+  };
+  // Modern CTA
+  modernCta: {
+    title: string;
+    subtitle: string;
+    button: string;
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -145,6 +196,52 @@ export const translations: Record<Language, Translations> = {
       button: "Défi accepté - Commencer maintenant",
       features: "🚀 Lancement immédiat • ⚡ Résultats garantis • 🎯 Sur mesure",
       disclaimer: "Prototype gratuit si non satisfait • Sans engagement"
+    },
+    footer: {
+      description: "Votre partenaire de confiance pour l'automatisation intelligente et les solutions IA sur-mesure.",
+      quickLinks: "Liens Rapides",
+      contact: "Contact",
+      followUs: "Suivez-nous",
+      rights: "Tous droits réservés."
+    },
+    process: {
+      badge: "Notre Processus",
+      title: "Comment Nous Procédons",
+      subtitle: "Un processus simplifié pour transformer votre entreprise avec l'IA",
+      steps: {
+        consultation: {
+          title: "Consultation",
+          description: "Nous analysons vos besoins et identifions les opportunités d'automatisation."
+        },
+        development: {
+          title: "Développement",
+          description: "Nous créons votre solution IA personnalisée en 48h."
+        },
+        deployment: {
+          title: "Déploiement",
+          description: "Nous intégrons la solution dans votre environnement existant."
+        },
+        support: {
+          title: "Support",
+          description: "Nous assurons le suivi et l'optimisation continue."
+        }
+      }
+    },
+    faq: {
+      badge: "FAQ",
+      title: "Questions Fréquentes",
+      subtitle: "Tout ce que vous devez savoir sur nos services"
+    },
+    contact: {
+      badge: "Contact",
+      title: "Prêt à Commencer ?",
+      subtitle: "Contactez-nous pour discuter de votre projet",
+      formButton: "Envoyer le message"
+    },
+    modernCta: {
+      title: "Prêt à Transformer Votre Entreprise ?",
+      subtitle: "Commencez votre transformation IA dès aujourd'hui",
+      button: "Démarrer Maintenant"
     }
   },
   en: {
@@ -218,6 +315,52 @@ export const translations: Record<Language, Translations> = {
       button: "Challenge accepted - Start now",
       features: "🚀 Immediate launch • ⚡ Guaranteed results • 🎯 Custom made",
       disclaimer: "Free prototype if not satisfied • No commitment"
+    },
+    footer: {
+      description: "Your trusted partner for intelligent automation and custom AI solutions.",
+      quickLinks: "Quick Links", 
+      contact: "Contact",
+      followUs: "Follow Us",
+      rights: "All rights reserved."
+    },
+    process: {
+      badge: "Our Process",
+      title: "How We Proceed",
+      subtitle: "A streamlined process to transform your business with AI",
+      steps: {
+        consultation: {
+          title: "Consultation",
+          description: "We analyze your needs and identify automation opportunities."
+        },
+        development: {
+          title: "Development", 
+          description: "We create your personalized AI solution in 48h."
+        },
+        deployment: {
+          title: "Deployment",
+          description: "We integrate the solution into your existing environment."
+        },
+        support: {
+          title: "Support",
+          description: "We ensure continuous monitoring and optimization."
+        }
+      }
+    },
+    faq: {
+      badge: "FAQ",
+      title: "Frequently Asked Questions",
+      subtitle: "Everything you need to know about our services"
+    },
+    contact: {
+      badge: "Contact",
+      title: "Ready to Get Started?",
+      subtitle: "Contact us to discuss your project",
+      formButton: "Send Message"
+    },
+    modernCta: {
+      title: "Ready to Transform Your Business?",
+      subtitle: "Start your AI transformation today",
+      button: "Get Started Now"
     }
   },
   es: {
@@ -291,6 +434,52 @@ export const translations: Record<Language, Translations> = {
       button: "Desafío aceptado - Empezar ahora",
       features: "🚀 Lanzamiento inmediato • ⚡ Resultados garantizados • 🎯 A medida",
       disclaimer: "Prototipo gratis si no estás satisfecho • Sin compromiso"
+    },
+    footer: {
+      description: "Tu socio de confianza para automatización inteligente y soluciones IA personalizadas.",
+      quickLinks: "Enlaces Rápidos",
+      contact: "Contacto", 
+      followUs: "Síguenos",
+      rights: "Todos los derechos reservados."
+    },
+    process: {
+      badge: "Nuestro Proceso",
+      title: "Cómo Procedemos",
+      subtitle: "Un proceso simplificado para transformar tu empresa con IA",
+      steps: {
+        consultation: {
+          title: "Consulta",
+          description: "Analizamos tus necesidades e identificamos oportunidades de automatización."
+        },
+        development: {
+          title: "Desarrollo",
+          description: "Creamos tu solución IA personalizada en 48h."
+        },
+        deployment: {
+          title: "Despliegue", 
+          description: "Integramos la solución en tu entorno existente."
+        },
+        support: {
+          title: "Soporte",
+          description: "Aseguramos el monitoreo y optimización continua."
+        }
+      }
+    },
+    faq: {
+      badge: "FAQ",
+      title: "Preguntas Frecuentes",
+      subtitle: "Todo lo que necesitas saber sobre nuestros servicios"
+    },
+    contact: {
+      badge: "Contacto",
+      title: "¿Listo para Empezar?",
+      subtitle: "Contáctanos para discutir tu proyecto",
+      formButton: "Enviar Mensaje"
+    },
+    modernCta: {
+      title: "¿Listo para Transformar Tu Empresa?",
+      subtitle: "Comienza tu transformación IA hoy",
+      button: "Empezar Ahora"
     }
   }
 };

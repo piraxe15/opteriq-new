@@ -1,26 +1,31 @@
 import { Search, GraduationCap, Code2, ArrowRight } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getTranslation } from "@/translations";
 
 const ModernProcess = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language).process;
+
   const steps = [
     {
       icon: Search,
       title: "IDENTIFIER",
-      subtitle: "Opportunités IA",
-      description: "Nous vous aidons à identifier les opportunités IA à fort impact et construisons une stratégie de transformation IA étape par étape pour les concrétiser.",
+      subtitle: t.steps.consultation.title,
+      description: t.steps.consultation.description,
       color: "from-primary to-accent"
     },
     {
       icon: GraduationCap,
       title: "ÉDUQUER",
-      subtitle: "Votre Équipe",
-      description: "Nous formons et accompagnons votre équipe avec les bons outils et le savoir-faire pour intégrer l'IA dans toute votre organisation.",
+      subtitle: t.steps.development.title,
+      description: t.steps.development.description,
       color: "from-primary to-accent"
     },
     {
       icon: Code2,
       title: "DÉVELOPPER",
-      subtitle: "Solutions IA",
-      description: "Nous tirons parti de notre vaste expérience et réseau pour développer des systèmes IA personnalisés qui font vraiment bouger les choses dans votre entreprise.",
+      subtitle: t.steps.deployment.title,
+      description: t.steps.deployment.description,
       color: "from-primary to-accent"
     }
   ];
@@ -39,15 +44,13 @@ const ModernProcess = () => {
         {/* En-tête de section */}
         <div className="text-center mb-20">
           <div className="inline-block bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 mb-6">
-            <span className="text-sm font-medium text-primary">Notre Méthode Éprouvée</span>
+            <span className="text-sm font-medium text-primary">{t.badge}</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            3 Étapes Vers Votre
-            <br />
-            <span className="text-primary">Transformation IA</span>
+            {t.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Nous passons nos journées à guider les entreprises à travers notre parcours de transformation IA en 3 étapes.
+            {t.subtitle}
           </p>
         </div>
 

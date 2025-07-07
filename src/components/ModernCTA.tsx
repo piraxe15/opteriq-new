@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, MessageCircle, Star } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getTranslation } from "@/translations";
 
 const ModernCTA = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language).modernCta;
   return (
     <section className="py-24 bg-gradient-to-br from-background to-card/30 relative overflow-hidden">
       {/* Background géométrique */}
@@ -26,22 +30,19 @@ const ModernCTA = () => {
 
           {/* Titre principal */}
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
-            Transformez Votre{" "}
-            <span className="text-primary">Entreprise</span>
-            <br />
-            Dès Aujourd'hui
+            {t.title}
           </h2>
 
           {/* Sous-titre */}
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Rejoignez les centaines d'entreprises qui ont déjà révolutionné leurs processus avec nos solutions IA
+            {t.subtitle}
           </p>
 
           {/* Bouton CTA */}
           <div className="flex justify-center items-center mb-16">
             <Button variant="hero" size="xl" className="group" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
               <Calendar className="mr-2 h-5 w-5" />
-              Réserver Un Appel Stratégique Gratuit
+              {t.button}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
