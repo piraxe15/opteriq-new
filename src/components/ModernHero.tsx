@@ -89,10 +89,10 @@ const ModernHero = () => {
           </div>
 
           {/* Boutons d'action */}
-          <div className="flex flex-col gap-4 justify-center items-center mb-16 animate-fade-in w-full max-w-[280px] sm:max-w-md mx-auto px-4" style={{ animationDelay: '0.6s' }}>
+          <div className="flex flex-col gap-4 justify-center items-center mb-16 animate-fade-in w-full max-w-xs sm:max-w-md mx-auto px-2" style={{ animationDelay: '0.6s' }}>
             <Button variant="hero" size="lg" className="group w-full text-xs sm:text-lg px-2 sm:px-10 h-12 sm:h-14" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
               <span className="hidden sm:inline">Démarrer Votre Transformation</span>
-              <span className="sm:hidden">Commencer</span>
+              <span className="sm:hidden">Commencer Gratuit</span>
               <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="sleek" size="lg" className="group w-full text-xs sm:text-lg px-2 sm:px-10 h-10 sm:h-14" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
