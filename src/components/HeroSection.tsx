@@ -4,66 +4,71 @@ import heroImage from "@/assets/hero-automation.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="accueil" className="pt-24 pb-20 bg-gradient-hero relative overflow-hidden min-h-screen flex items-center">
+    <section id="accueil" className="pt-20 pb-16 bg-gradient-hero relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           <div className="space-y-8 animate-fade-in">
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div className="inline-block">
-                <span className="text-primary font-medium text-xs tracking-wider uppercase bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-                  Agence IA & Automatisation
+                <span className="text-primary font-medium text-sm tracking-wide uppercase bg-primary/10 px-3 py-1 rounded-full">
+                  Agence IA
                 </span>
               </div>
-              
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-foreground leading-tight tracking-tight">
-                Nous automatisons.{" "}
-                <span className="font-normal text-primary">Vous progressez.</span>
+              <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                Automatisez.{" "}
+                <span className="text-primary">Libérez.</span>{" "}
+                <span className="bg-gradient-primary bg-clip-text text-transparent">
+                  Progressez.
+                </span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto font-light">
-                Transformez vos processus métier avec l'intelligence artificielle. 
-                Des solutions sur mesure qui réduisent vos tâches répétitives et libèrent le potentiel de vos équipes.
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
+                Transformez vos processus métier avec des solutions IA sur mesure. 
+                Réduisez vos tâches manuelles de 60% et libérez le potentiel de vos équipes.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="default" size="lg" className="group px-8">
-                Planifier un appel stratégique
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="hero" size="xl" className="group">
+                Planifier un appel stratégique gratuit
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg" className="px-8">
+              <Button variant="outline" size="xl">
                 Découvrir nos services
               </Button>
             </div>
             
-            <div className="grid grid-cols-3 gap-8 pt-12 max-w-lg mx-auto">
-              <div className="text-center animate-float">
-                <div className="text-2xl md:text-3xl font-light text-primary mb-1">60%</div>
-                <div className="text-xs text-muted-foreground">Gain d'efficacité</div>
+            <div className="flex items-center space-x-8 pt-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">60%</div>
+                <div className="text-sm text-muted-foreground">Réduction des tâches</div>
               </div>
-              <div className="text-center animate-float" style={{animationDelay: '1s'}}>
-                <div className="text-2xl md:text-3xl font-light text-primary mb-1">48h</div>
-                <div className="text-xs text-muted-foreground">Prototype livré</div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">24h/24</div>
+                <div className="text-sm text-muted-foreground">Agents autonomes</div>
               </div>
-              <div className="text-center animate-float" style={{animationDelay: '2s'}}>
-                <div className="text-2xl md:text-3xl font-light text-primary mb-1">24/7</div>
-                <div className="text-xs text-muted-foreground">Agents autonomes</div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">48h</div>
+                <div className="text-sm text-muted-foreground">Prototype livré</div>
               </div>
             </div>
-            
-            <div className="pt-12 animate-slide-up">
+          </div>
+          
+          <div className="relative animate-scale-in lg:animate-slide-up">
+            <div className="relative">
               <img 
                 src={heroImage} 
                 alt="Automatisation IA" 
-                className="w-full max-w-2xl mx-auto h-auto rounded-lg shadow-card opacity-90"
+                className="w-full h-auto rounded-2xl shadow-hover"
               />
+              <div className="absolute inset-0 bg-gradient-primary/10 rounded-2xl"></div>
             </div>
           </div>
         </div>
       </div>
       
       {/* Background decoration */}
-      <div className="absolute top-1/4 right-0 w-72 h-72 bg-primary/3 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-accent/3 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
     </section>
   );
 };

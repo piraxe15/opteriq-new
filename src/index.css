@@ -8,26 +8,26 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 20 6% 20%;
+    --background: 210 20% 98%;
+    --foreground: 215 25% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 20 6% 20%;
+    --card-foreground: 215 25% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 20 6% 20%;
+    --popover-foreground: 215 25% 27%;
 
-    --primary: 40 8% 60%;
+    --primary: 142 76% 36%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 5% 95%;
-    --secondary-foreground: 20 6% 20%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 25% 27%;
 
-    --muted: 30 5% 95%;
-    --muted-foreground: 20 6% 45%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 20 8% 75%;
-    --accent-foreground: 20 6% 20%;
+    --accent: 179 25% 65%;
+    --accent-foreground: 215 25% 27%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -36,14 +36,14 @@ All colors MUST be HSL.
     --input: 214 32% 91%;
     --ring: 142 76% 36%;
     
-    /* Opteriq Neutral Design System */
-    --gradient-primary: linear-gradient(135deg, hsl(40 8% 60%), hsl(20 8% 75%));
-    --gradient-secondary: linear-gradient(135deg, hsl(30 5% 95%), hsl(0 0% 100%));
-    --gradient-hero: linear-gradient(135deg, hsl(40 8% 60% / 0.05), hsl(20 8% 75% / 0.05));
+    /* AI Agency Design System */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(179 25% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 20% 98%), hsl(210 40% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 76% 36% / 0.1), hsl(179 25% 65% / 0.1));
     
-    --shadow-soft: 0 4px 20px hsl(40 8% 60% / 0.1);
-    --shadow-card: 0 8px 25px hsl(20 6% 20% / 0.08);
-    --shadow-hover: 0 12px 40px hsl(40 8% 60% / 0.15);
+    --shadow-soft: 0 4px 20px hsl(142 76% 36% / 0.1);
+    --shadow-card: 0 8px 25px hsl(215 25% 27% / 0.08);
+    --shadow-hover: 0 12px 40px hsl(142 76% 36% / 0.15);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -67,26 +67,26 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 20 6% 10%;
-    --foreground: 0 0% 95%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 20 6% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 20 6% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 40 8% 70%;
-    --primary-foreground: 20 6% 10%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 20 6% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 20 6% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 20 6% 25%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
