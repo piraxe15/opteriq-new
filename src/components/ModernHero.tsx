@@ -76,9 +76,9 @@ const ModernHero = () => {
               Votre partenaire de confiance pour devenir une entreprise{" "}
               <span className="text-primary font-semibold">IA-first</span>.
             </p>
-            <p>
+            <p className="text-sm sm:text-base">
               Spécialistes en{" "}
-              <span className="inline-block min-w-[200px] text-left">
+              <span className="inline-block min-w-[160px] sm:min-w-[200px] text-left">
                 <AnimatedText 
                   words={capabilities} 
                   className="text-primary font-bold" 
@@ -89,13 +89,14 @@ const ModernHero = () => {
           </div>
 
           {/* Boutons d'action */}
-          <div className="flex flex-col gap-4 justify-center items-center mb-16 animate-fade-in w-full max-w-md mx-auto" style={{ animationDelay: '0.6s' }}>
-            <Button variant="hero" size="xl" className="group w-full" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
-              Démarrer Votre Transformation
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          <div className="flex flex-col gap-4 justify-center items-center mb-16 animate-fade-in w-full max-w-sm mx-auto px-4" style={{ animationDelay: '0.6s' }}>
+            <Button variant="hero" size="xl" className="group w-full text-sm sm:text-lg px-4 sm:px-10" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
+              <span className="hidden sm:inline">Démarrer Votre Transformation</span>
+              <span className="sm:hidden">Commencer Maintenant</span>
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="sleek" size="xl" className="group w-full" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
-              <Play className="mr-2 h-5 w-5" />
+            <Button variant="sleek" size="xl" className="group w-full text-sm sm:text-lg px-4 sm:px-10" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+              <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Voir Notre Approche
             </Button>
           </div>
