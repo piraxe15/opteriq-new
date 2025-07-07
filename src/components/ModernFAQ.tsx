@@ -8,17 +8,7 @@ const ModernFAQ = () => {
     {
       category: "Automatisation Intelligente",
       question: "Comment l'automatisation IA peut-elle transformer mon entreprise ?",
-      answer: "Notre automatisation intelligente utilise des algorithmes avancés pour identifier et automatiser vos tâches répétitives. Nous analysons vos processus existants, concevons des solutions sur-mesure qui s'intègrent parfaitement à vos systèmes actuels, et assurons un fonctionnement 24/7 avec une maintenance proactive."
-    },
-    {
-      category: "Automatisation Intelligente", 
-      question: "Quels types de tâches peuvent être automatisées ?",
-      answer: "Nous automatisons la gestion des emails, le traitement de documents, la saisie de données, la génération de rapports, la planification, le service client, et bien plus. Chaque solution est adaptée à vos besoins spécifiques."
-    },
-    {
-      category: "Solutions Sur-Mesure",
-      question: "Pourquoi choisir une solution sur-mesure plutôt qu'un outil existant ?",
-      answer: "Les solutions sur-mesure s'adaptent parfaitement à vos processus métier uniques, contrairement aux outils génériques. Nous analysons en profondeur vos besoins, développons rapidement des prototypes, et incluons une formation complète pour votre équipe."
+      answer: "Notre automatisation intelligente analyse vos processus existants et automatise vos tâches répétitives. Nous concevons des solutions sur-mesure qui s'intègrent parfaitement à vos systèmes actuels, fonctionnent 24/7 et libèrent vos équipes pour des tâches à forte valeur ajoutée."
     },
     {
       category: "Solutions Sur-Mesure",
@@ -29,11 +19,6 @@ const ModernFAQ = () => {
       category: "Consultation Stratégique",
       question: "Comment identifiez-vous les meilleures opportunités d'automatisation ?",
       answer: "Nous commençons par un audit gratuit de vos processus, analysons vos points de friction, calculons le ROI potentiel de chaque opportunité, et créons un plan d'action priorisé. Notre accompagnement vous guide à chaque étape de la transformation."
-    },
-    {
-      category: "Consultation Stratégique",
-      question: "Quel accompagnement proposez-vous après l'audit ?",
-      answer: "Nous restons à vos côtés tout au long de votre transformation IA : plan d'action détaillé, formation de vos équipes, support technique continu, et optimisation des performances. Notre objectif est votre succès à long terme."
     }
   ];
 
