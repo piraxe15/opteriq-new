@@ -13,7 +13,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/0ce809f9-8c53-4667-9b80-674c29b95707.png" 
               alt="Opteriq Logo" 
-              className="w-10 h-10 md:w-12 md:h-12"
+              className="h-8 md:h-10 w-auto"
             />
           </div>
           
