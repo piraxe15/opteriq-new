@@ -13,6 +13,7 @@ const ContactSection = () => {
   const { toast } = useToast();
   const { language } = useLanguage();
   const t = getTranslation(language).contact;
+  const toastT = getTranslation(language).toast;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,8 +23,8 @@ const ContactSection = () => {
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
-        title: "Message envoyé !",
-        description: "Nous vous répondrons dans les 24h.",
+        title: toastT.success,
+        description: toastT.description,
       });
     }, 1000);
   };
@@ -55,36 +56,36 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto">
           {/* Formulaire */}
           <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl p-6 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">Envoyez-nous un message</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">{t.form.title}</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName">Prénom</Label>
+                  <Label htmlFor="firstName">{t.form.firstName}</Label>
                   <Input id="firstName" name="firstName" required />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName">Nom</Label>
+                  <Label htmlFor="lastName">{t.form.lastName}</Label>
                   <Input id="lastName" name="lastName" required />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="email">Email professionnel</Label>
+                <Label htmlFor="email">{t.form.email}</Label>
                 <Input id="email" name="email" type="email" required />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="company">Entreprise</Label>
+                <Label htmlFor="company">{t.form.company}</Label>
                 <Input id="company" name="company" />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="message">Décrivez votre projet</Label>
+                <Label htmlFor="message">{t.form.message}</Label>
                 <Textarea 
                   id="message" 
                   name="message" 
-                  placeholder="Quels sont vos défis actuels ? Quels processus souhaitez-vous automatiser ?"
+                  placeholder={t.form.messagePlaceholder}
                   className="min-h-[120px]"
                   required 
                 />
@@ -92,11 +93,11 @@ const ContactSection = () => {
               
               <Button type="submit" variant="hero" size="lg" className="w-full group" disabled={isSubmitting}>
                 {isSubmitting ? (
-                  "Envoi en cours..."
+                  t.form.submitting
                 ) : (
                   <>
                     <Send className="mr-2 h-5 w-5" />
-                    Envoyer le message
+                    {t.form.submit}
                   </>
                 )}
               </Button>
@@ -106,7 +107,7 @@ const ContactSection = () => {
           {/* Informations de contact */}
           <div className="space-y-8">
             <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Ou contactez-nous directement</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">{t.info.title}</h3>
               
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
@@ -114,7 +115,7 @@ const ContactSection = () => {
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <div className="font-medium text-foreground">Email</div>
+                    <div className="font-medium text-foreground">{t.info.email}</div>
                     <a href="mailto:contact@opteriq.com" className="text-primary hover:text-primary/80 transition-colors">
                       contact@opteriq.com
                     </a>
@@ -126,12 +127,12 @@ const ContactSection = () => {
                     <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <div className="font-medium text-foreground">Appel stratégique</div>
+                    <div className="font-medium text-foreground">{t.info.phone}</div>
                     <button 
                       onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}
                       className="text-primary hover:text-primary/80 transition-colors"
                     >
-                      Réserver un créneau
+                      {t.info.phoneAction}
                     </button>
                   </div>
                 </div>
@@ -141,8 +142,8 @@ const ContactSection = () => {
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <div className="font-medium text-foreground">Localisation</div>
-                    <div className="text-muted-foreground">France & International</div>
+                    <div className="font-medium text-foreground">{t.info.location}</div>
+                    <div className="text-muted-foreground">{t.info.locationValue}</div>
                   </div>
                 </div>
               </div>
@@ -150,9 +151,9 @@ const ContactSection = () => {
 
             {/* Temps de réponse */}
             <div className="bg-gradient-card backdrop-blur-sm border border-border/50 rounded-2xl p-6 text-center">
-              <h4 className="font-bold text-foreground mb-2">Réponse Garantie</h4>
+              <h4 className="font-bold text-foreground mb-2">{t.info.guaranteeTitle}</h4>
               <p className="text-muted-foreground text-sm">
-                Nous répondons à tous les messages dans les <span className="text-primary font-semibold">24 heures</span>
+                {t.info.guaranteeText}
               </p>
             </div>
           </div>

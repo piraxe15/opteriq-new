@@ -9,23 +9,23 @@ const ModernProcess = () => {
   const steps = [
     {
       icon: Search,
-      title: "IDENTIFIER",
-      subtitle: t.steps.consultation.title,
-      description: t.steps.consultation.description,
+      title: t.steps.identify.title,
+      subtitle: t.steps.identify.subtitle,
+      description: t.steps.identify.description,
       color: "from-primary to-accent"
     },
     {
       icon: GraduationCap,
-      title: "ÉDUQUER",
-      subtitle: t.steps.development.title,
-      description: t.steps.development.description,
+      title: t.steps.educate.title,
+      subtitle: t.steps.educate.subtitle,
+      description: t.steps.educate.description,
       color: "from-primary to-accent"
     },
     {
       icon: Code2,
-      title: "DÉVELOPPER",
-      subtitle: t.steps.deployment.title,
-      description: t.steps.deployment.description,
+      title: t.steps.develop.title,
+      subtitle: t.steps.develop.subtitle,
+      description: t.steps.develop.description,
       color: "from-primary to-accent"
     }
   ];
@@ -103,15 +103,13 @@ const ModernProcess = () => {
         <div className="text-center mt-20">
           <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold text-foreground mb-4">
-              Nous Ne Sommes Pas Une Société De
-              <br />
-              <span className="text-primary">Conseil IA</span>
+              {t.conclusion.title}
             </h3>
             <p className="text-xl text-muted-foreground mb-6">
-              Nous sommes bien plus que cela.
+              {t.conclusion.subtitle}
             </p>
             <p className="text-lg text-muted-foreground">
-              Nous plaçons l'IA au centre de tout ce que nous faisons.
+              {t.conclusion.description}
             </p>
           </div>
         </div>

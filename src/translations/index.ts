@@ -85,22 +85,26 @@ export interface Translations {
     title: string;
     subtitle: string;
     steps: {
-      consultation: {
+      identify: {
         title: string;
+        subtitle: string;
         description: string;
       };
-      development: {
+      educate: {
         title: string;
+        subtitle: string;
         description: string;
       };
-      deployment: {
+      develop: {
         title: string;
+        subtitle: string;
         description: string;
       };
-      support: {
-        title: string;
-        description: string;
-      };
+    };
+    conclusion: {
+      title: string;
+      subtitle: string;
+      description: string;
     };
   };
   // FAQ Section
@@ -108,19 +112,52 @@ export interface Translations {
     badge: string;
     title: string;
     subtitle: string;
+    items: {
+      category: string;
+      question: string;
+      answer: string;
+    }[];
+    ctaTitle: string;
+    ctaSubtitle: string;
+    ctaButton: string;
   };
   // Contact Section
   contact: {
     badge: string;
     title: string;
     subtitle: string;
-    formButton: string;
+    form: {
+      title: string;
+      firstName: string;
+      lastName: string;
+      email: string;
+      company: string;
+      message: string;
+      messagePlaceholder: string;
+      submitting: string;
+      submit: string;
+    };
+    info: {
+      title: string;
+      email: string;
+      phone: string;
+      phoneAction: string;
+      location: string;
+      locationValue: string;
+      guaranteeTitle: string;
+      guaranteeText: string;
+    };
   };
   // Modern CTA
   modernCta: {
     title: string;
     subtitle: string;
     button: string;
+  };
+  // Toast messages
+  toast: {
+    success: string;
+    description: string;
   };
 }
 
@@ -209,34 +246,82 @@ export const translations: Record<Language, Translations> = {
       title: "Comment Nous Procédons",
       subtitle: "Un processus simplifié pour transformer votre entreprise avec l'IA",
       steps: {
-        consultation: {
-          title: "Consultation",
-          description: "Nous analysons vos besoins et identifions les opportunités d'automatisation."
+        identify: {
+          title: "IDENTIFIER",
+          subtitle: "Opportunités IA", 
+          description: "Nous vous aidons à identifier les opportunités IA à fort impact et construisons une stratégie de transformation IA étape par étape pour les concrétiser."
         },
-        development: {
-          title: "Développement",
-          description: "Nous créons votre solution IA personnalisée en 48h."
+        educate: {
+          title: "ÉDUQUER",
+          subtitle: "Votre Équipe",
+          description: "Nous formons et accompagnons votre équipe avec les bons outils et le savoir-faire pour intégrer l'IA dans toute votre organisation."
         },
-        deployment: {
-          title: "Déploiement",
-          description: "Nous intégrons la solution dans votre environnement existant."
-        },
-        support: {
-          title: "Support",
-          description: "Nous assurons le suivi et l'optimisation continue."
+        develop: {
+          title: "DÉVELOPPER", 
+          subtitle: "Solutions IA",
+          description: "Nous tirons parti de notre vaste expérience et réseau pour développer des systèmes IA personnalisés qui font vraiment bouger les choses dans votre entreprise."
         }
+      },
+      conclusion: {
+        title: "Nous Ne Sommes Pas Une Société De Conseil IA",
+        subtitle: "Nous sommes bien plus que cela.",
+        description: "Nous plaçons l'IA au centre de tout ce que nous faisons."
       }
     },
     faq: {
       badge: "FAQ",
-      title: "Questions Fréquentes",
-      subtitle: "Tout ce que vous devez savoir sur nos services"
+      title: "Questions Fréquentes", 
+      subtitle: "Tout ce que vous devez savoir sur nos services",
+      items: [
+        {
+          category: "Automatisation Intelligente",
+          question: "Comment l'automatisation IA peut-elle transformer mon entreprise ?",
+          answer: "Notre automatisation intelligente analyse vos processus existants et automatise vos tâches répétitives. Nous concevons des solutions sur-mesure qui s'intègrent parfaitement à vos systèmes actuels, fonctionnent 24/7 et libèrent vos équipes pour des tâches à forte valeur ajoutée."
+        },
+        {
+          category: "Solutions Sur-Mesure", 
+          question: "Combien de temps faut-il pour développer une solution ?",
+          answer: "Nous livrons un prototype fonctionnel en 48h, puis itérons selon vos retours. Le développement complet prend généralement 2-6 semaines selon la complexité, avec une approche agile et des livraisons fréquentes."
+        },
+        {
+          category: "Consultation Stratégique",
+          question: "Comment identifiez-vous les meilleures opportunités d'automatisation ?", 
+          answer: "Nous commençons par un audit gratuit de vos processus, analysons vos points de friction, calculons le ROI potentiel de chaque opportunité, et créons un plan d'action priorisé. Notre accompagnement vous guide à chaque étape de la transformation."
+        }
+      ],
+      ctaTitle: "Une Question Spécifique ?",
+      ctaSubtitle: "Notre équipe est là pour vous accompagner dans votre transformation IA",
+      ctaButton: "Contactez-nous directement"
     },
     contact: {
       badge: "Contact",
-      title: "Prêt à Commencer ?",
+      title: "Prêt à Commencer ?", 
       subtitle: "Contactez-nous pour discuter de votre projet",
-      formButton: "Envoyer le message"
+      form: {
+        title: "Envoyez-nous un message",
+        firstName: "Prénom",
+        lastName: "Nom", 
+        email: "Email professionnel",
+        company: "Entreprise",
+        message: "Décrivez votre projet",
+        messagePlaceholder: "Quels sont vos défis actuels ? Quels processus souhaitez-vous automatiser ?",
+        submitting: "Envoi en cours...",
+        submit: "Envoyer le message"
+      },
+      info: {
+        title: "Ou contactez-nous directement",
+        email: "Email",
+        phone: "Appel stratégique", 
+        phoneAction: "Réserver un créneau",
+        location: "Localisation",
+        locationValue: "France & International",
+        guaranteeTitle: "Réponse Garantie",
+        guaranteeText: "Nous répondons à tous les messages dans les 24 heures"
+      }
+    },
+    toast: {
+      success: "Message envoyé !",
+      description: "Nous vous répondrons dans les 24h."
     },
     modernCta: {
       title: "Prêt à Transformer Votre Entreprise ?",
@@ -328,34 +413,82 @@ export const translations: Record<Language, Translations> = {
       title: "How We Proceed",
       subtitle: "A streamlined process to transform your business with AI",
       steps: {
-        consultation: {
-          title: "Consultation",
-          description: "We analyze your needs and identify automation opportunities."
+        identify: {
+          title: "IDENTIFY",
+          subtitle: "AI Opportunities",
+          description: "We help you identify high-impact AI opportunities and build a step-by-step AI transformation strategy to realize them."
         },
-        development: {
-          title: "Development", 
-          description: "We create your personalized AI solution in 48h."
+        educate: {
+          title: "EDUCATE", 
+          subtitle: "Your Team",
+          description: "We train and support your team with the right tools and know-how to integrate AI throughout your organization."
         },
-        deployment: {
-          title: "Deployment",
-          description: "We integrate the solution into your existing environment."
-        },
-        support: {
-          title: "Support",
-          description: "We ensure continuous monitoring and optimization."
+        develop: {
+          title: "DEVELOP",
+          subtitle: "AI Solutions", 
+          description: "We leverage our extensive experience and network to develop personalized AI systems that really make a difference in your business."
         }
+      },
+      conclusion: {
+        title: "We Are Not An AI Consulting Company",
+        subtitle: "We are much more than that.",
+        description: "We place AI at the center of everything we do."
       }
     },
     faq: {
       badge: "FAQ",
       title: "Frequently Asked Questions",
-      subtitle: "Everything you need to know about our services"
+      subtitle: "Everything you need to know about our services",
+      items: [
+        {
+          category: "Intelligent Automation",
+          question: "How can AI automation transform my business?",
+          answer: "Our intelligent automation analyzes your existing processes and automates your repetitive tasks. We design custom solutions that integrate perfectly with your current systems, work 24/7 and free your teams for high-value tasks."
+        },
+        {
+          category: "Custom Solutions",
+          question: "How long does it take to develop a solution?", 
+          answer: "We deliver a functional prototype in 48h, then iterate based on your feedback. Full development typically takes 2-6 weeks depending on complexity, with an agile approach and frequent deliveries."
+        },
+        {
+          category: "Strategic Consultation",
+          question: "How do you identify the best automation opportunities?",
+          answer: "We start with a free audit of your processes, analyze your friction points, calculate the potential ROI of each opportunity, and create a prioritized action plan. Our support guides you through every step of the transformation."
+        }
+      ],
+      ctaTitle: "A Specific Question?",
+      ctaSubtitle: "Our team is here to support you in your AI transformation",
+      ctaButton: "Contact us directly"
     },
     contact: {
-      badge: "Contact",
+      badge: "Contact", 
       title: "Ready to Get Started?",
       subtitle: "Contact us to discuss your project",
-      formButton: "Send Message"
+      form: {
+        title: "Send us a message",
+        firstName: "First Name",
+        lastName: "Last Name",
+        email: "Professional Email", 
+        company: "Company",
+        message: "Describe your project",
+        messagePlaceholder: "What are your current challenges? Which processes would you like to automate?",
+        submitting: "Sending...",
+        submit: "Send Message"
+      },
+      info: {
+        title: "Or contact us directly",
+        email: "Email",
+        phone: "Strategic Call",
+        phoneAction: "Book a slot", 
+        location: "Location",
+        locationValue: "France & International",
+        guaranteeTitle: "Guaranteed Response",
+        guaranteeText: "We respond to all messages within 24 hours"
+      }
+    },
+    toast: {
+      success: "Message sent!",
+      description: "We will respond within 24h."
     },
     modernCta: {
       title: "Ready to Transform Your Business?",
@@ -447,34 +580,82 @@ export const translations: Record<Language, Translations> = {
       title: "Cómo Procedemos",
       subtitle: "Un proceso simplificado para transformar tu empresa con IA",
       steps: {
-        consultation: {
-          title: "Consulta",
-          description: "Analizamos tus necesidades e identificamos oportunidades de automatización."
+        identify: {
+          title: "IDENTIFICAR",
+          subtitle: "Oportunidades IA",
+          description: "Te ayudamos a identificar oportunidades de IA de alto impacto y construimos una estrategia de transformación IA paso a paso para realizarlas."
         },
-        development: {
-          title: "Desarrollo",
-          description: "Creamos tu solución IA personalizada en 48h."
+        educate: {
+          title: "EDUCAR",
+          subtitle: "Tu Equipo", 
+          description: "Formamos y acompañamos a tu equipo con las herramientas adecuadas y el conocimiento para integrar la IA en toda tu organización."
         },
-        deployment: {
-          title: "Despliegue", 
-          description: "Integramos la solución en tu entorno existente."
-        },
-        support: {
-          title: "Soporte",
-          description: "Aseguramos el monitoreo y optimización continua."
+        develop: {
+          title: "DESARROLLAR",
+          subtitle: "Soluciones IA",
+          description: "Aprovechamos nuestra amplia experiencia y red para desarrollar sistemas de IA personalizados que realmente marcan la diferencia en tu empresa."
         }
+      },
+      conclusion: {
+        title: "No Somos Una Empresa De Consultoría IA",
+        subtitle: "Somos mucho más que eso.",
+        description: "Colocamos la IA en el centro de todo lo que hacemos."
       }
     },
     faq: {
       badge: "FAQ",
       title: "Preguntas Frecuentes",
-      subtitle: "Todo lo que necesitas saber sobre nuestros servicios"
+      subtitle: "Todo lo que necesitas saber sobre nuestros servicios",
+      items: [
+        {
+          category: "Automatización Inteligente",
+          question: "¿Cómo puede la automatización IA transformar mi empresa?",
+          answer: "Nuestra automatización inteligente analiza tus procesos existentes y automatiza tus tareas repetitivas. Diseñamos soluciones personalizadas que se integran perfectamente con tus sistemas actuales, funcionan 24/7 y liberan a tus equipos para tareas de alto valor."
+        },
+        {
+          category: "Soluciones a Medida",
+          question: "¿Cuánto tiempo toma desarrollar una solución?",
+          answer: "Entregamos un prototipo funcional en 48h, luego iteramos según tus comentarios. El desarrollo completo generalmente toma 2-6 semanas dependiendo de la complejidad, con un enfoque ágil y entregas frecuentes."
+        },
+        {
+          category: "Consultoría Estratégica", 
+          question: "¿Cómo identifican las mejores oportunidades de automatización?",
+          answer: "Comenzamos con una auditoría gratuita de tus procesos, analizamos tus puntos de fricción, calculamos el ROI potencial de cada oportunidad, y creamos un plan de acción priorizado. Nuestro acompañamiento te guía en cada paso de la transformación."
+        }
+      ],
+      ctaTitle: "¿Una Pregunta Específica?",
+      ctaSubtitle: "Nuestro equipo está aquí para acompañarte en tu transformación IA",
+      ctaButton: "Contáctanos directamente"
     },
     contact: {
       badge: "Contacto",
       title: "¿Listo para Empezar?",
       subtitle: "Contáctanos para discutir tu proyecto",
-      formButton: "Enviar Mensaje"
+      form: {
+        title: "Envíanos un mensaje",
+        firstName: "Nombre",
+        lastName: "Apellido",
+        email: "Email Profesional",
+        company: "Empresa", 
+        message: "Describe tu proyecto",
+        messagePlaceholder: "¿Cuáles son tus desafíos actuales? ¿Qué procesos te gustaría automatizar?",
+        submitting: "Enviando...",
+        submit: "Enviar Mensaje"
+      },
+      info: {
+        title: "O contáctanos directamente",
+        email: "Email",
+        phone: "Llamada Estratégica",
+        phoneAction: "Reservar una cita",
+        location: "Ubicación",
+        locationValue: "Francia e Internacional", 
+        guaranteeTitle: "Respuesta Garantizada",
+        guaranteeText: "Respondemos a todos los mensajes en 24 horas"
+      }
+    },
+    toast: {
+      success: "¡Mensaje enviado!",
+      description: "Responderemos en 24h."
     },
     modernCta: {
       title: "¿Listo para Transformar Tu Empresa?",

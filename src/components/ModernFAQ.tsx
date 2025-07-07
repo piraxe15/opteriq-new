@@ -8,23 +8,7 @@ const ModernFAQ = () => {
   const { language } = useLanguage();
   const t = getTranslation(language).faq;
 
-  const faqs = [
-    {
-      category: "Automatisation Intelligente",
-      question: "Comment l'automatisation IA peut-elle transformer mon entreprise ?",
-      answer: "Notre automatisation intelligente analyse vos processus existants et automatise vos tâches répétitives. Nous concevons des solutions sur-mesure qui s'intègrent parfaitement à vos systèmes actuels, fonctionnent 24/7 et libèrent vos équipes pour des tâches à forte valeur ajoutée."
-    },
-    {
-      category: "Solutions Sur-Mesure",
-      question: "Combien de temps faut-il pour développer une solution ?",
-      answer: "Nous livrons un prototype fonctionnel en 48h, puis itérons selon vos retours. Le développement complet prend généralement 2-6 semaines selon la complexité, avec une approche agile et des livraisons fréquentes."
-    },
-    {
-      category: "Consultation Stratégique",
-      question: "Comment identifiez-vous les meilleures opportunités d'automatisation ?",
-      answer: "Nous commençons par un audit gratuit de vos processus, analysons vos points de friction, calculons le ROI potentiel de chaque opportunité, et créons un plan d'action priorisé. Notre accompagnement vous guide à chaque étape de la transformation."
-    }
-  ];
+  const faqs = t.items;
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -99,16 +83,16 @@ const ModernFAQ = () => {
         <div className="text-center mt-20">
           <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-2xl p-8 max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Une Question Spécifique ?
+              {t.ctaTitle}
             </h3>
             <p className="text-muted-foreground mb-6">
-              Notre équipe est là pour vous accompagner dans votre transformation IA
+              {t.ctaSubtitle}
             </p>
             <a 
               href="mailto:contact@opteriq.com"
               className="inline-flex items-center text-primary hover:text-primary/80 transition-colors font-medium"
             >
-              Contactez-nous directement
+              {t.ctaButton}
             </a>
           </div>
         </div>
