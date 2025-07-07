@@ -2,14 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Zap, Target, BarChart3 } from "lucide-react";
 import FloatingElements from "./FloatingElements";
 import AnimatedText from "./AnimatedText";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getTranslation } from "@/translations";
 
 const ModernHero = () => {
-  const capabilities = [
-    "Automatisation Intelligente",
-    "Agents IA Autonomes", 
-    "Stratégies Personnalisées",
-    "Solutions Sur-Mesure"
-  ];
+  const { language } = useLanguage();
+  const t = getTranslation(language).hero;
 
   return (
     <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-secondary/10">
@@ -54,33 +52,32 @@ const ModernHero = () => {
           {/* Badge moderne */}
           <div className="inline-flex items-center space-x-2 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full px-4 py-2 mb-8 animate-fade-in">
             <Zap className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-muted-foreground">Agence IA Nouvelle Génération</span>
+            <span className="text-sm font-medium text-muted-foreground">{t.badge}</span>
           </div>
 
           {/* Titre principal avec animation */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-8 animate-fade-in-up">
             <span className="block text-foreground leading-tight">
-              Automatisez.
+              {t.title1}
             </span>
             <span className="block text-primary leading-tight mb-4">
-              Libérez.
+              {t.title2}
             </span>
             <span className="block text-foreground leading-tight">
-              <span className="text-shimmer">Progressez.</span>
+              <span className="text-shimmer">{t.title3}</span>
             </span>
           </h1>
 
           {/* Sous-titre avec animation de mots */}
           <div className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <p className="mb-4">
-              Votre partenaire de confiance pour devenir une entreprise{" "}
-              <span className="text-primary font-semibold">IA-first</span>.
+              {t.subtitle1}
             </p>
             <p className="text-sm sm:text-base">
-              Spécialistes en{" "}
+              {t.subtitle2}{" "}
               <span className="inline-block min-w-[160px] sm:min-w-[200px] text-left">
                 <AnimatedText 
-                  words={capabilities} 
+                  words={t.capabilities} 
                   className="text-primary font-bold" 
                   speed={2000}
                 />
@@ -91,13 +88,13 @@ const ModernHero = () => {
           {/* Boutons d'action */}
           <div className="flex flex-col gap-4 justify-center items-center mb-16 animate-fade-in w-full max-w-sm mx-auto px-4" style={{ animationDelay: '0.6s' }}>
             <Button variant="hero" size="xl" className="group w-full text-sm sm:text-lg px-4 sm:px-10" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
-              <span className="hidden sm:inline">Démarrer Votre Transformation</span>
-              <span className="sm:hidden">Commencer Maintenant</span>
+              <span className="hidden sm:inline">{t.cta1}</span>
+              <span className="sm:hidden">{t.cta1Mobile}</span>
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="sleek" size="xl" className="group w-full text-sm sm:text-lg px-4 sm:px-10" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
               <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-              Voir Notre Approche
+              {t.cta2}
             </Button>
           </div>
 
@@ -108,7 +105,7 @@ const ModernHero = () => {
                 <Target className="w-6 h-6 text-primary" />
               </div>
               <div className="text-3xl font-bold text-primary mb-2">95%</div>
-              <div className="text-sm text-muted-foreground">Projets Réussis</div>
+              <div className="text-sm text-muted-foreground">{t.stats.projects}</div>
             </div>
             
             <div className="text-center p-6 bg-card/30 backdrop-blur-sm rounded-2xl border border-border/50 hover:bg-card/50 transition-all duration-300 group">
@@ -116,7 +113,7 @@ const ModernHero = () => {
                 <BarChart3 className="w-6 h-6 text-primary" />
               </div>
               <div className="text-3xl font-bold text-primary mb-2">48h</div>
-              <div className="text-sm text-muted-foreground">Prototype Livré</div>
+              <div className="text-sm text-muted-foreground">{t.stats.prototype}</div>
             </div>
             
             <div className="text-center p-6 bg-card/30 backdrop-blur-sm rounded-2xl border border-border/50 hover:bg-card/50 transition-all duration-300 group">
@@ -124,7 +121,7 @@ const ModernHero = () => {
                 <Zap className="w-6 h-6 text-primary" />
               </div>
               <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Support Dédié</div>
+              <div className="text-sm text-muted-foreground">{t.stats.support}</div>
             </div>
           </div>
         </div>
