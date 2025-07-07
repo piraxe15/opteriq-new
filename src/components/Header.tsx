@@ -3,10 +3,13 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import AnimatedText from "./AnimatedText";
 import LanguageSelector from "./LanguageSelector";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getTranslation } from "@/translations";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const keywords = ["Intelligence", "Automatisation", "Innovation", "Performance"];
+  const { language } = useLanguage();
+  const t = getTranslation(language).header;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border/50">
@@ -22,9 +25,9 @@ const Header = () => {
           
           {/* Animated keywords - inspired by Morningside */}
           <div className="hidden lg:flex items-center space-x-2 text-sm text-muted-foreground">
-            <span>Spécialistes en</span>
+            <span>{t.specialistsIn}</span>
             <AnimatedText 
-              words={keywords} 
+              words={t.keywords} 
               className="text-primary font-semibold min-w-[120px]" 
               speed={2500}
             />
@@ -32,26 +35,26 @@ const Header = () => {
           
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#accueil" className="text-muted-foreground hover:text-primary transition-colors duration-300 relative group">
-              Accueil
+              {t.navigation.home}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
             <a href="#services" className="text-muted-foreground hover:text-primary transition-colors duration-300 relative group">
-              Services
+              {t.navigation.services}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
             <a href="#process" className="text-muted-foreground hover:text-primary transition-colors duration-300 relative group">
-              Process
+              {t.navigation.process}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
             <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-300 relative group">
-              Contact
+              {t.navigation.contact}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
           </nav>
           
           <div className="flex items-center space-x-4">
             <Button variant="modern" size="lg" className="hidden md:inline-flex" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
-              Planifier un appel
+              {t.cta}
             </Button>
             <LanguageSelector />
             <Button 
@@ -70,19 +73,19 @@ const Header = () => {
           <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border/50">
             <nav className="flex flex-col space-y-4 p-6">
               <a href="#accueil" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
-                Accueil
+                {t.navigation.home}
               </a>
               <a href="#services" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
-                Services
+                {t.navigation.services}
               </a>
               <a href="#process" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
-                Process
+                {t.navigation.process}
               </a>
               <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
-                Contact
+                {t.navigation.contact}
               </a>
               <Button variant="modern" size="lg" className="w-full" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
-                Planifier un appel
+                {t.cta}
               </Button>
             </nav>
           </div>

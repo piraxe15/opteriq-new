@@ -1,6 +1,18 @@
 import { Language } from '@/hooks/useLanguage';
 
 export interface Translations {
+  // Header
+  header: {
+    keywords: string[];
+    specialistsIn: string;
+    navigation: {
+      home: string;
+      services: string;
+      process: string;
+      contact: string;
+    };
+    cta: string;
+  };
   // Hero Section
   hero: {
     badge: string;
@@ -63,6 +75,17 @@ export interface Translations {
 
 export const translations: Record<Language, Translations> = {
   fr: {
+    header: {
+      keywords: ["Intelligence", "Automatisation", "Innovation", "Performance"],
+      specialistsIn: "Spécialistes en",
+      navigation: {
+        home: "Accueil",
+        services: "Services", 
+        process: "Process",
+        contact: "Contact"
+      },
+      cta: "Planifier un appel"
+    },
     hero: {
       badge: "Agence IA Nouvelle Génération",
       title1: "Automatisez.",
@@ -125,6 +148,17 @@ export const translations: Record<Language, Translations> = {
     }
   },
   en: {
+    header: {
+      keywords: ["Intelligence", "Automation", "Innovation", "Performance"],
+      specialistsIn: "Specialists in",
+      navigation: {
+        home: "Home",
+        services: "Services",
+        process: "Process", 
+        contact: "Contact"
+      },
+      cta: "Schedule a call"
+    },
     hero: {
       badge: "Next-Generation AI Agency",
       title1: "Automate.",
@@ -187,6 +221,17 @@ export const translations: Record<Language, Translations> = {
     }
   },
   es: {
+    header: {
+      keywords: ["Inteligencia", "Automatización", "Innovación", "Rendimiento"],
+      specialistsIn: "Especialistas en",
+      navigation: {
+        home: "Inicio",
+        services: "Servicios",
+        process: "Proceso",
+        contact: "Contacto"
+      },
+      cta: "Programar una llamada"
+    },
     hero: {
       badge: "Agencia IA de Nueva Generación",
       title1: "Automatiza.",

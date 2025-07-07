@@ -1,23 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Clock, Shield, Zap, ArrowRight } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getTranslation } from "@/translations";
 
 const CTASection = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language).cta;
+
   const guarantees = [
     {
       icon: Clock,
       title: "48h",
-      description: "Prototype livré"
+      description: t.guarantees.prototype
     },
     {
       icon: Shield,
-      title: "Garantie",
-      description: "Satisfait ou gratuit"
+      title: t.guarantees.guarantee,
+      description: t.guarantees.guarantee
     },
     {
       icon: Zap,
       title: "POC",
-      description: "Opérationnel immédiat"
+      description: t.guarantees.poc
     }
   ];
 
@@ -28,16 +33,15 @@ const CTASection = () => {
           <div className="mb-16 animate-fade-in">
             <div className="inline-block mb-4">
               <span className="text-primary font-medium text-sm tracking-wide uppercase bg-primary/10 px-3 py-1 rounded-full">
-                03 — Engagement Express
+                {t.badge}
               </span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              <span className="text-muted-foreground italic">Prototype IA fonctionnel en</span>{" "}
+              <span className="text-muted-foreground italic">{t.title.split(' 48h')[0]}</span>{" "}
               <span className="text-primary">48h</span>
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Nous livrons un POC opérationnel en deux jours ouvrés. 
-              Pas convaincu ? Nous réitérons sans frais jusqu'à validation ou vous gardez le prototype gratuitement.
+              {t.subtitle}
             </p>
           </div>
 
@@ -68,16 +72,16 @@ const CTASection = () => {
 
           <div className="space-y-6 animate-slide-up">
             <Button variant="hero" size="xl" className="group">
-              Défi accepté - Commencer maintenant
+              {t.button}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
             <div className="text-center space-y-2">
               <p className="text-sm text-muted-foreground">
-                🚀 Lancement immédiat • ⚡ Résultats garantis • 🎯 Sur mesure
+                {t.features}
               </p>
               <p className="text-xs text-muted-foreground/70">
-                Prototype gratuit si non satisfait • Sans engagement
+                {t.disclaimer}
               </p>
             </div>
           </div>

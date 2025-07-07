@@ -1,29 +1,34 @@
 import { Bot, Target, Lightbulb, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getTranslation } from "@/translations";
 
 const ModernServices = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language).services;
+
   const services = [
     {
       icon: Bot,
-      title: "Automatisation Intelligente",
-      description: "Des systèmes IA qui automatisent vos tâches répétitives et libèrent du temps pour votre équipe.",
-      features: ["Automatisation 24/7", "Intégration Simple", "Maintenance Assurée"],
+      title: t.automation.title,
+      description: t.automation.description,
+      features: t.automation.features,
       gradient: "from-primary to-accent",
       delay: "0s"
     },
     {
       icon: Target,
-      title: "Solutions Sur-Mesure",
-      description: "Nous créons des outils IA spécifiquement adaptés à vos processus métier existants.",
-      features: ["Analyse de Besoins", "Développement Rapide", "Formation Incluse"],
+      title: t.customSolutions.title,
+      description: t.customSolutions.description,
+      features: t.customSolutions.features,
       gradient: "from-primary to-accent",
       delay: "0.2s"
     },
     {
       icon: Lightbulb,
-      title: "Consultation Stratégique",
-      description: "Nous identifions les opportunités d'automatisation qui auront le plus d'impact dans votre entreprise.",
-      features: ["Audit Gratuit", "Plan d'Action", "Accompagnement"],
+      title: t.consultation.title,
+      description: t.consultation.description,
+      features: t.consultation.features,
       gradient: "from-primary to-accent",
       delay: "0.4s"
     }
@@ -44,17 +49,15 @@ const ModernServices = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Nos Solutions</span>
+            <span className="text-sm font-medium text-primary">{t.badge}</span>
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Automatisez Vos Processus
-            <br />
-            <span className="text-primary">Avec L'IA</span>
+            {t.title}
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Gagnez du temps, réduisez les erreurs, concentrez-vous sur l'essentiel
+            {t.subtitle}
           </p>
         </div>
 
@@ -103,7 +106,7 @@ const ModernServices = () => {
                     className="w-full group/btn mt-6"
                     onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
                   >
-                    <span>En savoir plus</span>
+                    <span>{t.learnMore}</span>
                     <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
                 </div>
@@ -116,21 +119,21 @@ const ModernServices = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center">
-          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
-              Automatisez Vos Tâches Dès Maintenant
-            </h3>
-            <p className="text-lg text-muted-foreground mb-6">
-              Découvrez comment l'IA peut simplifier vos processus quotidiens
-            </p>
-            <Button variant="hero" size="xl" className="group" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
-              <span className="hidden sm:inline">Commencer Maintenant Gratuitement</span>
-              <span className="sm:hidden">Commencer</span>
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+          <div className="text-center">
+            <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-2xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-3xl font-bold text-foreground mb-4">
+                {t.ctaTitle}
+              </h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                {t.ctaSubtitle}
+              </p>
+              <Button variant="hero" size="xl" className="group" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
+                <span className="hidden sm:inline">{t.ctaButton}</span>
+                <span className="sm:hidden">{t.ctaButtonMobile}</span>
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
           </div>
-        </div>
       </div>
 
       {/* Background Elements */}
