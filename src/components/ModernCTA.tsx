@@ -25,7 +25,7 @@ const ModernCTA = () => {
           </div>
 
           {/* Titre principal */}
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 leading-tight">
             Transformez Votre{" "}
             <span className="text-primary">Entreprise</span>
             <br />
@@ -33,7 +33,7 @@ const ModernCTA = () => {
           </h2>
 
           {/* Sous-titre */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
             Rejoignez les centaines d'entreprises qui ont déjà révolutionné leurs processus avec nos solutions IA
           </p>
 
@@ -47,7 +47,7 @@ const ModernCTA = () => {
           </div>
 
           {/* Garanties et preuves sociales */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50">
               <div className="text-3xl font-bold text-primary mb-2">48h</div>
               <div className="text-sm text-muted-foreground">Prototype Livré</div>

@@ -58,7 +58,7 @@ const ModernHero = () => {
           </div>
 
           {/* Titre principal avec animation */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 animate-fade-in-up">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-8 animate-fade-in-up">
             <span className="block text-foreground leading-tight">
               Automatisez.
             </span>
@@ -71,7 +71,7 @@ const ModernHero = () => {
           </h1>
 
           {/* Sous-titre avec animation de mots */}
-          <div className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <p className="mb-4">
               Votre partenaire de confiance pour devenir une entreprise{" "}
               <span className="text-primary font-semibold">IA-first</span>.
@@ -99,7 +99,7 @@ const ModernHero = () => {
           </div>
 
           {/* Statistiques impressionnantes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.9s' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.9s' }}>
             <div className="text-center p-6 bg-card/30 backdrop-blur-sm rounded-2xl border border-border/50 hover:bg-card/50 transition-all duration-300 group">
               <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <Target className="w-6 h-6 text-primary" />

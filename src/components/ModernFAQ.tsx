@@ -42,12 +42,12 @@ const ModernFAQ = () => {
           <div className="inline-block bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 mb-6">
             <span className="text-sm font-medium text-primary">Questions Fréquentes</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground mb-6">
             Tout Ce Que Vous
             <br />
             <span className="text-primary">Devez Savoir</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Découvrez comment nos solutions IA peuvent transformer votre entreprise
           </p>
         </div>

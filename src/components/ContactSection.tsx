@@ -40,23 +40,23 @@ const ContactSection = () => {
           <div className="inline-block bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 mb-6">
             <span className="text-sm font-medium text-primary">Contactez-nous</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground mb-6">
             Parlons De Votre
             <br />
             <span className="text-primary">Projet IA</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Prêt à transformer votre entreprise ? Discutons de vos besoins et objectifs.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto">
           {/* Formulaire */}
-          <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Envoyez-nous un message</h3>
+          <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl p-6 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-6">Envoyez-nous un message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="firstName">Prénom</Label>
                   <Input id="firstName" name="firstName" required />
