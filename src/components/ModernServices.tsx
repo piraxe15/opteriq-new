@@ -5,26 +5,26 @@ const ModernServices = () => {
   const services = [
     {
       icon: Bot,
-      title: "Agents IA Autonomes",
-      description: "Systèmes d'acquisition automatique de prospects qui utilisent l'IA pour réserver des rendez-vous dans votre calendrier sans que vous ayez à lever le petit doigt.",
-      features: ["24/7 Automatisation", "Intelligence Prédictive", "Intégration Seamless"],
-      gradient: "from-blue-500 to-cyan-500",
+      title: "Automatisation Intelligente",
+      description: "Des systèmes IA qui automatisent vos tâches répétitives et libèrent du temps pour votre équipe.",
+      features: ["Automatisation 24/7", "Intégration Simple", "Maintenance Assurée"],
+      gradient: "from-primary to-accent",
       delay: "0s"
     },
     {
       icon: Target,
-      title: "Messaging Hyper-Ciblé",
-      description: "Nous avons testé des centaines de prompts IA pour trouver la personnalisation de messages qui résonne vraiment et ne semble pas artificielle.",
-      features: ["Personnalisation Avancée", "A/B Testing Continu", "Optimisation IA"],
-      gradient: "from-purple-500 to-pink-500",
+      title: "Solutions Sur-Mesure",
+      description: "Nous créons des outils IA spécifiquement adaptés à vos processus métier existants.",
+      features: ["Analyse de Besoins", "Développement Rapide", "Formation Incluse"],
+      gradient: "from-primary to-accent",
       delay: "0.2s"
     },
     {
       icon: Lightbulb,
-      title: "Découverte Product-Market Fit",
-      description: "Notre segmentation d'audience rapide et nos tests de positionnement vous aident à identifier qui est le plus réceptif à votre produit.",
-      features: ["Analyse Comportementale", "Segmentation Intelligente", "Insights Actionnables"],
-      gradient: "from-orange-500 to-red-500",
+      title: "Consultation Stratégique",
+      description: "Nous identifions les opportunités d'automatisation qui auront le plus d'impact dans votre entreprise.",
+      features: ["Audit Gratuit", "Plan d'Action", "Accompagnement"],
+      gradient: "from-primary to-accent",
       delay: "0.4s"
     }
   ];
@@ -40,13 +40,13 @@ const ModernServices = () => {
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Nous Construisons L'Infrastructure
+            Automatisez Vos Processus
             <br />
-            <span className="text-primary">IA De Vos Ventes</span>
+            <span className="text-primary">Avec L'IA</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Pour que vous puissiez scaler sans les maux de tête
+            Gagnez du temps, réduisez les erreurs, concentrez-vous sur l'essentiel
           </p>
         </div>
 
@@ -107,10 +107,10 @@ const ModernServices = () => {
         <div className="text-center">
           <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold text-foreground mb-4">
-              Prêt À Transformer Votre Entreprise ?
+              Automatisez Vos Tâches Dès Maintenant
             </h3>
             <p className="text-lg text-muted-foreground mb-6">
-              Découvrez comment nos solutions IA peuvent révolutionner vos processus de vente
+              Découvrez comment l'IA peut simplifier vos processus quotidiens
             </p>
             <Button variant="hero" size="xl" className="group">
               Commencer Maintenant

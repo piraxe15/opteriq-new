@@ -6,7 +6,7 @@ const ModernFooter = () => {
         {/* Logo et description centrés */}
         <div className="text-center max-w-2xl mx-auto mb-8">
           <div className="flex items-center justify-center space-x-3 mb-4">
-            <img src="/lovable-uploads/117794ff-b203-452a-b819-54520341f0be.png" alt="Opteriq Logo" className="w-8 h-8" />
+            <img src="/lovable-uploads/0ce809f9-8c53-4667-9b80-674c29b95707.png" alt="Opteriq Logo" className="w-8 h-8" />
             <span className="text-xl font-bold text-foreground">Opteriq</span>
           </div>
           <p className="text-muted-foreground leading-relaxed">

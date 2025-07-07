@@ -11,7 +11,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/117794ff-b203-452a-b819-54520341f0be.png" 
+              src="/lovable-uploads/0ce809f9-8c53-4667-9b80-674c29b95707.png" 
               alt="Opteriq Logo" 
               className="w-10 h-10 md:w-12 md:h-12"
             />
