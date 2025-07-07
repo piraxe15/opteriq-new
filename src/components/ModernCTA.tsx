@@ -4,6 +4,14 @@ import { ArrowRight, Calendar, MessageCircle, Star } from "lucide-react";
 const ModernCTA = () => {
   return (
     <section className="py-24 bg-gradient-to-br from-background to-card/30 relative overflow-hidden">
+      {/* Background géométrique */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-1/3 w-[160px] h-[160px] rounded-full border border-primary/5 animate-pulse" style={{animationDelay: '0.5s'}} />
+        <div className="absolute bottom-20 right-1/3 w-[120px] h-[120px] rounded-full border border-accent/8" />
+        <div className="absolute top-1/3 right-20 w-10 h-10 bg-primary/10 rounded-full animate-float" style={{animationDelay: '1s'}} />
+        <div className="absolute bottom-1/3 left-20 w-8 h-8 bg-secondary/20 rounded-full animate-float" style={{animationDelay: '2.5s'}} />
+      </div>
+      
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge avec étoiles */}

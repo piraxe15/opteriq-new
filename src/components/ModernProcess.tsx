@@ -27,6 +27,14 @@ const ModernProcess = () => {
 
   return (
     <section id="process" className="py-24 bg-gradient-to-br from-background to-secondary/20 relative overflow-hidden">
+      {/* Background géométrique */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-20 w-[180px] h-[180px] rounded-full border border-primary/5 animate-pulse" style={{animationDelay: '0.5s'}} />
+        <div className="absolute bottom-1/4 right-20 w-[120px] h-[120px] rounded-full border border-accent/8" />
+        <div className="absolute top-40 right-1/3 w-10 h-10 bg-primary/10 rounded-full animate-float" style={{animationDelay: '1.5s'}} />
+        <div className="absolute bottom-40 left-1/4 w-6 h-6 bg-secondary/20 rounded-full animate-float" style={{animationDelay: '2s'}} />
+      </div>
+      
       <div className="container mx-auto px-6 relative z-10">
         {/* En-tête de section */}
         <div className="text-center mb-20">

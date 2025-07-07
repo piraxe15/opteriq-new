@@ -30,6 +30,14 @@ const TestimonialsSection = () => {
 
   return (
     <section className="py-24 bg-gradient-to-br from-secondary/5 to-background relative overflow-hidden">
+      {/* Background géométrique */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-16 right-1/4 w-[160px] h-[160px] rounded-full border border-primary/5" />
+        <div className="absolute bottom-20 left-1/3 w-[140px] h-[140px] rounded-full border border-accent/5 animate-pulse" style={{animationDelay: '1s'}} />
+        <div className="absolute top-1/3 left-16 w-8 h-8 bg-primary/10 rounded-full animate-float" style={{animationDelay: '0.5s'}} />
+        <div className="absolute bottom-1/3 right-16 w-6 h-6 bg-secondary/20 rounded-full animate-float" style={{animationDelay: '2.5s'}} />
+      </div>
+      
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-20">

@@ -26,6 +26,14 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-background to-secondary/10 relative overflow-hidden">
+      {/* Background géométrique */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-32 right-1/3 w-[180px] h-[180px] rounded-full border border-primary/5" />
+        <div className="absolute bottom-32 left-1/4 w-[150px] h-[150px] rounded-full border border-accent/5 animate-pulse" style={{animationDelay: '1s'}} />
+        <div className="absolute top-1/4 left-20 w-8 h-8 bg-primary/10 rounded-full animate-float" style={{animationDelay: '2s'}} />
+        <div className="absolute bottom-1/4 right-20 w-6 h-6 bg-secondary/20 rounded-full animate-float" style={{animationDelay: '0.5s'}} />
+      </div>
+      
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">

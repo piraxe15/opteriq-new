@@ -28,6 +28,14 @@ const ModernFAQ = () => {
 
   return (
     <section id="faq" className="py-24 bg-gradient-to-br from-background to-secondary/20 relative overflow-hidden">
+      {/* Background géométrique */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-1/4 w-[200px] h-[200px] rounded-full border border-primary/5 animate-pulse" style={{animationDelay: '1.5s'}} />
+        <div className="absolute bottom-24 right-1/4 w-[160px] h-[160px] rounded-full border border-accent/5" />
+        <div className="absolute top-40 right-20 w-10 h-10 bg-primary/10 rounded-full animate-float" style={{animationDelay: '0.5s'}} />
+        <div className="absolute bottom-40 left-20 w-8 h-8 bg-secondary/20 rounded-full animate-float" style={{animationDelay: '2s'}} />
+      </div>
+      
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
