@@ -29,16 +29,12 @@ const ModernCTA = () => {
             Rejoignez les centaines d'entreprises qui ont déjà révolutionné leurs processus avec nos solutions IA
           </p>
 
-          {/* Boutons CTA */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          {/* Bouton CTA */}
+          <div className="flex justify-center items-center mb-16">
             <Button variant="hero" size="xl" className="group" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
               <Calendar className="mr-2 h-5 w-5" />
               Réserver Un Appel Stratégique Gratuit
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="sleek" size="xl" className="group">
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Discuter Avec Un Expert
             </Button>
           </div>
 
