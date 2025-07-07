@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export type Language = 'fr' | 'en' | 'es' | 'ar';
+export type Language = 'fr' | 'en' | 'es';
 
 interface LanguageContextType {
   language: Language;
@@ -16,7 +16,7 @@ interface LanguageProviderProps {
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const [language, setLanguage] = useState<Language>('fr');
-  const isRTL = language === 'ar';
+  const isRTL = false;
 
   useEffect(() => {
     // Apply RTL direction to document
