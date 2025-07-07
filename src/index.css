@@ -2,52 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern AI Agency Design System - Dark/Modern Theme */
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 215 25% 27%;
+    /* Dark theme inspired by SmartScaling + Morningside minimal aesthetic */
+    --background: 220 13% 9%;
+    --foreground: 220 9% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card: 220 13% 11%;
+    --card-foreground: 220 9% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover: 220 13% 11%;
+    --popover-foreground: 220 9% 95%;
 
-    --primary: 142 76% 36%;
-    --primary-foreground: 0 0% 100%;
+    /* Neutral beige primary inspired by logo */
+    --primary: 35 15% 75%;
+    --primary-foreground: 220 13% 9%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 220 9% 95%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 65%;
 
-    --accent: 179 25% 65%;
-    --accent-foreground: 215 25% 27%;
+    --accent: 35 15% 85%;
+    --accent-foreground: 220 13% 9%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 220 9% 95%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 142 76% 36%;
+    --border: 220 13% 20%;
+    --input: 220 13% 15%;
+    --ring: 35 15% 75%;
     
-    /* AI Agency Design System */
-    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(179 25% 65%));
-    --gradient-secondary: linear-gradient(135deg, hsl(210 20% 98%), hsl(210 40% 96%));
-    --gradient-hero: linear-gradient(135deg, hsl(142 76% 36% / 0.1), hsl(179 25% 65% / 0.1));
+    /* Modern gradient system */
+    --gradient-primary: linear-gradient(135deg, hsl(35 15% 75%), hsl(35 25% 85%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 13% 9%), hsl(220 13% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 13% 9%) 0%, hsl(220 13% 12%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(220 13% 11% / 0.8), hsl(220 13% 15% / 0.8));
     
-    --shadow-soft: 0 4px 20px hsl(142 76% 36% / 0.1);
-    --shadow-card: 0 8px 25px hsl(215 25% 27% / 0.08);
-    --shadow-hover: 0 12px 40px hsl(142 76% 36% / 0.15);
+    /* Sophisticated shadows */
+    --shadow-soft: 0 4px 20px hsl(220 13% 5% / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 13% 5% / 0.4);
+    --shadow-hover: 0 20px 60px hsl(35 15% 75% / 0.1);
+    --shadow-glow: 0 0 40px hsl(35 15% 75% / 0.2);
     
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -66,42 +70,14 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  .light {
+    /* Light mode - optional, we'll focus on dark mode */
+    --background: 35 15% 97%;
+    --foreground: 220 13% 15%;
+    --card: 35 15% 99%;
+    --card-foreground: 220 13% 15%;
+    --primary: 35 15% 65%;
+    --primary-foreground: 35 15% 97%;
   }
 }
 
@@ -111,6 +87,103 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+@layer components {
+  /* Animated background patterns */
+  .bg-dots {
+    background-image: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  
+  .bg-grid {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Floating animation for background elements */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+
+  /* Glow effects */
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-hover:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Text animations */
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--foreground)),
+      hsl(var(--primary)),
+      hsl(var(--foreground))
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+  }
+}
+
+@layer utilities {
+  /* Custom keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.2);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.4);
+    }
+  }
+  
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    0%, 50% { border-color: transparent; }
+    51%, 100% { border-color: hsl(var(--primary)); }
   }
 }

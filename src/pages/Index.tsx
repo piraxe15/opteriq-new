@@ -1,21 +1,21 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import MethodologySection from "@/components/MethodologySection";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
+import ModernHero from "@/components/ModernHero";
+import ModernServices from "@/components/ModernServices";
+import ModernProcess from "@/components/ModernProcess";
+import ModernCTA from "@/components/ModernCTA";
+import ModernFooter from "@/components/ModernFooter";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
       <Header />
       <main>
-        <HeroSection />
-        <ServicesSection />
-        <MethodologySection />
-        <CTASection />
+        <ModernHero />
+        <ModernServices />
+        <ModernProcess />
+        <ModernCTA />
       </main>
-      <Footer />
+      <ModernFooter />
     </div>
   );
 };
