@@ -5,9 +5,8 @@ const ModernFooter = () => {
       <div className="container mx-auto px-6">
         {/* Logo et description centrés */}
         <div className="text-center max-w-2xl mx-auto mb-8">
-          <div className="flex items-center justify-center space-x-3 mb-4">
+          <div className="flex items-center justify-center mb-4">
             <img src="/lovable-uploads/0ce809f9-8c53-4667-9b80-674c29b95707.png" alt="Opteriq Logo" className="w-8 h-8" />
-            <span className="text-xl font-bold text-foreground">Opteriq</span>
           </div>
           <p className="text-muted-foreground leading-relaxed">
             Transformez votre entreprise avec l'intelligence artificielle.

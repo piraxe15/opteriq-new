@@ -9,13 +9,12 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center">
             <img 
               src="/lovable-uploads/0ce809f9-8c53-4667-9b80-674c29b95707.png" 
               alt="Opteriq Logo" 
               className="w-10 h-10 md:w-12 md:h-12"
             />
-            <span className="text-2xl font-bold text-foreground">Opteriq</span>
           </div>
           
           {/* Animated keywords - inspired by Morningside */}
