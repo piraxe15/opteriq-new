@@ -26,14 +26,13 @@ const ModernHero = () => {
           {/* Titre principal avec animation */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 animate-fade-in-up">
             <span className="block text-foreground leading-tight">
-              L'Intelligence Artificielle
+              Automatisez.
             </span>
             <span className="block text-primary leading-tight mb-4">
-              Qui Transforme
+              Libérez.
             </span>
             <span className="block text-foreground leading-tight">
-              Votre{" "}
-              <span className="text-shimmer">Quotidien</span>
+              <span className="text-shimmer">Progressez.</span>
             </span>
           </h1>
 
