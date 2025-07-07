@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import AnimatedText from "./AnimatedText";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const keywords = ["Intelligence", "Automatisation", "Innovation", "Performance"];
 
   return (
@@ -50,11 +52,39 @@ const Header = () => {
             <Button variant="modern" size="lg" className="hidden md:inline-flex" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
               Planifier un appel
             </Button>
-            <Button variant="outline" size="icon" className="md:hidden">
-              <Menu className="h-4 w-4" />
+            <Button 
+              variant="outline" 
+              size="icon" 
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </Button>
           </div>
         </div>
+
+        {/* Menu mobile */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border/50">
+            <nav className="flex flex-col space-y-4 p-6">
+              <a href="#accueil" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                Accueil
+              </a>
+              <a href="#services" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                Services
+              </a>
+              <a href="#process" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                Process
+              </a>
+              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
+                Contact
+              </a>
+              <Button variant="modern" size="lg" className="w-full" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
+                Planifier un appel
+              </Button>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );

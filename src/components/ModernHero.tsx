@@ -78,21 +78,23 @@ const ModernHero = () => {
             </p>
             <p>
               Spécialistes en{" "}
-              <AnimatedText 
-                words={capabilities} 
-                className="text-primary font-bold" 
-                speed={2000}
-              />
+              <span className="inline-block min-w-[200px] text-left">
+                <AnimatedText 
+                  words={capabilities} 
+                  className="text-primary font-bold" 
+                  speed={2000}
+                />
+              </span>
             </p>
           </div>
 
           {/* Boutons d'action */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <Button variant="hero" size="xl" className="group" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
+          <div className="flex flex-col gap-4 justify-center items-center mb-16 animate-fade-in w-full max-w-md mx-auto" style={{ animationDelay: '0.6s' }}>
+            <Button variant="hero" size="xl" className="group w-full" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
               Démarrer Votre Transformation
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="sleek" size="xl" className="group" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button variant="sleek" size="xl" className="group w-full" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
               <Play className="mr-2 h-5 w-5" />
               Voir Notre Approche
             </Button>
