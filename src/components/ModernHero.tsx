@@ -12,7 +12,41 @@ const ModernHero = () => {
   ];
 
   return (
-    <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-secondary/10">
+      {/* Background géométrique inspiré de SmartScaling AI */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Cercles concentriques */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="w-[300px] h-[300px] rounded-full border border-primary/10 absolute animate-pulse" style={{animationDelay: '0s'}} />
+          <div className="w-[500px] h-[500px] rounded-full border border-primary/5 absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" />
+          <div className="w-[700px] h-[700px] rounded-full border border-primary/5 absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 animate-pulse" style={{animationDelay: '1s'}} />
+          <div className="w-[900px] h-[900px] rounded-full border border-primary/3 absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" />
+          <div className="w-[1100px] h-[1100px] rounded-full border border-primary/3 absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 animate-pulse" style={{animationDelay: '2s'}} />
+        </div>
+        
+        {/* Icônes flottantes tech */}
+        <div className="absolute top-20 left-20 w-12 h-12 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 flex items-center justify-center animate-float">
+          <Zap className="w-6 h-6 text-primary" />
+        </div>
+        
+        <div className="absolute top-40 right-32 w-10 h-10 bg-accent/10 backdrop-blur-sm rounded-full border border-accent/20 flex items-center justify-center animate-float" style={{animationDelay: '0.5s'}}>
+          <Target className="w-5 h-5 text-accent" />
+        </div>
+        
+        <div className="absolute bottom-32 left-32 w-14 h-14 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 flex items-center justify-center animate-float" style={{animationDelay: '1s'}}>
+          <BarChart3 className="w-7 h-7 text-primary" />
+        </div>
+        
+        <div className="absolute bottom-40 right-20 w-8 h-8 bg-secondary/20 backdrop-blur-sm rounded-full border border-secondary/30 animate-float" style={{animationDelay: '1.5s'}} />
+        
+        <div className="absolute top-1/3 right-20 w-6 h-6 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30 animate-float" style={{animationDelay: '2s'}} />
+        
+        <div className="absolute bottom-1/3 left-16 w-10 h-10 bg-accent/10 backdrop-blur-sm rounded-full border border-accent/20 animate-float" style={{animationDelay: '2.5s'}} />
+        
+        {/* Effet de gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/80" />
+      </div>
+      
       <FloatingElements />
       
       <div className="container mx-auto px-6 py-20 relative z-10">
