@@ -150,9 +150,17 @@ export interface Translations {
   };
   // Modern CTA
   modernCta: {
+    badge: string;
     title: string;
     subtitle: string;
     button: string;
+    stats: {
+      prototype: string;
+      roi: string;
+      support: string;
+    };
+    quote: string;
+    signature: string;
   };
   // Toast messages
   toast: {
@@ -223,7 +231,7 @@ export const translations: Record<Language, Translations> = {
     },
     cta: {
       badge: "03 — Engagement Express",
-      title: "Prototype IA fonctionnel en 48h",
+      title: "Prototype IA fonctionnel en 72h",
       subtitle: "Nous livrons un POC opérationnel en deux jours ouvrés. Pas convaincu ? Nous réitérons sans frais jusqu'à validation ou vous gardez le prototype gratuitement.",
       guarantees: {
         prototype: "Prototype livré",
@@ -281,7 +289,7 @@ export const translations: Record<Language, Translations> = {
         {
           category: "Solutions Sur-Mesure", 
           question: "Combien de temps faut-il pour développer une solution ?",
-          answer: "Nous livrons un prototype fonctionnel en 48h, puis itérons selon vos retours. Le développement complet prend généralement 2-6 semaines selon la complexité, avec une approche agile et des livraisons fréquentes."
+          answer: "Nous livrons un prototype fonctionnel en 72h, puis itérons selon vos retours. Le développement complet prend généralement 2-6 semaines selon la complexité, avec une approche agile et des livraisons fréquentes."
         },
         {
           category: "Consultation Stratégique",
@@ -314,7 +322,7 @@ export const translations: Record<Language, Translations> = {
         phone: "Appel stratégique", 
         phoneAction: "Réserver un créneau",
         location: "Localisation",
-        locationValue: "France & International",
+        locationValue: "Canada Québec & International",
         guaranteeTitle: "Réponse Garantie",
         guaranteeText: "Nous répondons à tous les messages dans les 24 heures"
       }
@@ -324,9 +332,17 @@ export const translations: Record<Language, Translations> = {
       description: "Nous vous répondrons dans les 24h."
     },
     modernCta: {
+      badge: "Résultats Garantis",
       title: "Prêt à Transformer Votre Entreprise ?",
       subtitle: "Commencez votre transformation IA dès aujourd'hui",
-      button: "Démarrer Maintenant"
+      button: "Démarrer Maintenant",
+      stats: {
+        prototype: "Prototype Livré",
+        roi: "Garantie Résultats", 
+        support: "Support Dédié"
+      },
+      quote: "Ne laissez pas vos concurrents prendre de l'avance. L'IA n'est plus l'avenir, c'est le présent.",
+      signature: "— L'équipe Opteriq"
     }
   },
   en: {
@@ -390,7 +406,7 @@ export const translations: Record<Language, Translations> = {
     },
     cta: {
       badge: "03 — Express Commitment",
-      title: "Functional AI prototype in 48h",
+      title: "Functional AI prototype in 72h",
       subtitle: "We deliver an operational POC in two business days. Not convinced? We reiterate at no cost until validation or you keep the prototype for free.",
       guarantees: {
         prototype: "Prototype delivered",
@@ -448,7 +464,7 @@ export const translations: Record<Language, Translations> = {
         {
           category: "Custom Solutions",
           question: "How long does it take to develop a solution?", 
-          answer: "We deliver a functional prototype in 48h, then iterate based on your feedback. Full development typically takes 2-6 weeks depending on complexity, with an agile approach and frequent deliveries."
+          answer: "We deliver a functional prototype in 72h, then iterate based on your feedback. Full development typically takes 2-6 weeks depending on complexity, with an agile approach and frequent deliveries."
         },
         {
           category: "Strategic Consultation",
@@ -481,7 +497,7 @@ export const translations: Record<Language, Translations> = {
         phone: "Strategic Call",
         phoneAction: "Book a slot", 
         location: "Location",
-        locationValue: "France & International",
+        locationValue: "Canada Quebec & International",
         guaranteeTitle: "Guaranteed Response",
         guaranteeText: "We respond to all messages within 24 hours"
       }
@@ -491,9 +507,17 @@ export const translations: Record<Language, Translations> = {
       description: "We will respond within 24h."
     },
     modernCta: {
+      badge: "Guaranteed Results",
       title: "Ready to Transform Your Business?",
       subtitle: "Start your AI transformation today",
-      button: "Get Started Now"
+      button: "Get Started Now",
+      stats: {
+        prototype: "Prototype Delivered",
+        roi: "Results Guarantee",
+        support: "Dedicated Support"
+      },
+      quote: "Don't let your competitors get ahead. AI is no longer the future, it's the present.",
+      signature: "— The Opteriq Team"
     }
   },
   es: {
@@ -557,7 +581,7 @@ export const translations: Record<Language, Translations> = {
     },
     cta: {
       badge: "03 — Compromiso Express",
-      title: "Prototipo IA funcional en 48h",
+      title: "Prototipo IA funcional en 72h",
       subtitle: "Entregamos un POC operacional en dos días hábiles. ¿No convencido? Reiteramos sin costo hasta la validación o te quedas con el prototipo gratis.",
       guarantees: {
         prototype: "Prototipo entregado",
@@ -615,7 +639,7 @@ export const translations: Record<Language, Translations> = {
         {
           category: "Soluciones a Medida",
           question: "¿Cuánto tiempo toma desarrollar una solución?",
-          answer: "Entregamos un prototipo funcional en 48h, luego iteramos según tus comentarios. El desarrollo completo generalmente toma 2-6 semanas dependiendo de la complejidad, con un enfoque ágil y entregas frecuentes."
+          answer: "Entregamos un prototipo funcional en 72h, luego iteramos según tus comentarios. El desarrollo completo generalmente toma 2-6 semanas dependiendo de la complejidad, con un enfoque ágil y entregas frecuentes."
         },
         {
           category: "Consultoría Estratégica", 
@@ -648,7 +672,7 @@ export const translations: Record<Language, Translations> = {
         phone: "Llamada Estratégica",
         phoneAction: "Reservar una cita",
         location: "Ubicación",
-        locationValue: "Francia e Internacional", 
+        locationValue: "Canadá Quebec e Internacional", 
         guaranteeTitle: "Respuesta Garantizada",
         guaranteeText: "Respondemos a todos los mensajes en 24 horas"
       }
@@ -658,9 +682,17 @@ export const translations: Record<Language, Translations> = {
       description: "Responderemos en 24h."
     },
     modernCta: {
+      badge: "Resultados Garantizados",
       title: "¿Listo para Transformar Tu Empresa?",
       subtitle: "Comienza tu transformación IA hoy",
-      button: "Empezar Ahora"
+      button: "Empezar Ahora",
+      stats: {
+        prototype: "Prototipo Entregado",
+        roi: "Garantía de Resultados",
+        support: "Soporte Dedicado"
+      },
+      quote: "No dejes que tus competidores se adelanten. La IA ya no es el futuro, es el presente.",
+      signature: "— El equipo Opteriq"
     }
   }
 };

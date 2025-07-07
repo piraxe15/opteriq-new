@@ -25,7 +25,7 @@ const ModernCTA = () => {
                 <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
               ))}
             </div>
-            <span className="text-sm font-medium text-primary">Résultats Garantis</span>
+            <span className="text-sm font-medium text-primary">{t.badge}</span>
           </div>
 
           {/* Titre principal */}
@@ -50,26 +50,26 @@ const ModernCTA = () => {
           {/* Garanties et preuves sociales */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50">
-              <div className="text-3xl font-bold text-primary mb-2">48h</div>
-              <div className="text-sm text-muted-foreground">Prototype Livré</div>
+              <div className="text-3xl font-bold text-primary mb-2">72h</div>
+              <div className="text-sm text-muted-foreground">{t.stats.prototype}</div>
             </div>
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50">
               <div className="text-3xl font-bold text-primary mb-2">ROI</div>
-              <div className="text-sm text-muted-foreground">Garantie Résultats</div>
+              <div className="text-sm text-muted-foreground">{t.stats.roi}</div>
             </div>
             <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50">
               <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Support Dédié</div>
+              <div className="text-sm text-muted-foreground">{t.stats.support}</div>
             </div>
           </div>
 
           {/* Message final */}
           <div className="mt-16 bg-gradient-card backdrop-blur-sm border border-border/50 rounded-3xl p-8">
             <p className="text-lg text-muted-foreground italic">
-              "Ne laissez pas vos concurrents prendre de l'avance. L'IA n'est plus l'avenir, c'est le présent."
+              "{t.quote}"
             </p>
             <div className="mt-4 text-primary font-semibold">
-              — L'équipe Opteriq
+              {t.signature}
             </div>
           </div>
         </div>
