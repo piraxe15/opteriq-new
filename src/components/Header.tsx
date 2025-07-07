@@ -50,7 +50,6 @@ const Header = () => {
           </nav>
           
           <div className="flex items-center space-x-4">
-            <LanguageSelector />
             <Button variant="modern" size="lg" className="hidden md:inline-flex" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
               Planifier un appel
             </Button>
@@ -62,6 +61,7 @@ const Header = () => {
             >
               {isMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </Button>
+            <LanguageSelector />
           </div>
         </div>
 
