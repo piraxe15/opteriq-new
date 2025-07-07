@@ -89,15 +89,16 @@ const ModernHero = () => {
           </div>
 
           {/* Boutons d'action */}
-          <div className="flex flex-col gap-4 justify-center items-center mb-16 animate-fade-in w-full max-w-sm mx-auto px-4" style={{ animationDelay: '0.6s' }}>
-            <Button variant="hero" size="xl" className="group w-full text-sm sm:text-lg px-4 sm:px-10" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
+          <div className="flex flex-col gap-4 justify-center items-center mb-16 animate-fade-in w-full max-w-xs sm:max-w-md mx-auto px-2" style={{ animationDelay: '0.6s' }}>
+            <Button variant="hero" size="lg" className="group w-full text-xs sm:text-lg px-2 sm:px-10 h-12 sm:h-14" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
               <span className="hidden sm:inline">Démarrer Votre Transformation</span>
-              <span className="sm:hidden">Commencer Maintenant</span>
-              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+              <span className="sm:hidden">Commencer Gratuit</span>
+              <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="sleek" size="xl" className="group w-full text-sm sm:text-lg px-4 sm:px-10" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
-              <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-              Voir Notre Approche
+            <Button variant="sleek" size="lg" className="group w-full text-xs sm:text-lg px-2 sm:px-10 h-10 sm:h-14" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+              <Play className="mr-1 sm:mr-2 h-3 w-3 sm:h-5 sm:w-5" />
+              <span className="hidden sm:inline">Voir Notre Approche</span>
+              <span className="sm:hidden">Découvrir</span>
             </Button>
           </div>
 
