@@ -7,21 +7,21 @@ const ModernProcess = () => {
       title: "IDENTIFIER",
       subtitle: "Opportunités IA",
       description: "Nous vous aidons à identifier les opportunités IA à fort impact et construisons une stratégie de transformation IA étape par étape pour les concrétiser.",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-primary to-accent"
     },
     {
       icon: GraduationCap,
       title: "ÉDUQUER",
       subtitle: "Votre Équipe",
       description: "Nous formons et accompagnons votre équipe avec les bons outils et le savoir-faire pour intégrer l'IA dans toute votre organisation.",
-      color: "from-purple-500 to-pink-500"
+      color: "from-primary to-accent"
     },
     {
       icon: Code2,
       title: "DÉVELOPPER",
       subtitle: "Solutions IA",
       description: "Nous tirons parti de notre vaste expérience et réseau pour développer des systèmes IA personnalisés qui font vraiment bouger les choses dans votre entreprise.",
-      color: "from-orange-500 to-red-500"
+      color: "from-primary to-accent"
     }
   ];
 
