@@ -31,7 +31,7 @@ const ModernCTA = () => {
 
           {/* Boutons CTA */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <Button variant="hero" size="xl" className="group">
+            <Button variant="hero" size="xl" className="group" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
               <Calendar className="mr-2 h-5 w-5" />
               Réserver Un Appel Stratégique Gratuit
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

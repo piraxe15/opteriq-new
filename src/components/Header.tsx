@@ -47,7 +47,7 @@ const Header = () => {
           </nav>
           
           <div className="flex items-center space-x-4">
-            <Button variant="modern" size="lg" className="hidden md:inline-flex" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button variant="modern" size="lg" className="hidden md:inline-flex" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
               Planifier un appel
             </Button>
             <Button variant="outline" size="icon" className="md:hidden">

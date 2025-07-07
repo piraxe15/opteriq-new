@@ -116,8 +116,8 @@ const ModernServices = () => {
             <p className="text-lg text-muted-foreground mb-6">
               Découvrez comment l'IA peut simplifier vos processus quotidiens
             </p>
-            <Button variant="hero" size="xl" className="group">
-              Commencer Maintenant
+            <Button variant="hero" size="xl" className="group" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
+              Commencer Maintenant Gratuitement
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
