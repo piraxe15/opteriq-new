@@ -6,6 +6,10 @@ const FloatingElements = () => {
       <div className="absolute top-1/3 -right-16 w-32 h-32 bg-accent/10 rounded-full animate-float-delayed blur-xl" />
       <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-primary/8 rounded-full animate-float blur-lg" />
       
+      {/* Additional geometric shapes */}
+      <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-primary/3 rotate-45 animate-float blur-lg" />
+      <div className="absolute bottom-1/3 right-20 w-20 h-20 bg-accent/5 rounded-full animate-float-delayed blur-xl" />
+      
       {/* Connecting lines - inspired by SmartScaling's circuit design */}
       <svg className="absolute inset-0 w-full h-full opacity-20">
         <defs>

@@ -12,7 +12,7 @@ const ModernHero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       <FloatingElements />
       
       <div className="container mx-auto px-6 py-20 relative z-10">
@@ -55,11 +55,11 @@ const ModernHero = () => {
 
           {/* Boutons d'action */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <Button variant="hero" size="xl" className="group">
+            <Button variant="hero" size="xl" className="group" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               Démarrer Votre Transformation
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="sleek" size="xl" className="group">
+            <Button variant="sleek" size="xl" className="group" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
               <Play className="mr-2 h-5 w-5" />
               Voir Notre Approche
             </Button>
@@ -71,24 +71,24 @@ const ModernHero = () => {
               <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <Target className="w-6 h-6 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">Opportunités IA Identifiées</div>
+              <div className="text-3xl font-bold text-primary mb-2">95%</div>
+              <div className="text-sm text-muted-foreground">Satisfaction Client</div>
             </div>
             
             <div className="text-center p-6 bg-card/30 backdrop-blur-sm rounded-2xl border border-border/50 hover:bg-card/50 transition-all duration-300 group">
               <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <BarChart3 className="w-6 h-6 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">1M+</div>
-              <div className="text-sm text-muted-foreground">Professionnels Formés à L'IA</div>
+              <div className="text-3xl font-bold text-primary mb-2">48h</div>
+              <div className="text-sm text-muted-foreground">Prototype Livré</div>
             </div>
             
             <div className="text-center p-6 bg-card/30 backdrop-blur-sm rounded-2xl border border-border/50 hover:bg-card/50 transition-all duration-300 group">
               <div className="flex items-center justify-center w-12 h-12 bg-primary/20 rounded-full mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <Zap className="w-6 h-6 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">100+</div>
-              <div className="text-sm text-muted-foreground">Solutions IA Sur-Mesure</div>
+              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-sm text-muted-foreground">Support Dédié</div>
             </div>
           </div>
         </div>

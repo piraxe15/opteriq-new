@@ -13,7 +13,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/117794ff-b203-452a-b819-54520341f0be.png" 
               alt="Opteriq Logo" 
-              className="w-8 h-8"
+              className="w-10 h-10 md:w-12 md:h-12"
             />
             <span className="text-2xl font-bold text-foreground">Opteriq</span>
           </div>
@@ -48,7 +48,7 @@ const Header = () => {
           </nav>
           
           <div className="flex items-center space-x-4">
-            <Button variant="modern" size="lg" className="hidden md:inline-flex">
+            <Button variant="modern" size="lg" className="hidden md:inline-flex" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               Planifier un appel
             </Button>
             <Button variant="outline" size="icon" className="md:hidden">
