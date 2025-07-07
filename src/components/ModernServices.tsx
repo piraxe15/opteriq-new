@@ -90,7 +90,11 @@ const ModernServices = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <Button variant="ghost" className="w-full group/btn mt-6">
+                  <Button 
+                    variant="ghost" 
+                    className="w-full group/btn mt-6"
+                    onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
                     <span>En savoir plus</span>
                     <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
