@@ -13,7 +13,7 @@ const ModernCTA = () => {
                 <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
               ))}
             </div>
-            <span className="text-sm font-medium text-primary">Satisfaction Client Garantie</span>
+            <span className="text-sm font-medium text-primary">Résultats Garantis</span>
           </div>
 
           {/* Titre principal */}

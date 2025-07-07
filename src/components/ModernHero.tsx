@@ -26,13 +26,13 @@ const ModernHero = () => {
           {/* Titre principal avec animation */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 animate-fade-in-up">
             <span className="block text-foreground leading-tight">
-              Nous Ne Vendons Pas
+              Nous Ne Faisons Pas
             </span>
             <span className="block text-primary leading-tight mb-4">
               De L'IA.
             </span>
             <span className="block text-foreground leading-tight">
-              Nous Vendons Des{" "}
+              Nous Livrons Des{" "}
               <span className="text-shimmer">Résultats.</span>
             </span>
           </h1>
@@ -72,7 +72,7 @@ const ModernHero = () => {
                 <Target className="w-6 h-6 text-primary" />
               </div>
               <div className="text-3xl font-bold text-primary mb-2">95%</div>
-              <div className="text-sm text-muted-foreground">Satisfaction Client</div>
+              <div className="text-sm text-muted-foreground">Projets Réussis</div>
             </div>
             
             <div className="text-center p-6 bg-card/30 backdrop-blur-sm rounded-2xl border border-border/50 hover:bg-card/50 transition-all duration-300 group">
