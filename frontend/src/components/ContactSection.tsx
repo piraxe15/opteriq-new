@@ -146,12 +146,12 @@ const ContactSection = () => {
                 <Button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full group text-base md:text-lg py-6 interactive-card glow-hover"
+                  className="w-full group text-base md:text-lg py-6 interactive-card glow-hover transition-all duration-300 hover:scale-105"
                   variant="hero"
                   size="xl"
                 >
                   <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  {isSubmitting ? t.form.submitting : t.form.submit}
+                  <span className="group-hover:text-white transition-colors">{isSubmitting ? t.form.submitting : t.form.submit}</span>
                   {!isSubmitting && <Sparkles className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />}
                 </Button>
               </form>
