@@ -219,11 +219,7 @@ export const translations: Record<Language, Translations> = {
         description: "Nous identifions les opportunités d'automatisation qui auront le plus d'impact dans votre entreprise.",
         features: ["Audit Gratuit", "Plan d'Action", "Accompagnement"]
       },
-      learnMore: "En savoir plus",
-      ctaTitle: "Automatisez Vos Tâches Dès Maintenant",
-      ctaSubtitle: "Découvrez comment l'IA peut simplifier vos processus quotidiens",
-      ctaButton: "Commencer Maintenant Gratuitement",
-      ctaButtonMobile: "Commencer"
+      learnMore: "En savoir plus"
     },
     cta: {
       badge: "03 — Engagement Express",
