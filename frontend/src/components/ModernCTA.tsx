@@ -68,7 +68,7 @@ const ModernCTA = () => {
               <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-primary/20 rounded-full mx-auto mb-3 md:mb-4 glow-pulse">
                 <BarChart3 className="w-6 h-6 md:w-8 md:h-8 text-primary" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2 text-glow">48h</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2 text-glow">72h</div>
               <div className="text-xs md:text-sm text-muted-foreground">{t.stats.prototype}</div>
             </div>
             
