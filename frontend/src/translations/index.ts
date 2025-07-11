@@ -52,10 +52,6 @@ export interface Translations {
       features: string[];
     };
     learnMore: string;
-    ctaTitle: string;
-    ctaSubtitle: string;
-    ctaButton: string;
-    ctaButtonMobile: string;
   };
   // CTA Section
   cta: {
