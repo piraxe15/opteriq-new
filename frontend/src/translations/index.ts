@@ -351,19 +351,6 @@ export const translations: Record<Language, Translations> = {
       },
       learnMore: "Learn more"
     },
-    cta: {
-      badge: "03 — Express Commitment",
-      title: "Functional AI prototype in 72h",
-      subtitle: "We deliver an operational POC in two business days. Not convinced? We reiterate at no cost until validation or you keep the prototype for free.",
-      guarantees: {
-        prototype: "Prototype delivered",
-        guarantee: "Satisfied or free",
-        poc: "Immediate operational"
-      },
-      button: "Challenge accepted - Start now",
-      features: "🚀 Immediate launch • ⚡ Guaranteed results • 🎯 Custom made",
-      disclaimer: "Free prototype if not satisfied • No commitment"
-    },
     footer: {
       description: "Your trusted partner for intelligent automation and custom AI solutions.",
       quickLinks: "Quick Links", 
