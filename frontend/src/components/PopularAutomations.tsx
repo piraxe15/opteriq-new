@@ -218,7 +218,7 @@ const PopularAutomations = () => {
                 </div>
               </div>
               
-              <h3 className="text-lg md:text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+              <h3 className="text-lg md:text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors title-safe">
                 {automation.title}
               </h3>
               
