@@ -390,11 +390,7 @@ export const translations: Record<Language, Translations> = {
         description: "We identify automation opportunities that will have the most impact in your business.",
         features: ["Free Audit", "Action Plan", "Support"]
       },
-      learnMore: "Learn more",
-      ctaTitle: "Automate Your Tasks Now",
-      ctaSubtitle: "Discover how AI can simplify your daily processes",
-      ctaButton: "Start Now For Free",
-      ctaButtonMobile: "Start"
+      learnMore: "Learn more"
     },
     cta: {
       badge: "03 — Express Commitment",
