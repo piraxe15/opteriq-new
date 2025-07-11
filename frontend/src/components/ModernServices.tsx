@@ -92,8 +92,15 @@ const ModernServices = () => {
                     <div className="text-4xl md:text-5xl font-bold text-primary/20">
                       0{index + 1}
                     </div>
-                    <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br ${service.gradient} p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
-                      <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white transition-all duration-300 group-hover:scale-110" />
+                    <div className={`relative w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br ${service.gradient} p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                      {/* Breathing glow background */}
+                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.gradient} opacity-20 animate-pulse blur-sm`} />
+                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.gradient} opacity-10 animate-pulse blur-md`} style={{animationDelay: '1s'}} />
+                      
+                      {/* Breathing icon with smooth scale */}
+                      <service.icon className="relative z-10 w-6 h-6 md:w-8 md:h-8 text-white animate-pulse transition-all duration-500" style={{
+                        animation: 'breathe 3s ease-in-out infinite'
+                      }} />
                     </div>
                   </div>
                 </div>
