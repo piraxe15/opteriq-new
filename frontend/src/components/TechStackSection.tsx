@@ -196,7 +196,7 @@ const TechStackSection = () => {
                     animation: 'breathe 3s ease-in-out infinite'
                   }} />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors title-safe">
                   {tool.name}
                 </h3>
               </div>
