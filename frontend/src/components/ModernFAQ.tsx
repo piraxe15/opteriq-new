@@ -93,42 +93,6 @@ const ModernFAQ = () => {
             </div>
           ))}
         </div>
-
-        {/* Enhanced bottom CTA with dynamic elements */}
-        <div className="text-center">
-          <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-3xl p-6 md:p-8 max-w-4xl mx-auto interactive-card relative overflow-hidden">
-            {/* Background decoration */}
-            <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 opacity-10">
-              <MessageCircle className="w-full h-full text-primary animate-float-slow" />
-            </div>
-            
-            <div className="relative z-10">
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full flex items-center justify-center glow-pulse">
-                  <MessageCircle className="w-6 h-6 md:w-8 md:h-8 text-primary animate-pulse" />
-                </div>
-              </div>
-              
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {t.ctaTitle}
-              </h3>
-              <p className="text-base md:text-lg text-muted-foreground mb-6">
-                {t.ctaSubtitle}
-              </p>
-              
-              <Button 
-                variant="hero" 
-                size="xl" 
-                className="group text-sm md:text-lg px-6 md:px-10 interactive-card glow-hover"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                <MessageCircle className="mr-2 h-4 w-4 md:h-5 md:w-5 animate-pulse" />
-                {t.ctaButton}
-                <Sparkles className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:scale-110 transition-transform" />
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Enhanced decorative elements */}
