@@ -206,8 +206,8 @@ const PopularAutomations = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center space-x-4 mb-4">
-                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br ${automation.color} p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 glow-pulse`}>
-                  <automation.icon className="w-6 h-6 md:w-8 md:h-8 text-white animate-pulse" />
+                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br ${automation.color} p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                  <automation.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
               </div>
               
