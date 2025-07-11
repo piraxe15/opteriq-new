@@ -95,10 +95,10 @@ const ModernHero = () => {
             <Button 
               variant="hero" 
               size="xl" 
-              className="group w-full sm:w-auto text-sm md:text-lg px-6 md:px-10 interactive-card glow-hover" 
+              className="group w-full sm:w-auto text-sm md:text-lg px-6 md:px-10 interactive-card glow-hover transition-all duration-300 hover:scale-105" 
               onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}
             >
-              <Sparkles className="mr-2 h-4 w-4 md:h-5 md:w-5 animate-pulse" />
+              <Sparkles className="mr-2 h-4 w-4 md:h-5 md:w-5 animate-pulse group-hover:scale-110 transition-transform" />
               <span className="hidden sm:inline">{t.cta1}</span>
               <span className="sm:hidden">{t.cta1Mobile}</span>
               <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
@@ -106,11 +106,11 @@ const ModernHero = () => {
             <Button 
               variant="sleek" 
               size="xl" 
-              className="group w-full sm:w-auto text-sm md:text-lg px-6 md:px-10 interactive-card" 
+              className="group w-full sm:w-auto text-sm md:text-lg px-6 md:px-10 interactive-card transition-all duration-300 hover:scale-105 hover:bg-primary/10" 
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <Play className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-              {t.cta2}
+              <Play className="mr-2 h-4 w-4 md:h-5 md:w-5 group-hover:scale-110 transition-transform" />
+              <span className="group-hover:text-primary transition-colors">{t.cta2}</span>
             </Button>
           </div>
 
