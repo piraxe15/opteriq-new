@@ -186,8 +186,15 @@ const TechStackSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center space-x-4 mb-4">
-                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br ${tool.color} p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
-                  <tool.icon className="w-6 h-6 md:w-8 md:h-8 text-white transition-all duration-300 group-hover:scale-110" />
+                <div className={`relative w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br ${tool.color} p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                  {/* Breathing glow background */}
+                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${tool.color} opacity-20 animate-pulse blur-sm`} />
+                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${tool.color} opacity-10 animate-pulse blur-md`} style={{animationDelay: '1s'}} />
+                  
+                  {/* Breathing icon with smooth scale */}
+                  <tool.icon className="relative z-10 w-6 h-6 md:w-8 md:h-8 text-white animate-pulse transition-all duration-500" style={{
+                    animation: 'breathe 3s ease-in-out infinite'
+                  }} />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                   {tool.name}
