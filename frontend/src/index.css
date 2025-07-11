@@ -159,6 +159,26 @@
     animation: morph 8s ease-in-out infinite;
   }
 
+  /* Fix for cut-off letters (g, p, q, etc.) */
+  .text-clip-fix {
+    line-height: 1.3;
+    padding-bottom: 0.1em;
+  }
+
+  /* Apply to all main text elements */
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    line-height: 1.3;
+    overflow: visible;
+  }
+
+  /* Specific fixes for titles that might get cut */
+  .title-safe {
+    line-height: 1.4;
+    padding-top: 0.1em;
+    padding-bottom: 0.2em;
+    overflow: visible;
+  }
+
   /* Section separators */
   .section-separator {
     position: relative;
