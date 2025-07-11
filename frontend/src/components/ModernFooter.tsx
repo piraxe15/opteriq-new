@@ -154,27 +154,17 @@ const ModernFooter = () => {
               </div>
             </div>
             
-            {/* Enhanced social links */}
+            {/* Enhanced social links - LinkedIn only */}
             <div className="space-y-3">
               <h4 className="text-sm font-semibold text-foreground">{t.followUs}</h4>
               <div className="flex space-x-3">
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/company/opteriq" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-all duration-300 group interactive-card"
                 >
                   <Linkedin className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center hover:bg-accent/20 transition-all duration-300 group interactive-card"
-                >
-                  <Twitter className="w-4 h-4 text-accent group-hover:scale-110 transition-transform" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-all duration-300 group interactive-card"
-                >
-                  <Instagram className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
                 </a>
               </div>
             </div>
