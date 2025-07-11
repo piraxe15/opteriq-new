@@ -479,4 +479,16 @@
     0%, 50% { border-color: transparent; }
     51%, 100% { border-color: hsl(var(--primary)); }
   }
+
+  /* Breathing animation for icons */
+  @keyframes breathe {
+    0%, 100% { 
+      transform: scale(1);
+      filter: brightness(1);
+    }
+    50% { 
+      transform: scale(1.1);
+      filter: brightness(1.2);
+    }
+  }
 }
