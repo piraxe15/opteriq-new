@@ -53,11 +53,11 @@ const ModernCTA = () => {
             <Button 
               variant="hero" 
               size="xl" 
-              className="group text-base md:text-lg px-8 md:px-12 py-4 md:py-6 interactive-card glow-strong" 
+              className="group text-base md:text-lg px-8 md:px-12 py-4 md:py-6 interactive-card glow-strong transition-all duration-300 hover:scale-105" 
               onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}
             >
-              <Calendar className="mr-2 h-5 w-5 md:h-6 md:w-6 animate-pulse" />
-              {t.button}
+              <Calendar className="mr-2 h-5 w-5 md:h-6 md:w-6 animate-pulse group-hover:scale-110 transition-transform" />
+              <span className="group-hover:text-white transition-colors">{t.button}</span>
               <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
