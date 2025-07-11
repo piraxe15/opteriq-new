@@ -596,17 +596,62 @@ export const translations: Record<Language, Translations> = {
         {
           category: "Automatización Inteligente",
           question: "¿Cómo puede la automatización IA transformar mi empresa?",
-          answer: "Nuestra automatización inteligente analiza tus procesos existentes y automatiza tus tareas repetitivas. Diseñamos soluciones personalizadas que se integran perfectamente con tus sistemas actuales, funcionan 24/7 y liberan a tus equipos para tareas de alto valor."
+          answer: "Nuestra automatización inteligente analiza tus procesos existentes y automatiza tareas repetitivas. Diseñamos soluciones personalizadas que se integran perfectamente con tus sistemas actuales, funcionan 24/7 y liberan a tus equipos para tareas de alto valor."
         },
         {
-          category: "Soluciones a Medida",
-          question: "¿Cuánto tiempo toma desarrollar una solución?",
-          answer: "Entregamos un prototipo funcional en 72h, luego iteramos según tus comentarios. El desarrollo completo generalmente toma 2-6 semanas dependiendo de la complejidad, con un enfoque ágil y entregas frecuentes."
+          category: "Soluciones Personalizadas",
+          question: "¿Cuánto tiempo lleva desarrollar una solución?",
+          answer: "Entregamos un prototipo funcional en 72 horas para validación. El desarrollo completo toma generalmente 2-4 semanas según la complejidad. Nuestro enfoque ágil permite ajustes rápidos según tus comentarios."
         },
         {
-          category: "Consultoría Estratégica", 
+          category: "Consultoría Estratégica",
           question: "¿Cómo identifican las mejores oportunidades de automatización?",
-          answer: "Comenzamos con una auditoría gratuita de tus procesos, analizamos tus puntos de fricción, calculamos el ROI potencial de cada oportunidad, y creamos un plan de acción priorizado. Nuestro acompañamiento te guía en cada paso de la transformación."
+          answer: "Realizamos una auditoría completa gratuita de tus procesos. Nuestro equipo de expertos analiza tu flujo de trabajo actual, identifica cuellos de botella y prioriza automatizaciones según su impacto potencial en productividad y ROI."
+        },
+        {
+          category: "Automatización e IA",
+          question: "¿Qué tareas pueden automatizarse en mi empresa?",
+          answer: "Emails automáticos, facturación, soporte al cliente, gestión de inventario, calificación de leads, reportes, entrada de datos, planificación y mucho más. Prácticamente cualquier tarea repetitiva puede optimizarse con IA."
+        },
+        {
+          category: "Automatización e IA",
+          question: "¿Puede la IA reemplazar a mis empleados?",
+          answer: "No, la IA libera a tus equipos de tareas repetitivas para que se concentren en estrategia, creatividad y relaciones con clientes. Es una herramienta de aumento, no de reemplazo."
+        },
+        {
+          category: "Costos y ROI",
+          question: "¿Cuánto cuesta la automatización IA?",
+          answer: "Desde €2000 según la complejidad del proyecto. El ROI se recupera típicamente en 3-6 meses a través de ganancias en productividad y reducción de errores."
+        },
+        {
+          category: "Implementación",
+          question: "¿Cuánto tiempo para ver los primeros resultados?",
+          answer: "Prototipo funcional en 72h, primeros resultados medibles en 1-2 semanas, implementación completa en 2-4 semanas. Priorizamos victorias rápidas."
+        },
+        {
+          category: "Implementación",
+          question: "¿Están seguros mis datos?",
+          answer: "Absolutamente. Cifrado de extremo a extremo, cumplimiento estricto de GDPR, almacenamiento seguro, acceso controlado. Tus datos permanecen confidenciales y protegidos."
+        },
+        {
+          category: "Técnico",
+          question: "¿Son compatibles mis herramientas actuales?",
+          answer: "90% del software profesional es integrable (CRM, ERP, herramientas de marketing, etc.). Nuestra auditoría gratuita incluye análisis de compatibilidad de tu stack tecnológico."
+        },
+        {
+          category: "Técnico",
+          question: "¿Qué pasa si no funciona?",
+          answer: "Garantía de satisfacción total. Si el prototipo no te convence, lo mantienes gratis sin compromiso. Iteramos hasta validación completa."
+        },
+        {
+          category: "Resultados",
+          question: "¿Qué ganancias puedo esperar?",
+          answer: "60-80% de tiempo ahorrado en tareas automatizadas, 95% menos errores, equipos más productivos y comprometidos, ROI promedio de 300% en el primer año."
+        },
+        {
+          category: "Resultados",
+          question: "¿La automatización evoluciona con mi empresa?",
+          answer: "Sí, nuestras soluciones son escalables. Ajustes y optimizaciones incluidos el primer año. La IA se adapta al crecimiento de tu negocio."
         }
       ],
       ctaTitle: "¿Una Pregunta Específica?",
