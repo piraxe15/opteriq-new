@@ -61,14 +61,14 @@ const ModernHero = () => {
           </div>
 
           {/* Main title with enhanced animations */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 md:mb-8 animate-fade-in-up">
-            <span className="block text-foreground leading-tight mb-2">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 md:mb-8 animate-fade-in-up title-safe">
+            <span className="block text-foreground leading-tight mb-2 title-safe">
               {t.title1}
             </span>
-            <span className="block text-primary leading-tight mb-2 md:mb-4 text-glow">
+            <span className="block text-primary leading-tight mb-2 md:mb-4 text-glow title-safe">
               {t.title2}
             </span>
-            <span className="block text-foreground leading-tight">
+            <span className="block text-foreground leading-tight title-safe">
               <span className="text-shimmer">{t.title3}</span>
             </span>
           </h1>
