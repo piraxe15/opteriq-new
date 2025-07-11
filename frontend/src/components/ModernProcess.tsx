@@ -61,7 +61,7 @@ const ModernProcess = () => {
           <div className="inline-block bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2 mb-6 glow-pulse">
             <span className="text-sm font-medium text-primary">{t.badge}</span>
           </div>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-shimmer">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-shimmer title-safe">
             {t.title}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
