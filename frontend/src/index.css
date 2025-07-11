@@ -159,24 +159,36 @@
     animation: morph 8s ease-in-out infinite;
   }
 
-  /* Fix for cut-off letters (g, p, q, etc.) */
-  .text-clip-fix {
-    line-height: 1.3;
-    padding-bottom: 0.1em;
+  /* AGGRESSIVE FIX for cut-off letters (g, p, q, etc.) */
+  * {
+    overflow: visible !important;
   }
 
-  /* Apply to all main text elements */
-  h1, h2, h3, h4, h5, h6, p, span, div {
-    line-height: 1.3;
-    overflow: visible;
+  h1, h2, h3, h4, h5, h6, p, span, div, button {
+    line-height: 1.4 !important;
+    padding-bottom: 0.2em !important;
+    overflow: visible !important;
   }
 
-  /* Specific fixes for titles that might get cut */
+  /* Specific fixes for titles and text elements */
   .title-safe {
-    line-height: 1.4;
-    padding-top: 0.1em;
-    padding-bottom: 0.2em;
-    overflow: visible;
+    line-height: 1.5 !important;
+    padding-top: 0.2em !important;
+    padding-bottom: 0.3em !important;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  /* Fix for all containers */
+  .container, .max-w-*, .w-*, [class*="max-w"], [class*="h-"] {
+    overflow: visible !important;
+  }
+
+  /* Fix for cards and sections */
+  .bg-card, .rounded-*, .border, [class*="rounded"], [class*="bg-"] {
+    overflow: visible !important;
+    padding-bottom: 0.2em !important;
   }
 
   /* Section separators */
