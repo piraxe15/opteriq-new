@@ -242,11 +242,11 @@ const PopularAutomations = () => {
           <Button 
             variant="hero" 
             size="xl" 
-            className="group text-base md:text-lg px-8 md:px-12 interactive-card glow-hover"
+            className="group text-base md:text-lg px-8 md:px-12 interactive-card glow-hover transition-all duration-300 hover:scale-105"
             onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}
           >
-            <Sparkles className="mr-2 h-5 w-5 animate-pulse" />
-            {t.cta}
+            <Sparkles className="mr-2 h-5 w-5 animate-pulse group-hover:scale-110 transition-transform" />
+            <span className="group-hover:text-white transition-colors">{t.cta}</span>
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
