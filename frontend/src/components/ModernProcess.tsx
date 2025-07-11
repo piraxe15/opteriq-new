@@ -91,8 +91,15 @@ const ModernProcess = () => {
                     <div className="text-5xl md:text-6xl font-bold text-primary/20 leading-none">
                       0{index + 1}
                     </div>
-                    <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${step.color} p-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
-                      <step.icon className="w-6 h-6 md:w-8 md:h-8 text-white transition-all duration-300 group-hover:scale-110" />
+                    <div className={`relative w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${step.color} p-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                      {/* Breathing glow background */}
+                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${step.color} opacity-20 animate-pulse blur-sm`} />
+                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${step.color} opacity-10 animate-pulse blur-md`} style={{animationDelay: '1s'}} />
+                      
+                      {/* Breathing icon with smooth scale */}
+                      <step.icon className="relative z-10 w-6 h-6 md:w-8 md:h-8 text-white animate-pulse transition-all duration-500" style={{
+                        animation: 'breathe 3s ease-in-out infinite'
+                      }} />
                     </div>
                   </div>
                 </div>
