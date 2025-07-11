@@ -39,7 +39,7 @@ const ModernCTA = () => {
           </div>
 
           {/* Enhanced main title */}
-          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 md:mb-8 leading-tight text-shimmer">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 md:mb-8 leading-tight text-shimmer title-safe">
             {t.title}
           </h2>
 
