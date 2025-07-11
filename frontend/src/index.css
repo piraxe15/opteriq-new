@@ -109,10 +109,11 @@
 }
 
 @layer components {
-  /* Animated background patterns */
+  /* Enhanced animated background patterns */
   .bg-dots {
     background-image: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.1) 1px, transparent 0);
     background-size: 20px 20px;
+    animation: dots-move 20s linear infinite;
   }
   
   .bg-grid {
@@ -120,9 +121,10 @@
       linear-gradient(hsl(var(--border) / 0.1) 1px, transparent 1px),
       linear-gradient(90deg, hsl(var(--border) / 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
+    animation: grid-shift 15s linear infinite;
   }
 
-  /* Floating animation for background elements */
+  /* Advanced floating animations */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -131,7 +133,63 @@
     animation: float 6s ease-in-out infinite 2s;
   }
 
-  /* Glow effects */
+  .animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+  }
+
+  .animate-float-fast {
+    animation: float-fast 4s ease-in-out infinite;
+  }
+
+  .animate-orbit {
+    animation: orbit 12s linear infinite;
+  }
+
+  .animate-orbit-reverse {
+    animation: orbit-reverse 15s linear infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+
+  .animate-drift {
+    animation: drift 10s ease-in-out infinite;
+  }
+
+  .animate-morph {
+    animation: morph 8s ease-in-out infinite;
+  }
+
+  /* Particle system */
+  .particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: hsl(var(--primary) / 0.6);
+    border-radius: 50%;
+    animation: particle-float 6s ease-in-out infinite;
+  }
+
+  .particle:nth-child(odd) {
+    animation-delay: -2s;
+    animation-duration: 8s;
+  }
+
+  .particle:nth-child(even) {
+    animation-delay: -4s;
+    animation-duration: 7s;
+  }
+
+  /* Advanced glow effects */
   .glow {
     box-shadow: var(--shadow-glow);
   }
@@ -140,7 +198,18 @@
     box-shadow: var(--shadow-glow);
   }
 
-  /* Text animations */
+  .glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  .glow-strong {
+    box-shadow: 
+      0 0 20px hsl(var(--primary) / 0.3),
+      0 0 40px hsl(var(--primary) / 0.2),
+      0 0 60px hsl(var(--primary) / 0.1);
+  }
+
+  /* Enhanced text animations */
   .text-shimmer {
     background: linear-gradient(
       90deg,
@@ -153,6 +222,63 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shimmer 3s linear infinite;
+  }
+
+  .text-wave {
+    animation: wave 2s ease-in-out infinite;
+  }
+
+  .text-glow {
+    text-shadow: 
+      0 0 10px hsl(var(--primary) / 0.5),
+      0 0 20px hsl(var(--primary) / 0.3),
+      0 0 30px hsl(var(--primary) / 0.2);
+  }
+
+  /* Interactive elements */
+  .interactive-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .interactive-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 20px 40px hsl(var(--primary) / 0.1),
+      0 0 0 1px hsl(var(--primary) / 0.2);
+  }
+
+  /* Morphing background elements */
+  .morph-bg {
+    background: linear-gradient(
+      45deg,
+      hsl(var(--primary) / 0.1),
+      hsl(var(--accent) / 0.1),
+      hsl(var(--primary) / 0.1)
+    );
+    background-size: 400% 400%;
+    animation: morph-bg 8s ease-in-out infinite;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .animate-float, .animate-float-delayed, .animate-float-slow, .animate-float-fast {
+      animation-duration: 4s;
+    }
+    
+    .animate-orbit, .animate-orbit-reverse {
+      animation-duration: 8s;
+    }
+    
+    .particle {
+      width: 1px;
+      height: 1px;
+    }
+    
+    .glow-strong {
+      box-shadow: 
+        0 0 10px hsl(var(--primary) / 0.2),
+        0 0 20px hsl(var(--primary) / 0.1);
+    }
   }
 }
 
