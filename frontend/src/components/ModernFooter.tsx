@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Sparkles, Zap, Heart, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Sparkles, Zap, Heart, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { getTranslation } from "@/translations";
 
