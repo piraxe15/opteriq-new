@@ -8,11 +8,11 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { getTranslation } from "@/translations";
 
 const ContactSection = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
   const { language } = useLanguage();
   const t = getTranslation(language).contact;
-  const toastT = getTranslation(language).toast;
+  const toastTranslation = getTranslation(language).toast;
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
