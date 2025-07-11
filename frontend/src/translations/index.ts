@@ -561,11 +561,7 @@ export const translations: Record<Language, Translations> = {
         description: "Identificamos las oportunidades de automatización que tendrán más impacto en tu empresa.",
         features: ["Auditoría Gratuita", "Plan de Acción", "Acompañamiento"]
       },
-      learnMore: "Saber más",
-      ctaTitle: "Automatiza Tus Tareas Ahora",
-      ctaSubtitle: "Descubre cómo la IA puede simplificar tus procesos diarios",
-      ctaButton: "Empezar Ahora Gratis",
-      ctaButtonMobile: "Empezar"
+      learnMore: "Saber más"
     },
     cta: {
       badge: "03 — Compromiso Express",
