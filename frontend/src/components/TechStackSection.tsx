@@ -187,7 +187,7 @@ const TechStackSection = () => {
             >
               <div className="flex items-center space-x-4 mb-4">
                 <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br ${tool.color} p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 glow-pulse`}>
-                  <tool.icon className="w-6 h-6 md:w-8 md:h-8 text-white animate-soft-pulse" />
+                  <tool.icon className="w-6 h-6 md:w-8 md:h-8 text-white animate-pulse" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                   {tool.name}
