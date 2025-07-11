@@ -120,7 +120,7 @@ const ModernHero = () => {
               <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-primary/20 rounded-full mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform glow-pulse">
                 <Target className="w-5 h-5 md:w-6 md:h-6 text-primary" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2 text-glow">95%</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2 text-glow">∞</div>
               <div className="text-xs md:text-sm text-muted-foreground">{t.stats.projects}</div>
             </div>
             
