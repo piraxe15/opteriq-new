@@ -1,34 +1,220 @@
-import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Twitter, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Sparkles, Zap, Heart, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { getTranslation } from "@/translations";
 
 const ModernFooter = () => {
   const { language } = useLanguage();
   const t = getTranslation(language).footer;
-  return <footer id="contact" className="bg-background border-t border-border/20 py-12">
-      <div className="container mx-auto px-6">
-        {/* Logo et description centrés */}
-        <div className="text-center max-w-2xl mx-auto mb-8">
-          <div className="flex items-center justify-center mb-4">
-            <img src="/lovable-uploads/0ce809f9-8c53-4667-9b80-674c29b95707.png" alt="Opteriq Logo" className="h-6 w-auto" />
-          </div>
-          <p className="text-muted-foreground leading-relaxed">
-            {t.description}
-          </p>
-        </div>
+  const headerT = getTranslation(language).header;
 
-        {/* Contact simple */}
-        <div className="text-center mb-8">
-          <p className="text-muted-foreground mb-2">{t.contact} ?</p>
-          <a href="mailto:contact@opteriq.com" className="text-primary hover:text-primary/80 transition-colors font-medium">
-            contact@opteriq.com
-          </a>
-        </div>
+  const currentYear = new Date().getFullYear();
 
-        {/* Copyright simple */}
-        <div className="text-center text-sm text-muted-foreground">© 2025 Opteriq. {t.rights}</div>
+  return (
+    <footer className="relative bg-gradient-to-br from-background via-secondary/10 to-background border-t border-border/50 overflow-hidden">
+      {/* Enhanced dynamic background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-10 left-10 md:left-20 w-[100px] h-[100px] md:w-[150px] md:h-[150px] rounded-full border border-primary/5 animate-orbit" style={{animationDelay: '0.5s'}} />
+        <div className="absolute bottom-10 right-10 md:right-20 w-[80px] h-[80px] md:w-[120px] md:h-[120px] rounded-full border border-accent/8 animate-orbit-reverse" />
+        
+        {/* Floating tech elements */}
+        <div className="absolute top-1/3 right-1/4 w-6 h-6 md:w-8 md:h-8 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 flex items-center justify-center animate-float">
+          <Zap className="w-3 h-3 md:w-4 md:h-4 text-primary" />
+        </div>
+        <div className="absolute bottom-1/3 left-1/4 w-5 h-5 md:w-7 md:h-7 bg-accent/10 backdrop-blur-sm rounded-full border border-accent/20 flex items-center justify-center animate-float-delayed">
+          <Sparkles className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-accent" />
+        </div>
+        
+        {/* Particle effects */}
+        <div className="absolute top-1/4 left-1/3 w-2 h-2 md:w-3 md:h-3 bg-primary/30 rounded-full animate-morph" />
+        <div className="absolute bottom-1/4 right-1/3 w-2 h-2 md:w-3 md:h-3 bg-accent/30 rounded-full animate-drift" />
+        
+        {/* Moving gradient overlay */}
+        <div className="absolute inset-0 morph-bg opacity-5" />
       </div>
-    </footer>;
+      
+      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16 relative z-10">
+        <div className="grid lg:grid-cols-4 gap-8 md:gap-12">
+          {/* Enhanced company info */}
+          <div className="lg:col-span-2 space-y-6">
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/0ce809f9-8c53-4667-9b80-674c29b95707.png" 
+                alt="Opteriq Logo" 
+                className="h-8 md:h-10 w-auto"
+              />
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-primary/10 rounded-full flex items-center justify-center glow-pulse">
+                <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary animate-pulse" />
+              </div>
+            </div>
+            
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-md">
+              {t.description}
+            </p>
+            
+            <div className="flex items-center space-x-4">
+              <div className="text-sm text-muted-foreground">Spécialistes en:</div>
+              <div className="flex flex-wrap gap-2">
+                {headerT.keywords.map((keyword, index) => (
+                  <span 
+                    key={index}
+                    className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full border border-primary/20 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced quick links */}
+          <div className="space-y-6">
+            <h3 className="text-lg md:text-xl font-bold text-foreground flex items-center">
+              <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mr-2">
+                <ExternalLink className="w-3 h-3 text-primary" />
+              </div>
+              {t.quickLinks}
+            </h3>
+            
+            <div className="space-y-3">
+              <a 
+                href="#accueil" 
+                className="block text-sm md:text-base text-muted-foreground hover:text-primary transition-colors duration-300 group"
+              >
+                <span className="flex items-center">
+                  {headerT.navigation.home}
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </span>
+              </a>
+              <a 
+                href="#services" 
+                className="block text-sm md:text-base text-muted-foreground hover:text-primary transition-colors duration-300 group"
+              >
+                <span className="flex items-center">
+                  {headerT.navigation.services}
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </span>
+              </a>
+              <a 
+                href="#process" 
+                className="block text-sm md:text-base text-muted-foreground hover:text-primary transition-colors duration-300 group"
+              >
+                <span className="flex items-center">
+                  {headerT.navigation.process}
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </span>
+              </a>
+              <a 
+                href="#contact" 
+                className="block text-sm md:text-base text-muted-foreground hover:text-primary transition-colors duration-300 group"
+              >
+                <span className="flex items-center">
+                  {headerT.navigation.contact}
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </span>
+              </a>
+            </div>
+          </div>
+
+          {/* Enhanced contact info */}
+          <div className="space-y-6">
+            <h3 className="text-lg md:text-xl font-bold text-foreground flex items-center">
+              <div className="w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center mr-2">
+                <Mail className="w-3 h-3 text-accent" />
+              </div>
+              {t.contact}
+            </h3>
+            
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 group">
+                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Mail className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm md:text-base text-muted-foreground group-hover:text-foreground transition-colors">
+                  contact@opteriq.com
+                </span>
+              </div>
+              
+              <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
+                <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                  <Phone className="w-4 h-4 text-accent" />
+                </div>
+                <span className="text-sm md:text-base text-muted-foreground group-hover:text-foreground transition-colors">
+                  Réserver un appel
+                </span>
+              </div>
+              
+              <div className="flex items-center space-x-3 group">
+                <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <MapPin className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm md:text-base text-muted-foreground group-hover:text-foreground transition-colors">
+                  Canada Québec & International
+                </span>
+              </div>
+            </div>
+            
+            {/* Enhanced social links */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-semibold text-foreground">{t.followUs}</h4>
+              <div className="flex space-x-3">
+                <a 
+                  href="#" 
+                  className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-all duration-300 group interactive-card"
+                >
+                  <Linkedin className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center hover:bg-accent/20 transition-all duration-300 group interactive-card"
+                >
+                  <Twitter className="w-4 h-4 text-accent group-hover:scale-110 transition-transform" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-all duration-300 group interactive-card"
+                >
+                  <Instagram className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Enhanced bottom section */}
+        <div className="border-t border-border/50 pt-8 mt-12">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              <span>© {currentYear} Opteriq.</span>
+              <span>{t.rights}</span>
+              <div className="flex items-center ml-2">
+                <span>Créé avec</span>
+                <Heart className="w-3 h-3 mx-1 text-red-500 animate-pulse" />
+                <span>au Canada</span>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2 text-xs text-muted-foreground">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span>Services disponibles 24/7</span>
+              </div>
+              
+              <div className="flex items-center space-x-1 text-xs text-muted-foreground">
+                <Zap className="w-3 h-3 text-primary" />
+                <span>Powered by AI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Enhanced decorative elements */}
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+      <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-primary/5 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-0 left-0 w-20 h-20 md:w-28 md:h-28 bg-accent/5 rounded-full blur-3xl animate-float-delayed"></div>
+    </footer>
+  );
 };
+
 export default ModernFooter;
