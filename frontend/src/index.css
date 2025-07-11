@@ -109,19 +109,17 @@
 }
 
 @layer components {
-  /* Enhanced animated background patterns */
-  .bg-dots {
-    background-image: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.1) 1px, transparent 0);
-    background-size: 20px 20px;
-    animation: dots-move 20s linear infinite;
+  /* Soft blinking animations for service and process icons */
+  .animate-soft-blink {
+    animation: soft-blink 2s ease-in-out infinite;
   }
-  
-  .bg-grid {
-    background-image: 
-      linear-gradient(hsl(var(--border) / 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--border) / 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: grid-shift 15s linear infinite;
+
+  .animate-soft-pulse {
+    animation: soft-pulse 3s ease-in-out infinite;
+  }
+
+  .animate-gentle-glow {
+    animation: gentle-glow 2.5s ease-in-out infinite;
   }
 
   /* Advanced floating animations */
@@ -161,6 +159,63 @@
     animation: morph 8s ease-in-out infinite;
   }
 
+  /* Section separators */
+  .section-separator {
+    position: relative;
+  }
+
+  .section-separator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)), transparent);
+    border-radius: 2px;
+  }
+
+  .section-dots {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .section-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid hsl(var(--primary) / 0.3);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .section-dot.active {
+    background: hsl(var(--primary));
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+  }
+
+  .section-dot:hover {
+    border-color: hsl(var(--primary) / 0.6);
+    transform: scale(1.2);
+  }
+
+  /* Tech background icons */
+  .tech-bg-icon {
+    position: absolute;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 1;
+  }
+
   /* Particle system */
   .particles {
     position: absolute;
@@ -189,7 +244,7 @@
     animation-duration: 7s;
   }
 
-  /* Advanced glow effects */
+  /* Enhanced glow effects */
   .glow {
     box-shadow: var(--shadow-glow);
   }
@@ -278,6 +333,10 @@
       box-shadow: 
         0 0 10px hsl(var(--primary) / 0.2),
         0 0 20px hsl(var(--primary) / 0.1);
+    }
+
+    .section-dots {
+      display: none;
     }
   }
 }
