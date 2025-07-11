@@ -509,19 +509,6 @@ export const translations: Record<Language, Translations> = {
       },
       learnMore: "Saber más"
     },
-    cta: {
-      badge: "03 — Compromiso Express",
-      title: "Prototipo IA funcional en 72h",
-      subtitle: "Entregamos un POC operacional en dos días hábiles. ¿No convencido? Reiteramos sin costo hasta la validación o te quedas con el prototipo gratis.",
-      guarantees: {
-        prototype: "Prototipo entregado",
-        guarantee: "Satisfecho o gratis",
-        poc: "Operacional inmediato"
-      },
-      button: "Desafío aceptado - Empezar ahora",
-      features: "🚀 Lanzamiento inmediato • ⚡ Resultados garantizados • 🎯 A medida",
-      disclaimer: "Prototipo gratis si no estás satisfecho • Sin compromiso"
-    },
     footer: {
       description: "Tu socio de confianza para automatización inteligente y soluciones IA personalizadas.",
       quickLinks: "Enlaces Rápidos",
