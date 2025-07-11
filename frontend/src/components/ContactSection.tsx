@@ -59,7 +59,7 @@ const ContactSection = () => {
             <span className="text-sm font-medium text-primary">{t.badge}</span>
           </div>
           
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-shimmer">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-shimmer title-safe">
             {t.title}
           </h2>
           
