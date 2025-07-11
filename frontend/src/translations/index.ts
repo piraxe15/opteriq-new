@@ -325,7 +325,7 @@ export const translations: Record<Language, Translations> = {
       cta1Mobile: "Get Started",
       cta2: "See Our Approach",
       stats: {
-        projects: "Successful Projects",
+        projects: "Infinite Possibilities",
         prototype: "Prototype Delivered",
         support: "Dedicated Support"
       }
