@@ -14,7 +14,7 @@ const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -22,10 +22,10 @@ const ContactSection = () => {
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
-        title: toastT.success,
-        description: toastT.description,
+        title: toastTranslation.success,
+        description: toastTranslation.description,
       });
-    }, 1000);
+    }, 2000);
   };
 
   return (
