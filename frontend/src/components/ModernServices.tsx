@@ -121,11 +121,11 @@ const ModernServices = () => {
                   {/* Enhanced CTA Button */}
                   <Button 
                     variant="ghost" 
-                    className="w-full group/btn mt-6 hover:bg-primary/5 border border-transparent hover:border-primary/20"
+                    className="w-full group/btn mt-6 hover:bg-primary/5 border border-transparent hover:border-primary/20 transition-all duration-300 hover:scale-105"
                     onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
                   >
-                    <span className="text-sm md:text-base">{t.learnMore}</span>
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    <span className="text-sm md:text-base group-hover/btn:text-primary transition-colors">{t.learnMore}</span>
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:text-primary transition-all duration-300" />
                   </Button>
                 </div>
 
