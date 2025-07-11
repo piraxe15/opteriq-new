@@ -6,6 +6,8 @@ const SectionNavigation = () => {
   const sections = [
     { id: 'accueil', label: 'Accueil' },
     { id: 'services', label: 'Services' },
+    { id: 'stack', label: 'Stack' },
+    { id: 'automations', label: 'Automatisations' },
     { id: 'process', label: 'Processus' },
     { id: 'faq', label: 'FAQ' },
     { id: 'contact', label: 'Contact' }
