@@ -53,19 +53,82 @@ export interface Translations {
     };
     learnMore: string;
   };
-  // Modern CTA
-  modernCta: {
+  // Footer
+  footer: {
+    description: string;
+    quickLinks: string;
+    contact: string;
+    followUs: string;
+    rights: string;
+  };
+  // Process Section
+  process: {
     badge: string;
     title: string;
     subtitle: string;
-    button: string;
-    stats: {
-      prototype: string;
-      roi: string;
-      support: string;
+    steps: {
+      identify: {
+        title: string;
+        subtitle: string;
+        description: string;
+      };
+      educate: {
+        title: string;
+        subtitle: string;
+        description: string;
+      };
+      develop: {
+        title: string;
+        subtitle: string;
+        description: string;
+      };
     };
-    quote: string;
-    signature: string;
+    conclusion: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+  };
+  // FAQ Section
+  faq: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    items: {
+      category: string;
+      question: string;
+      answer: string;
+    }[];
+    ctaTitle: string;
+    ctaSubtitle: string;
+    ctaButton: string;
+  };
+  // Contact Section
+  contact: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    form: {
+      title: string;
+      firstName: string;
+      lastName: string;
+      email: string;
+      company: string;
+      message: string;
+      messagePlaceholder: string;
+      submitting: string;
+      submit: string;
+    };
+    info: {
+      title: string;
+      email: string;
+      phone: string;
+      phoneAction: string;
+      location: string;
+      locationValue: string;
+      guaranteeTitle: string;
+      guaranteeText: string;
+    };
   };
   // Toast messages
   toast: {
