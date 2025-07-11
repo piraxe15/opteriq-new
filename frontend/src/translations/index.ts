@@ -193,19 +193,6 @@ export const translations: Record<Language, Translations> = {
       },
       learnMore: "En savoir plus"
     },
-    cta: {
-      badge: "03 — Engagement Express",
-      title: "Prototype IA fonctionnel en 72h",
-      subtitle: "Nous livrons un POC opérationnel en deux jours ouvrés. Pas convaincu ? Nous réitérons sans frais jusqu'à validation ou vous gardez le prototype gratuitement.",
-      guarantees: {
-        prototype: "Prototype livré",
-        guarantee: "Satisfait ou gratuit",
-        poc: "Opérationnel immédiat"
-      },
-      button: "Défi accepté - Commencer maintenant",
-      features: "🚀 Lancement immédiat • ⚡ Résultats garantis • 🎯 Sur mesure",
-      disclaimer: "Prototype gratuit si non satisfait • Sans engagement"
-    },
     footer: {
       description: "Votre partenaire de confiance pour l'automatisation intelligente et les solutions IA sur-mesure.",
       quickLinks: "Liens Rapides",
