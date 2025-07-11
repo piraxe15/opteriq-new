@@ -601,8 +601,8 @@ export const translations: Record<Language, Translations> = {
     modernCta: {
       badge: "Resultados Garantizados",
       title: "¿Listo para Transformar Tu Empresa?",
-      subtitle: "Comienza tu transformación IA hoy",
-      button: "Empezar Ahora",
+      subtitle: "Comienza tu transformación IA hoy con nuestra garantía de satisfacción total",
+      button: "Iniciar Mi Transformación IA",
       stats: {
         prototype: "Prototipo Entregado",
         roi: "Garantía de Resultados",
