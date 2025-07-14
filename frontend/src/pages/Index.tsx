@@ -8,14 +8,12 @@ import ModernFAQ from "@/components/ModernFAQ";
 import ContactSection from "@/components/ContactSection";
 import ModernCTA from "@/components/ModernCTA";
 import ModernFooter from "@/components/ModernFooter";
-import SectionNavigation from "@/components/SectionNavigation";
 import TechBackground from "@/components/TechBackground";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <TechBackground />
-      <SectionNavigation />
       <Header />
       <main>
         <ModernHero />
