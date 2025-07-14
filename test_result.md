@@ -101,3 +101,88 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "L'utilisateur signale des problèmes d'affichage et de scroll : une section qui s'affiche sur le côté droit, des dimensions qui changent et buggent en bas de page, un scroll qui force à remonter, et souhaite un défilement automatique entre sections au lieu de cliquer sur des boutons."
+
+backend:
+  - task: "Backend API functionality"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "low"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Backend is functional, focus on frontend scroll issues"
+
+frontend:
+  - task: "Fix mobile responsive overflow and scroll issues"
+    implemented: true
+    working: false
+    file: "/app/frontend/src/index.css"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: false
+        agent: "main"
+        comment: "User reports section appearing on right side, dimension changes, and scroll bugs. Added overflow fixes and safe positioning."
+        
+  - task: "Remove problematic section navigation dots"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Index.tsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Removed SectionNavigation component that was causing right-side display issues. Also removed all CSS styles for section dots."
+        
+  - task: "Implement smooth scroll between sections"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/index.css"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Added scroll-behavior: smooth, scroll-snap-type, and scroll-snap-align to sections for automatic smooth scrolling."
+        
+  - task: "Fix floating elements positioning to prevent overflow"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/FloatingElements.tsx, /app/frontend/src/components/TechBackground.tsx, /app/frontend/src/components/ModernHero.tsx"
+    stuck_count: 0
+    priority: "high" 
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Updated all floating elements to use percentage-based positioning (15%, 20%, etc.) instead of fixed positions that could cause overflow. Reduced orbit radius and particle count for better mobile performance."
+
+metadata:
+  created_by: "main_agent"
+  version: "1.1"
+  test_sequence: 1
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "Fix mobile responsive overflow and scroll issues"
+    - "Remove problematic section navigation dots"
+    - "Implement smooth scroll between sections"
+    - "Fix floating elements positioning to prevent overflow"
+  stuck_tasks:
+    - "Fix mobile responsive overflow and scroll issues"
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+  - agent: "main"
+    message: "Fixed major scroll and overflow issues: 1) Removed navigation dots from right side, 2) Added smooth scroll behavior between sections, 3) Fixed all floating elements to use safe percentage positioning instead of fixed positions that could overflow, 4) Reduced animation radius and particle count for better mobile performance. Ready for testing."
