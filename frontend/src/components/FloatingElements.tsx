@@ -4,17 +4,17 @@ const FloatingElements = () => {
   const [particles, setParticles] = useState([]);
 
   useEffect(() => {
-    // Generate random particles for dynamic background
+    // Generate random particles for dynamic background - MOBILE SAFE
     const generateParticles = () => {
       const newParticles = [];
-      for (let i = 0; i < 15; i++) {
+      for (let i = 0; i < 8; i++) { // Reduced count for better performance
         newParticles.push({
           id: i,
-          x: Math.random() * 100,
-          y: Math.random() * 100,
+          x: 20 + Math.random() * 60, // Keep particles in center 60% of screen
+          y: 20 + Math.random() * 60, // Keep particles in center 60% of screen
           delay: Math.random() * 6,
           duration: 6 + Math.random() * 4,
-          size: 1 + Math.random() * 3,
+          size: 1 + Math.random() * 2, // Smaller particles
         });
       }
       setParticles(newParticles);
@@ -24,27 +24,23 @@ const FloatingElements = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Enhanced floating circles with various animations */}
-      <div className="absolute top-20 -left-20 w-40 h-40 bg-primary/5 rounded-full animate-float-slow blur-xl" />
-      <div className="absolute top-1/3 -right-16 w-32 h-32 bg-accent/10 rounded-full animate-float-delayed blur-xl" />
-      <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-primary/8 rounded-full animate-float blur-lg" />
+    <div className="absolute inset-0 overflow-hidden pointer-events-none max-w-full">
+      {/* Enhanced floating circles with SAFE positioning */}
+      <div className="absolute top-20 left-[10%] w-32 h-32 md:w-40 md:h-40 bg-primary/5 rounded-full animate-float-slow blur-xl" />
+      <div className="absolute top-1/3 right-[15%] w-24 h-24 md:w-32 md:h-32 bg-accent/10 rounded-full animate-float-delayed blur-xl" />
+      <div className="absolute bottom-1/4 left-[20%] w-20 h-20 md:w-24 md:h-24 bg-primary/8 rounded-full animate-float blur-lg" />
       
-      {/* Morphing geometric shapes */}
-      <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-primary/3 animate-morph animate-drift blur-lg" />
-      <div className="absolute bottom-1/3 right-20 w-20 h-20 bg-accent/5 rounded-full animate-float-fast blur-xl" />
+      {/* Morphing geometric shapes - CONTAINED */}
+      <div className="absolute top-1/2 right-[25%] w-12 h-12 md:w-16 md:h-16 bg-primary/3 animate-morph animate-drift blur-lg" />
+      <div className="absolute bottom-1/3 right-[30%] w-16 h-16 md:w-20 md:h-20 bg-accent/5 rounded-full animate-float-fast blur-xl" />
       
-      {/* Orbiting elements */}
-      <div className="absolute top-1/4 left-1/3 w-6 h-6 bg-primary/20 rounded-full animate-orbit" />
-      <div className="absolute bottom-1/4 right-1/3 w-8 h-8 bg-accent/15 rounded-full animate-orbit-reverse" />
-      
-      {/* Pulsing glow elements */}
-      <div className="absolute top-3/4 left-1/5 w-12 h-12 bg-primary/10 rounded-full animate-pulse-glow blur-md" />
-      <div className="absolute top-1/5 right-1/5 w-10 h-10 bg-accent/10 rounded-full animate-pulse-glow blur-md" 
+      {/* Pulsing glow elements - SAFE POSITIONING */}
+      <div className="absolute top-3/4 left-[25%] w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full animate-pulse-glow blur-md" />
+      <div className="absolute top-1/5 right-[25%] w-8 h-8 md:w-10 md:h-10 bg-accent/10 rounded-full animate-pulse-glow blur-md" 
            style={{ animationDelay: '2s' }} />
       
-      {/* Dynamic particle system */}
-      <div className="particles">
+      {/* Dynamic particle system - CONTAINED */}
+      <div className="particles max-w-full overflow-hidden">
         {particles.map((particle) => (
           <div
             key={particle.id}
@@ -61,66 +57,42 @@ const FloatingElements = () => {
         ))}
       </div>
       
-      {/* Enhanced connecting lines with multiple paths */}
-      <svg className="absolute inset-0 w-full h-full opacity-30">
+      {/* Enhanced connecting lines - RESPONSIVE */}
+      <svg className="absolute inset-0 w-full h-full opacity-20 max-w-full">
         <defs>
           <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
-            <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
+            <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
             <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
-          </linearGradient>
-          <linearGradient id="lineGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="hsl(var(--accent))" stopOpacity="0.1" />
-            <stop offset="50%" stopColor="hsl(var(--accent))" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.1" />
           </linearGradient>
         </defs>
         
-        {/* Multiple animated paths */}
+        {/* Simplified paths for better mobile performance */}
         <path
-          d="M 100 200 Q 300 100 500 300 T 800 200"
-          stroke="url(#lineGradient)"
-          strokeWidth="2"
-          fill="none"
-          className="animate-pulse"
-        />
-        <path
-          d="M 200 400 Q 400 300 600 500 T 900 400"
+          d="M 10% 30% Q 50% 20% 90% 40%"
           stroke="url(#lineGradient)"
           strokeWidth="1"
           fill="none"
           className="animate-pulse"
-          style={{ animationDelay: '1s' }}
         />
         <path
-          d="M 0 300 Q 200 200 400 350 T 700 300"
-          stroke="url(#lineGradient2)"
-          strokeWidth="1.5"
+          d="M 20% 70% Q 60% 60% 80% 80%"
+          stroke="url(#lineGradient)"
+          strokeWidth="1"
           fill="none"
           className="animate-pulse"
           style={{ animationDelay: '2s' }}
         />
-        <path
-          d="M 150 100 Q 350 50 550 200 T 850 150"
-          stroke="url(#lineGradient2)"
-          strokeWidth="1"
-          fill="none"
-          className="animate-pulse"
-          style={{ animationDelay: '3s' }}
-        />
       </svg>
       
-      {/* Animated background dots with movement */}
-      <div className="absolute inset-0 bg-dots opacity-20" />
-      
-      {/* Moving gradient overlays */}
-      <div className="absolute top-0 left-0 w-full h-full morph-bg opacity-10" />
+      {/* Moving gradient overlays - CONTAINED */}
+      <div className="absolute top-0 left-0 w-full h-full morph-bg opacity-5 max-w-full overflow-hidden" />
       
       {/* Mobile-specific optimizations */}
       <div className="md:hidden">
-        {/* Reduced particle count for mobile */}
-        <div className="absolute top-10 right-10 w-8 h-8 bg-primary/20 rounded-full animate-float" />
-        <div className="absolute bottom-10 left-10 w-6 h-6 bg-accent/20 rounded-full animate-float-delayed" />
+        {/* Minimal particles for mobile */}
+        <div className="absolute top-10 right-[20%] w-6 h-6 bg-primary/20 rounded-full animate-float" />
+        <div className="absolute bottom-10 left-[20%] w-4 h-4 bg-accent/20 rounded-full animate-float-delayed" />
       </div>
     </div>
   );
