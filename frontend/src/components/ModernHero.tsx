@@ -23,27 +23,27 @@ const ModernHero = () => {
         </div>
         
         {/* Enhanced floating tech icons with more variety - MOBILE SAFE */}
-        <div className="absolute top-10 md:top-20 left-2 md:left-20 w-10 h-10 md:w-12 md:h-12 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 flex items-center justify-center animate-float glow-pulse">
+        <div className="absolute top-10 md:top-20 left-[15%] w-10 h-10 md:w-12 md:h-12 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 flex items-center justify-center animate-float glow-pulse">
           <Zap className="w-5 h-5 md:w-6 md:h-6 text-primary" />
         </div>
         
-        <div className="absolute top-20 md:top-40 right-2 md:right-32 w-8 h-8 md:w-10 md:h-10 bg-accent/10 backdrop-blur-sm rounded-full border border-accent/20 flex items-center justify-center animate-orbit" style={{animationDelay: '0.5s'}}>
+        <div className="absolute top-20 md:top-40 right-[15%] w-8 h-8 md:w-10 md:h-10 bg-accent/10 backdrop-blur-sm rounded-full border border-accent/20 flex items-center justify-center animate-orbit" style={{animationDelay: '0.5s'}}>
           <Target className="w-4 h-4 md:w-5 md:h-5 text-accent" />
         </div>
         
-        <div className="absolute bottom-20 md:bottom-32 left-2 md:left-32 w-12 h-12 md:w-14 md:h-14 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 flex items-center justify-center animate-float-fast" style={{animationDelay: '1s'}}>
+        <div className="absolute bottom-20 md:bottom-32 left-[20%] w-12 h-12 md:w-14 md:h-14 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 flex items-center justify-center animate-float-fast" style={{animationDelay: '1s'}}>
           <BarChart3 className="w-6 h-6 md:w-7 md:h-7 text-primary" />
         </div>
         
-        <div className="absolute bottom-32 md:bottom-40 right-2 md:right-20 w-6 h-6 md:w-8 md:h-8 bg-secondary/20 backdrop-blur-sm rounded-full border border-secondary/30 animate-morph" style={{animationDelay: '1.5s'}} />
+        <div className="absolute bottom-32 md:bottom-40 right-[20%] w-6 h-6 md:w-8 md:h-8 bg-secondary/20 backdrop-blur-sm rounded-full border border-secondary/30 animate-morph" style={{animationDelay: '1.5s'}} />
         
-        <div className="absolute top-1/3 right-2 md:right-20 w-5 h-5 md:w-6 md:h-6 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30 animate-drift" style={{animationDelay: '2s'}} />
+        <div className="absolute top-1/3 right-[25%] w-5 h-5 md:w-6 md:h-6 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30 animate-drift" style={{animationDelay: '2s'}} />
         
-        <div className="absolute bottom-1/3 left-2 md:left-16 w-8 h-8 md:w-10 md:h-10 bg-accent/10 backdrop-blur-sm rounded-full border border-accent/20 animate-orbit-reverse" style={{animationDelay: '2.5s'}} />
+        <div className="absolute bottom-1/3 left-[25%] w-8 h-8 md:w-10 md:h-10 bg-accent/10 backdrop-blur-sm rounded-full border border-accent/20 animate-orbit-reverse" style={{animationDelay: '2.5s'}} />
         
         {/* Additional dynamic elements - MOBILE SAFE */}
-        <div className="absolute top-1/4 left-4 md:left-1/4 w-4 h-4 md:w-6 md:h-6 bg-primary/15 backdrop-blur-sm rounded-full animate-float" style={{animationDelay: '3s'}} />
-        <div className="absolute top-3/4 right-4 md:right-1/4 w-3 h-3 md:w-5 md:h-5 bg-accent/15 backdrop-blur-sm rounded-full animate-float-delayed" style={{animationDelay: '3.5s'}} />
+        <div className="absolute top-1/4 left-[30%] w-4 h-4 md:w-6 md:h-6 bg-primary/15 backdrop-blur-sm rounded-full animate-float" style={{animationDelay: '3s'}} />
+        <div className="absolute top-3/4 right-[30%] w-3 h-3 md:w-5 md:h-5 bg-accent/15 backdrop-blur-sm rounded-full animate-float-delayed" style={{animationDelay: '3.5s'}} />
         
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/80" />
