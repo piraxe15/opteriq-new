@@ -55,12 +55,8 @@ const ModernHero = () => {
             </p>
             <p className="text-sm md:text-base">
               {t.subtitle2}{" "}
-              <span className="inline-block min-w-[120px] md:min-w-[160px] text-left">
-                <AnimatedText 
-                  words={t.capabilities} 
-                  className="text-primary font-bold text-glow" 
-                  speed={2000}
-                />
+              <span className="inline-block min-w-[120px] md:min-w-[160px] text-left text-primary font-bold text-glow">
+                Automatisation IA
               </span>
             </p>
           </div>
