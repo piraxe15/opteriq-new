@@ -140,7 +140,7 @@ const ModernFooter = () => {
                   <Phone className="w-4 h-4 text-accent" />
                 </div>
                 <span className="text-sm md:text-base text-muted-foreground group-hover:text-foreground transition-colors">
-                  Réserver un appel
+                  {t.bookCall}
                 </span>
               </div>
               
