@@ -60,6 +60,12 @@ export interface Translations {
     contact: string;
     followUs: string;
     rights: string;
+    specialistsIn: string;
+    bookCall: string;
+    location: string;
+    createdWith: string;
+    inCanada: string;
+    servicesAvailable: string;
   };
   // Process Section
   process: {
