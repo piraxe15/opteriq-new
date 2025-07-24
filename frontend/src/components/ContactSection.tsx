@@ -40,6 +40,23 @@ const ContactSection = () => {
       });
 
       if (response.ok) {
+        // Google Analytics - Track form submission conversion
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-629518634',
+            'event_category': 'Contact',
+            'event_label': 'Form Submission',
+            'value': 1
+          });
+          
+          // Track custom event
+          gtag('event', 'contact_form_submit', {
+            'event_category': 'Lead Generation',
+            'event_label': data.email,
+            'custom_parameter_company': data.company || 'Not specified'
+          });
+        }
+
         toast({
           title: toastTranslation.success,
           description: toastTranslation.description,
