@@ -134,6 +134,7 @@ export interface Translations {
       locationValue: string;
       guaranteeTitle: string;
       guaranteeText: string;
+      quickResponse: string;
     };
   };
   // Toast messages
