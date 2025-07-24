@@ -245,12 +245,18 @@ const PopularAutomations = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center">
+        <div className="text-center flex justify-center">
           <Button 
             variant="hero" 
             size="xl" 
-            className="group text-base md:text-lg px-8 md:px-12 interactive-card glow-hover transition-all duration-300 hover:scale-105"
+            className="group text-base md:text-lg px-8 md:px-12 interactive-card glow-hover transition-all duration-300 hover:scale-105 mx-auto"
             onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}
+            style={{ 
+              display: 'flex',
+              alignItems: 'center', 
+              justifyContent: 'center',
+              margin: '0 auto'
+            }}
           >
             <Sparkles className="mr-2 h-5 w-5 animate-pulse group-hover:scale-110 transition-transform" />
             <span className="group-hover:text-white transition-colors">{t.cta}</span>
