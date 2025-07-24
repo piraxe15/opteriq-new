@@ -174,7 +174,7 @@ export const translations: Record<Language, Translations> = {
     },
     services: {
       badge: "Nos Solutions",
-      title: "Automatisez Vos Processus Avec L'IA",
+      title: "Automatisez Vos Processus Avec l'IA",
       subtitle: "Gagnez du temps, réduisez les erreurs, concentrez-vous sur l'essentiel",
       automation: {
         title: "Automatisation Intelligente",
