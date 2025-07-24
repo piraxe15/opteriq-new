@@ -91,19 +91,6 @@ const Header = () => {
               <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
                 {t.navigation.contact}
               </a>
-              <Button variant="modern" size="lg" className="w-full" onClick={() => {
-                // Google Analytics tracking
-                if (typeof gtag !== 'undefined') {
-                  gtag('event', 'click', {
-                    'event_category': 'CTA',
-                    'event_label': 'Header Mobile - Planifier un appel',
-                    'value': 1
-                  });
-                }
-                window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank');
-              }}>
-                {t.cta}
-              </Button>
             </nav>
           </div>
         )}
