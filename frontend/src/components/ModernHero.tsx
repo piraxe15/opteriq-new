@@ -87,7 +87,7 @@ const ModernHero = () => {
             >
               <Sparkles className="mr-2 h-4 w-4 md:h-5 md:w-5 animate-pulse group-hover:scale-110 transition-transform" />
               <span className="hidden sm:inline">{t.cta1}</span>
-              <span className="sm:hidden">{t.cta1Mobile}</span>
+              <span className="block sm:hidden">{t.cta1Mobile}</span>
               <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
