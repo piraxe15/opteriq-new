@@ -10,7 +10,7 @@ const ModernFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-16 md:py-20 bg-gradient-to-br from-background via-secondary/5 to-background relative">
+    <section id="faq" className="py-12 md:py-16 bg-gradient-to-br from-background via-secondary/5 to-background relative">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         
         {/* Elegant header */}
