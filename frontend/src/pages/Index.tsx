@@ -12,7 +12,7 @@ import TechBackground from "@/components/TechBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground relative">
+    <div className="bg-background text-foreground relative">
       <TechBackground />
       <Header />
       <main>
