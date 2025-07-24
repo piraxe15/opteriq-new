@@ -13,7 +13,8 @@ const ModernHero = () => {
     <section id="accueil" className="relative py-20 flex items-center justify-center bg-gradient-to-br from-background via-background to-secondary/10"
     style={{ minHeight: '100vh' }}>
       {/* Enhanced background with multiple animation layers */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0"
+      style={{ overflow: 'visible' }}>
         {/* Concentric circles with varied animations */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full border border-primary/10 absolute animate-pulse glow-pulse" style={{animationDelay: '0s'}} />
