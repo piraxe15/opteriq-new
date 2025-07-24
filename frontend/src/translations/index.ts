@@ -530,7 +530,13 @@ export const translations: Record<Language, Translations> = {
       quickLinks: "Quick Links", 
       contact: "Contact",
       followUs: "Follow Us",
-      rights: "All rights reserved."
+      rights: "All rights reserved.",
+      specialistsIn: "Specialists in",
+      bookCall: "Book a call",
+      location: "Canada Quebec & International",
+      createdWith: "Made with",
+      inCanada: "in Canada",
+      servicesAvailable: "Services available 24/7"
     },
     process: {
       badge: "Our Process",
