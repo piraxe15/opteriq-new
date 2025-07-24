@@ -192,7 +192,7 @@ const ModernFooter = () => {
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
               <div className="flex items-center space-x-2 text-xs text-muted-foreground">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span>Services disponibles 24/7</span>
+                <span>{t.servicesAvailable}</span>
               </div>
             </div>
           </div>
