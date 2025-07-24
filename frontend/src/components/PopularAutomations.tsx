@@ -61,15 +61,16 @@ const PopularAutomations = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center space-x-4 mb-4">
-                <div className={`relative w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br ${automation.color} p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                <div className={`relative w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br ${automationIcons[index].color} p-3 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
                   {/* Breathing glow background */}
-                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${automation.color} opacity-20 animate-pulse blur-sm`} />
-                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${automation.color} opacity-10 animate-pulse blur-md`} style={{animationDelay: '1s'}} />
+                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${automationIcons[index].color} opacity-20 animate-pulse blur-sm`} />
+                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${automationIcons[index].color} opacity-10 animate-pulse blur-md`} style={{animationDelay: '1s'}} />
                   
                   {/* Breathing icon with smooth scale */}
-                  <automation.icon className="relative z-10 w-6 h-6 md:w-8 md:h-8 text-white animate-pulse transition-all duration-500" style={{
-                    animation: 'breathe 3s ease-in-out infinite'
-                  }} />
+                  {React.createElement(automationIcons[index].icon, {
+                    className: "relative z-10 w-6 h-6 md:w-8 md:h-8 text-white animate-pulse transition-all duration-500",
+                    style: { animation: 'breathe 3s ease-in-out infinite' }
+                  })}
                 </div>
               </div>
               
@@ -94,7 +95,7 @@ const PopularAutomations = () => {
               </div>
 
               {/* Hover effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${automation.color} opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500 pointer-events-none`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${automationIcons[index].color} opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500 pointer-events-none`} />
             </div>
           ))}
         </div>
