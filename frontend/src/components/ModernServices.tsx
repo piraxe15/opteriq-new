@@ -81,7 +81,7 @@ const ModernServices = () => {
               className="group relative animate-fade-in"
               style={{ animationDelay: service.delay }}
             >
-              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl p-6 md:p-8 h-full hover:bg-card/80 transition-all duration-500 hover:shadow-glow group-hover:scale-105 interactive-card">
+              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl p-6 md:p-8 h-full hover:bg-card/80 transition-all duration-500 hover:shadow-glow group-hover:scale-105 interactive-card flex flex-col">
                 {/* Enhanced header with background icon */}
                 <div className="relative mb-6">
                   <div className="absolute -top-4 -right-4 w-16 h-16 md:w-20 md:h-20 opacity-10">
