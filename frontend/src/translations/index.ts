@@ -338,7 +338,82 @@ export const translations: Record<Language, Translations> = {
         support: "Support Dédié"
       },
       quote: "Ne laissez pas vos concurrents prendre de l'avance. L'IA n'est plus l'avenir, c'est le présent.",
-      signature: "— L'équipe Opteriq"
+      signature: "— L'équipe Opteriq",
+      features: {
+        immediate: "Lancement immédiat",
+        guaranteed: "Résultats garantis",
+        custom: "Sur mesure"
+      },
+      guarantee: "Prototype gratuit si non satisfait • Sans engagement"
+    },
+    techStack: {
+      badge: "Notre Stack",
+      title: "Technologies de Pointe",
+      subtitle: "Les outils que nous maîtrisons pour créer vos automatisations",
+      tools: [
+        {
+          name: "n8n",
+          description: "Workflows visuels pour automatisations complexes"
+        },
+        {
+          name: "Make",
+          description: "Intégrations avancées entre applications"
+        },
+        {
+          name: "Custom APIs",
+          description: "Solutions sur-mesure pour besoins spécifiques"
+        },
+        {
+          name: "Webhooks",
+          description: "Communications temps réel entre systèmes"
+        },
+        {
+          name: "Databases",
+          description: "Stockage et traitement de données optimisés"
+        },
+        {
+          name: "Cursor AI",
+          description: "Développement accéléré par l'intelligence artificielle"
+        }
+      ]
+    },
+    popularAutomations: {
+      badge: "Solutions Prêtes",
+      title: "Automatisations Populaires",
+      subtitle: "Des workflows éprouvés que vous pouvez déployer immédiatement",
+      automations: [
+        {
+          title: "E-commerce → Gestion Stock",
+          description: "Synchronisation automatique entre boutique en ligne et inventaire",
+          tags: ["Shopify", "WooCommerce", "Inventaire"]
+        },
+        {
+          title: "CRM → Email Marketing",
+          description: "Segmentation automatique et campagnes personnalisées",
+          tags: ["HubSpot", "Mailchimp", "Automatisation"]
+        },
+        {
+          title: "Lead Gen → Qualification",
+          description: "Scoring et routage automatique des prospects",
+          tags: ["Leads", "Scoring", "CRM"]
+        },
+        {
+          title: "Support → Ticketing",
+          description: "Tri automatique et escalade des demandes client",
+          tags: ["Zendesk", "Support", "Chatbot"]
+        },
+        {
+          title: "Social → Analytics",
+          description: "Collecte et analyse automatique des performances sociales",
+          tags: ["Facebook", "Instagram", "Analytics"]
+        },
+        {
+          title: "RDV → Confirmations",
+          description: "Rappels et confirmations automatiques de rendez-vous",
+          tags: ["Calendly", "SMS", "Email"]
+        }
+      ],
+      cta: "Voir Tous les Workflows"
     }
   },
   en: {
