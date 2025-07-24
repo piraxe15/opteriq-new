@@ -214,6 +214,24 @@
     overflow: visible !important;
   }
 
+  /* FIX BUTTON TEXT ALIGNMENT */
+  button, .btn, [role="button"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Button text specifically */
+  button > span, button > text, .btn > span, .btn > text {
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
   /* Specific fixes for titles and text elements */
   .title-safe {
     line-height: 1.5 !important;
