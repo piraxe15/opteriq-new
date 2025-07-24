@@ -296,6 +296,32 @@
     }
   }
 
+  /* DESKTOP BUTTON FIXES - RESTORE NORMAL SIZES */
+  @media (min-width: 769px) {
+    button, .btn, [role="button"] {
+      font-size: 16px !important;
+      padding: 12px 24px !important;
+    }
+    
+    button span, .btn span {
+      font-size: inherit !important;
+    }
+    
+    /* Hero button desktop */
+    .text-lg {
+      font-size: 18px !important;
+    }
+    
+    .text-base {
+      font-size: 16px !important;
+    }
+    
+    /* Large buttons */
+    .text-xl {
+      font-size: 20px !important;
+    }
+  }
+
   /* Specific fixes for titles and text elements */
   .title-safe {
     line-height: 1.5 !important;
