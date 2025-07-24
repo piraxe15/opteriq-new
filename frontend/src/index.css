@@ -159,75 +159,69 @@
     animation: morph 8s ease-in-out infinite;
   }
 
-  /* SINGLE PAGE SCROLL - No section separation - AGGRESSIVE FIX */
+  /* SINGLE PAGE SCROLL - No section separation - ULTRA AGGRESSIVE FIX */
   html, body {
     overflow-x: hidden !important;
     scroll-behavior: smooth !important;
     width: 100% !important;
     max-width: 100vw !important;
+    height: auto !important;
+    min-height: auto !important;
   }
 
-  /* FORCE REMOVE ALL SECONDARY SCROLLBARS */
-  html {
-    overflow: overlay !important;
-  }
-
-  body {
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-  }
-
-  *, *::before, *::after {
+  /* PREVENT ALL SECONDARY SCROLL CONTAINERS */
+  * {
     box-sizing: border-box !important;
     max-width: 100% !important;
+    overflow-x: visible !important;
+    min-height: auto !important;
   }
 
-  /* Sections as normal content blocks - FORCE NO OVERFLOW */
+  /* FORCE REMOVE MIN-HEIGHT AND HEIGHT CONSTRAINTS */
+  section, div, main, article, aside {
+    min-height: auto !important;
+    height: auto !important;
+    max-width: 100vw !important;
+  }
+
+  /* SECTIONS MUST BE NORMAL FLOW - NO VIEWPORT LOCKING */
   section {
     width: 100% !important;
     max-width: 100vw !important;
     position: relative !important;
     overflow: visible !important;
+    min-height: auto !important;
+    height: auto !important;
+    display: block !important;
   }
 
-  /* Main container - normal flow - NO OVERFLOW */
-  main {
-    width: 100% !important;
-    max-width: 100vw !important;
-    overflow: visible !important;
-  }
-
-  /* Fix containers - AGGRESSIVE NO OVERFLOW */
+  /* CONTAINERS MUST NOT CREATE SCROLL ZONES */
   .container, [class*="container"] {
     max-width: 100vw !important;
     width: 100% !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
     overflow: visible !important;
+    min-height: auto !important;
+    height: auto !important;
   }
 
-  /* Fix absolute positioned elements - STRICT VIEWPORT RESTRICTION */
-  .absolute {
-    max-width: 100vw !important;
+  /* FLEX CONTAINERS SHOULD NOT LOCK HEIGHT */
+  .flex, [class*="flex"] {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  /* REMOVE ALL VIEWPORT HEIGHT CONSTRAINTS */
+  [class*="min-h"], [class*="h-screen"], [class*="vh"] {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  /* AGGRESSIVE OVERFLOW PREVENTION */
+  .absolute, .fixed {
+    max-width: 95vw !important;
     overflow: visible !important;
-  }
-
-  /* Fix floating elements that might go off-screen - CONTAINED */
-  .animate-float, .animate-orbit, .animate-drift {
-    max-width: 85vw !important;
-    will-change: auto !important;
-  }
-
-  /* Fix orbiting elements specifically - SMALLER RADIUS */
-  .animate-orbit, .animate-orbit-reverse {
-    transform-origin: center !important;
-    max-width: 75vw !important;
-    will-change: auto !important;
-  }
-
-  /* REMOVE WILL-CHANGE FROM ALL ELEMENTS TO PREVENT REFLOW */
-  * {
-    will-change: auto !important;
   }
 
   /* AGGRESSIVE FIX for cut-off letters (g, p, q, etc.) */
