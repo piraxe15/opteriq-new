@@ -159,11 +159,9 @@
     animation: morph 8s ease-in-out infinite;
   }
 
-  /* MOBILE FIX - Prevent horizontal scroll */
+  /* SINGLE PAGE SCROLL - No section separation */
   html, body {
     overflow-x: hidden !important;
-    max-width: 100vw !important;
-    width: 100% !important;
     scroll-behavior: smooth !important;
   }
 
@@ -171,22 +169,20 @@
     box-sizing: border-box !important;
   }
 
-  /* Smooth scroll sections */
+  /* Sections as normal content blocks - no special overflow */
   section {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    scroll-margin-top: 0px;
+    width: 100%;
+    position: relative;
   }
 
-  /* Main container for smooth scroll */
+  /* Main container - normal flow */
   main {
-    scroll-snap-type: none;
+    width: 100%;
   }
 
-  /* Fix all containers that might overflow */
+  /* Fix containers - no forced overflow */
   .container, [class*="container"] {
     max-width: 100vw !important;
-    overflow-x: hidden !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
@@ -199,16 +195,12 @@
   /* Fix floating elements that might go off-screen - MORE RESTRICTIVE */
   .animate-float, .animate-orbit, .animate-drift {
     max-width: 90vw !important;
-    left: 5% !important;
-    right: 5% !important;
   }
 
   /* Fix orbiting elements specifically */
   .animate-orbit, .animate-orbit-reverse {
     transform-origin: center !important;
     max-width: 80vw !important;
-    left: 10% !important;
-    right: 10% !important;
   }
 
   /* AGGRESSIVE FIX for cut-off letters (g, p, q, etc.) */
