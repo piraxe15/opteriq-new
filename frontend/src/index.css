@@ -214,7 +214,7 @@
     overflow: visible !important;
   }
 
-  /* FIX BUTTON TEXT ALIGNMENT */
+  /* FIX BUTTON TEXT ALIGNMENT - MORE AGGRESSIVE */
   button, .btn, [role="button"] {
     display: flex !important;
     align-items: center !important;
@@ -222,14 +222,35 @@
     line-height: 1 !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    vertical-align: middle !important;
   }
 
-  /* Button text specifically */
-  button > span, button > text, .btn > span, .btn > text {
+  /* Button text specifically - FORCE CENTERING */
+  button *, .btn *, [role="button"] * {
     line-height: 1 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    vertical-align: middle !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Target specific button classes */
+  .inline-flex {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
+  }
+
+  /* Fix typography in buttons */
+  button span, button div, button p {
+    line-height: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    vertical-align: middle !important;
   }
 
   /* Specific fixes for titles and text elements */
