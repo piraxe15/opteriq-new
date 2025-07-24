@@ -162,7 +162,7 @@ const PopularAutomations = () => {
   const t = content[language] || content.fr;
 
   return (
-    <section id="automations" className="py-16 md:py-24 bg-gradient-to-br from-background via-secondary/5 to-background relative overflow-hidden section-separator">
+    <section id="automations" className="py-12 md:py-16 bg-gradient-to-br from-background via-secondary/5 to-background relative overflow-hidden section-separator">
       {/* Enhanced dynamic background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-1/4 w-[140px] h-[140px] md:w-[200px] md:h-[200px] rounded-full border border-primary/5 animate-orbit" style={{animationDelay: '0.5s'}} />
