@@ -194,11 +194,6 @@ const ModernFooter = () => {
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span>Services disponibles 24/7</span>
               </div>
-              
-              <div className="flex items-center space-x-1 text-xs text-muted-foreground">
-                <Zap className="w-3 h-3 text-primary" />
-                <span>Powered by AI</span>
-              </div>
             </div>
           </div>
         </div>
