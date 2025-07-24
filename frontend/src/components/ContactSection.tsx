@@ -123,6 +123,7 @@ const ContactSection = () => {
                     </label>
                     <Input 
                       type="text" 
+                      name="firstName"
                       required 
                       className="bg-background/50 border-border/50 focus:border-primary/50 transition-all duration-300"
                     />
