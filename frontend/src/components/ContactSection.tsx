@@ -174,6 +174,7 @@ const ContactSection = () => {
                   </label>
                   <Textarea 
                     rows={4} 
+                    name="message"
                     placeholder={t.form.messagePlaceholder}
                     required
                     className="bg-background/50 border-border/50 focus:border-primary/50 transition-all duration-300 resize-none"
