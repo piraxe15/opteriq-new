@@ -663,7 +663,8 @@ export const translations: Record<Language, Translations> = {
         location: "Location",
         locationValue: "Canada Quebec & International",
         guaranteeTitle: "Guaranteed Response",
-        guaranteeText: "We respond to all messages within 24 hours"
+        guaranteeText: "We respond to all messages within 24 hours",
+        quickResponse: "Response within 24h guaranteed"
       }
     },
     toast: {
