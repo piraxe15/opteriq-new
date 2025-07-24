@@ -49,7 +49,7 @@ const Header = () => {
           </nav>
           
           <div className="flex items-center space-x-2 md:space-x-4">
-            <Button variant="modern" size="sm" className="hidden sm:inline-flex text-xs md:text-sm px-3 md:px-6 py-2 md:py-3" onClick={() => {
+            <Button variant="modern" size="sm" className="text-xs md:text-sm px-3 md:px-6 py-2 md:py-3" onClick={() => {
               // Google Analytics tracking
               if (typeof gtag !== 'undefined') {
                 gtag('event', 'click', {
