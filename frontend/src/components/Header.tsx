@@ -60,7 +60,7 @@ const Header = () => {
               }
               window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank');
             }}>
-              {typeof window !== 'undefined' && window.innerWidth >= 640 ? 'Planifier un appel' : 'Appel'}
+              {typeof window !== 'undefined' && window.innerWidth >= 640 ? t.cta : (language === 'en' ? 'Call' : language === 'es' ? 'Llamada' : 'Appel')}
             </Button>
             <LanguageSelector />
             <Button 
