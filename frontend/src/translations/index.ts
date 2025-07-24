@@ -246,7 +246,13 @@ export const translations: Record<Language, Translations> = {
       quickLinks: "Liens Rapides",
       contact: "Contact",
       followUs: "Suivez-nous",
-      rights: "Tous droits réservés."
+      rights: "Tous droits réservés.",
+      specialistsIn: "Spécialistes en",
+      bookCall: "Réserver un appel",
+      location: "Canada Québec & International",
+      createdWith: "Créé avec",
+      inCanada: "au Canada",
+      servicesAvailable: "Services disponibles 24/7"
     },
     process: {
       badge: "Notre Processus",
