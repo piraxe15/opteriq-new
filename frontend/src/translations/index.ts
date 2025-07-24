@@ -578,12 +578,57 @@ export const translations: Record<Language, Translations> = {
         {
           category: "Custom Solutions",
           question: "How long does it take to develop a solution?", 
-          answer: "We deliver a functional prototype in 72h, then iterate based on your feedback. Full development typically takes 2-6 weeks depending on complexity, with an agile approach and frequent deliveries."
+          answer: "We deliver a functional prototype in 72 hours for validation. Full development typically takes 2-4 weeks depending on complexity. Our agile approach allows quick adjustments based on your feedback."
         },
         {
           category: "Strategic Consultation",
           question: "How do you identify the best automation opportunities?",
-          answer: "We start with a free audit of your processes, analyze your friction points, calculate the potential ROI of each opportunity, and create a prioritized action plan. Our support guides you through every step of the transformation."
+          answer: "We conduct a complete free audit of your processes. Our expert team analyzes your current workflow, identifies bottlenecks and prioritizes automations based on their potential impact on your productivity and ROI."
+        },
+        {
+          category: "Automation & AI",
+          question: "What tasks can be automated in my business?",
+          answer: "Automatic emails, billing, customer support, inventory management, lead qualification, reporting, data entry, scheduling, and much more. Practically any repetitive task can be optimized with AI."
+        },
+        {
+          category: "Automation & AI",
+          question: "Can AI replace my employees?",
+          answer: "No, AI frees your teams from repetitive tasks so they can focus on strategy, creativity and customer relationships. It's an augmentation tool, not a replacement."
+        },
+        {
+          category: "Costs & ROI",
+          question: "How much does AI automation cost?",
+          answer: "Starting from €2000 depending on project complexity. ROI is typically recovered in 3-6 months through productivity gains and error reduction."
+        },
+        {
+          category: "Implementation",
+          question: "How long to see first results?",
+          answer: "Functional prototype in 72h, first measurable results in 1-2 weeks, full deployment in 2-4 weeks. We prioritize quick wins."
+        },
+        {
+          category: "Implementation",
+          question: "Is my data secure?",
+          answer: "Absolutely. End-to-end encryption, strict GDPR compliance, secure storage, controlled access. Your data remains confidential and protected."
+        },
+        {
+          category: "Technical",
+          question: "Are my current tools compatible?",
+          answer: "90% of professional software is integrable (CRM, ERP, marketing tools, etc.). Our free audit includes compatibility analysis of your tech stack."
+        },
+        {
+          category: "Technical",
+          question: "What if it doesn't work?",
+          answer: "Total satisfaction guarantee. If the prototype doesn't convince you, you keep it free without any commitment. We iterate until complete validation."
+        },
+        {
+          category: "Results",
+          question: "What gains can I expect?",
+          answer: "60-80% time saved on automated tasks, 95% fewer errors, more productive and engaged teams, average ROI of 300% in the first year."
+        },
+        {
+          category: "Results",
+          question: "Does automation evolve with my business?",
+          answer: "Yes, our solutions are scalable. Adjustments and optimizations included in the first year. AI adapts to your business growth."
         }
       ],
       ctaTitle: "A Specific Question?",
