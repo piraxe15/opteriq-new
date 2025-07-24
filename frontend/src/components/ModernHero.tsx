@@ -120,11 +120,11 @@ const ModernHero = () => {
             </div>
             
             <div className="text-center p-4 md:p-6 bg-card/30 backdrop-blur-sm rounded-2xl border border-border/50 hover:bg-card/50 transition-all duration-300 group interactive-card">
-              <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-primary/20 rounded-full mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform glow-pulse">
-                <Zap className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+              <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-primary/20 rounded-full mx-auto mb-3 md:mb-4 group-hover:scale-110 transition-transform glow-pulse animate-pulse">
+                <Zap className="w-5 h-5 md:w-6 md:h-6 text-primary animate-pulse" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2 text-glow">24/7</div>
-              <div className="text-xs md:text-sm text-muted-foreground">{t.stats.support}</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2 text-glow text-center">24/7</div>
+              <div className="text-xs md:text-sm text-muted-foreground text-center">{t.stats.support}</div>
             </div>
           </div>
         </div>
