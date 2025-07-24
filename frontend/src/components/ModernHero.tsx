@@ -72,7 +72,18 @@ const ModernHero = () => {
               variant="hero" 
               size="xl" 
               className="group w-full sm:w-auto text-sm md:text-lg px-6 md:px-10 interactive-card glow-hover transition-all duration-300 hover:scale-105" 
-              onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}
+              onClick={() => {
+                // Google Analytics tracking
+                if (typeof gtag !== 'undefined') {
+                  gtag('event', 'conversion', {
+                    'send_to': 'AW-629518634',
+                    'event_category': 'CTA',
+                    'event_label': 'Hero - Démarrer Transformation',
+                    'value': 1
+                  });
+                }
+                window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank');
+              }}
             >
               <Sparkles className="mr-2 h-4 w-4 md:h-5 md:w-5 animate-pulse group-hover:scale-110 transition-transform" />
               <span className="hidden sm:inline">{t.cta1}</span>
