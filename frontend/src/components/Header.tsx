@@ -23,14 +23,10 @@ const Header = () => {
             />
           </div>
           
-          {/* Animated keywords - inspired by Morningside */}
+          {/* Static text - TEST FIX FOR SCROLL ISSUE */}
           <div className="hidden lg:flex items-center space-x-2 text-sm text-muted-foreground">
             <span>{t.specialistsIn}</span>
-            <AnimatedText 
-              words={t.keywords} 
-              className="text-primary font-semibold min-w-[120px]" 
-              speed={2500}
-            />
+            <span className="text-primary font-semibold min-w-[120px]">Automatisation</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
