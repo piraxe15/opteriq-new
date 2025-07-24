@@ -9,11 +9,13 @@ import ContactSection from "@/components/ContactSection";
 import ModernCTA from "@/components/ModernCTA";
 import ModernFooter from "@/components/ModernFooter";
 import TechBackground from "@/components/TechBackground";
+import SectionNavigation from "@/components/SectionNavigation";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <TechBackground />
+      <SectionNavigation />
       <Header />
       <main>
         <ModernHero />
