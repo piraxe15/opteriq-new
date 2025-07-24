@@ -163,8 +163,8 @@ export const translations: Record<Language, Translations> = {
         "Stratégies Personnalisées",
         "Solutions Sur-Mesure"
       ],
-      cta1: "Démarrer Votre Transformation",
-      cta1Mobile: "Commencer Maintenant",
+      cta1: "Démarrer Maintenant",
+      cta1Mobile: "Démarrer",
       cta2: "Voir Notre Approche",
       stats: {
         projects: "Possibilités Infinies",
