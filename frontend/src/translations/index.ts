@@ -331,7 +331,7 @@ export const translations: Record<Language, Translations> = {
       badge: "Résultats Garantis",
       title: "Prêt à Transformer Votre Entreprise ?",
       subtitle: "Commencez votre transformation IA dès aujourd'hui avec notre garantie de satisfaction totale",
-      button: "Démarrer Ma Transformation IA",
+      button: "Démarrer Maintenant",
       stats: {
         prototype: "Prototype Livré",
         roi: "Garantie Résultats", 
