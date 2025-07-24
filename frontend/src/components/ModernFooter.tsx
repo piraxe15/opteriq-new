@@ -182,9 +182,9 @@ const ModernFooter = () => {
                 <span>{t.rights}</span>
               </div>
               <div className="flex items-center space-x-1">
-                <span>Créé avec</span>
+                <span>{t.createdWith}</span>
                 <Heart className="w-3 h-3 text-red-500 animate-pulse" />
-                <span>au Canada</span>
+                <span>{t.inCanada}</span>
               </div>
             </div>
             
