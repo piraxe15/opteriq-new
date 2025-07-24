@@ -118,9 +118,9 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 max-w-7xl mx-auto px-4 md:px-6">
           {/* Enhanced contact form */}
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl p-6 md:p-8 interactive-card">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-full flex items-center justify-center glow-pulse">
