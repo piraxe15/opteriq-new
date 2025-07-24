@@ -18,14 +18,47 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: toastTranslation.success,
-        description: toastTranslation.description,
+    // Get form data
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = {
+      firstName: formData.get('firstName') as string,
+      lastName: formData.get('lastName') as string,
+      email: formData.get('email') as string,
+      company: formData.get('company') as string,
+      message: formData.get('message') as string,
+      timestamp: new Date().toISOString(),
+      source: 'website'
+    };
+
+    try {
+      const response = await fetch('https://opteriq.app.n8n.cloud/webhook/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
       });
-    }, 2000);
+
+      if (response.ok) {
+        toast({
+          title: toastTranslation.success,
+          description: toastTranslation.description,
+        });
+        // Reset form
+        (e.target as HTMLFormElement).reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending contact form:', error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
