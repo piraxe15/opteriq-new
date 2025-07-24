@@ -53,7 +53,17 @@ const Header = () => {
           </nav>
           
           <div className="flex items-center space-x-4">
-            <Button variant="modern" size="lg" className="hidden md:inline-flex" onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}>
+            <Button variant="modern" size="lg" className="hidden md:inline-flex" onClick={() => {
+              // Google Analytics tracking
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {
+                  'event_category': 'CTA',
+                  'event_label': 'Header - Planifier un appel',
+                  'value': 1
+                });
+              }
+              window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank');
+            }}>
               {t.cta}
             </Button>
             <LanguageSelector />
