@@ -295,7 +295,7 @@ const ContactSection = () => {
                 
                 <div className="flex items-center space-x-2 mt-4 text-xs md:text-sm text-green-500">
                   <Clock className="w-4 h-4" />
-                  <span>Réponse sous 24h garantie</span>
+                  <span>{t.info.quickResponse}</span>
                 </div>
               </div>
             </div>
