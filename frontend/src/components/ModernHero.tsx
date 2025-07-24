@@ -15,7 +15,12 @@ const ModernHero = () => {
       {/* Enhanced background with multiple animation layers */}
       <div className="absolute inset-0"
       style={{ overflow: 'visible' }}>
-        {/* BACKGROUND ANIMATIONS TEMPORARILY DISABLED FOR TESTING */}
+        {/* LIGHTWEIGHT background - only essential elements */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full border border-primary/5 absolute" />
+          <div className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] rounded-full border border-primary/3 absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" />
+        </div>
+        
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/80" />
       </div>
