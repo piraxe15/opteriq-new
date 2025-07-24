@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "L'utilisateur signale des problèmes d'affichage et de scroll : une section qui s'affiche sur le côté droit, des dimensions qui changent et buggent en bas de page, un scroll qui force à remonter, et souhaite un défilement automatique entre sections au lieu de cliquer sur des boutons."
+user_problem_statement: "L'utilisateur a signalé que des sections du site s'affichent encore en français alors qu'elles devraient être traduites en anglais et en espagnol. Il fallait compléter toutes les traductions manquantes pour les 2 langues (anglais et espagnol) de toutes les sections du site."
 
 backend:
   - task: "Backend API functionality"
@@ -115,56 +115,44 @@ backend:
     status_history:
       - working: true
         agent: "main"
-        comment: "Backend is functional, focus on frontend scroll issues"
+        comment: "Backend is functional, focus on frontend translation issues"
 
 frontend:
-  - task: "Fix mobile responsive overflow and scroll issues"
-    implemented: true
-    working: false
-    file: "/app/frontend/src/index.css"
-    stuck_count: 1
-    priority: "high"
-    needs_retesting: true
-    status_history:
-      - working: false
-        agent: "main"
-        comment: "User reports section appearing on right side, dimension changes, and scroll bugs. Added overflow fixes and safe positioning."
-        
-  - task: "Remove problematic section navigation dots"
+  - task: "Complete English and Spanish translations for all sections"
     implemented: true
     working: true
-    file: "/app/frontend/src/pages/Index.tsx"
+    file: "/app/frontend/src/translations/index.ts"
     stuck_count: 0
     priority: "high"
     needs_retesting: true
     status_history:
       - working: true
         agent: "main"
-        comment: "Removed SectionNavigation component that was causing right-side display issues. Also removed all CSS styles for section dots."
+        comment: "Added comprehensive translations for TechStackSection, PopularAutomations, ModernCTA features and guarantee text, and fixed header button text to use translations instead of hardcoded French text."
         
-  - task: "Implement smooth scroll between sections"
+  - task: "Fix hardcoded French text in components"
     implemented: true
     working: true
-    file: "/app/frontend/src/index.css"
+    file: "/app/frontend/src/components/Header.tsx, /app/frontend/src/components/ModernCTA.tsx, /app/frontend/src/components/TechStackSection.tsx, /app/frontend/src/components/PopularAutomations.tsx"
     stuck_count: 0
     priority: "high"
     needs_retesting: true
     status_history:
       - working: true
         agent: "main"
-        comment: "Added scroll-behavior: smooth, scroll-snap-type, and scroll-snap-align to sections for automatic smooth scrolling."
+        comment: "Updated all components to use centralized translation system instead of local translation objects or hardcoded text. Header button now correctly shows translated text based on language selection."
         
-  - task: "Fix floating elements positioning to prevent overflow"
+  - task: "Centralize translation system for all components"
     implemented: true
     working: true
-    file: "/app/frontend/src/components/FloatingElements.tsx, /app/frontend/src/components/TechBackground.tsx, /app/frontend/src/components/ModernHero.tsx"
+    file: "/app/frontend/src/translations/index.ts"
     stuck_count: 0
-    priority: "high" 
+    priority: "high"
     needs_retesting: true
     status_history:
       - working: true
         agent: "main"
-        comment: "Updated all floating elements to use percentage-based positioning (15%, 20%, etc.) instead of fixed positions that could cause overflow. Reduced orbit radius and particle count for better mobile performance."
+        comment: "Extended translation interface and centralized all text content including new sections (techStack, popularAutomations, modernCta with features and guarantee text) for all three languages (FR, EN, ES)."
 
 metadata:
   created_by: "main_agent"
