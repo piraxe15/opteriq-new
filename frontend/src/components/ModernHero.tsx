@@ -48,14 +48,14 @@ const ModernHero = () => {
             </span>
           </h1>
 
-          {/* Enhanced subtitle with dynamic text */}
-          <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <p className="mb-4">
+          {/* Enhanced subtitle with dynamic text - COMPACT */}
+          <div className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <p className="mb-2">
               {t.subtitle1}
             </p>
-            <p className="text-sm sm:text-base md:text-lg">
+            <p className="text-sm md:text-base">
               {t.subtitle2}{" "}
-              <span className="inline-block min-w-[140px] sm:min-w-[160px] md:min-w-[200px] text-left">
+              <span className="inline-block min-w-[120px] md:min-w-[160px] text-left">
                 <AnimatedText 
                   words={t.capabilities} 
                   className="text-primary font-bold text-glow" 
@@ -65,8 +65,8 @@ const ModernHero = () => {
             </p>
           </div>
 
-          {/* Enhanced action buttons with better mobile layout */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-12 md:mb-16 animate-fade-in w-full max-w-lg mx-auto px-4" style={{ animationDelay: '0.6s' }}>
+          {/* Enhanced action buttons with better mobile layout - COMPACT */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-8 md:mb-10 animate-fade-in w-full max-w-lg mx-auto px-4" style={{ animationDelay: '0.6s' }}>
             <Button 
               variant="hero" 
               size="xl" 
