@@ -135,6 +135,48 @@ export interface Translations {
     success: string;
     description: string;
   };
+  // Modern CTA Section
+  modernCta: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    button: string;
+    stats: {
+      prototype: string;
+      roi: string;
+      support: string;
+    };
+    quote: string;
+    signature: string;
+    features: {
+      immediate: string;
+      guaranteed: string;
+      custom: string;
+    };
+    guarantee: string;
+  };
+  // Tech Stack Section
+  techStack: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    tools: {
+      name: string;
+      description: string;
+    }[];
+  };
+  // Popular Automations Section
+  popularAutomations: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    automations: {
+      title: string;
+      description: string;
+      tags: string[];
+    }[];
+    cta: string;
+  };
 }
 
 export const translations: Record<Language, Translations> = {
