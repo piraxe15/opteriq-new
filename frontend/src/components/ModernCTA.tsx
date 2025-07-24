@@ -93,15 +93,15 @@ const ModernCTA = () => {
           <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mb-8 md:mb-12">
             <div className="flex items-center space-x-2 bg-card/30 backdrop-blur-sm rounded-full px-3 md:px-4 py-2 text-sm md:text-base">
               <Rocket className="w-4 h-4 text-primary animate-pulse" />
-              <span className="text-muted-foreground">Lancement immédiat</span>
+              <span className="text-muted-foreground">{t.features.immediate}</span>
             </div>
             <div className="flex items-center space-x-2 bg-card/30 backdrop-blur-sm rounded-full px-3 md:px-4 py-2 text-sm md:text-base">
               <Zap className="w-4 h-4 text-accent animate-pulse" />
-              <span className="text-muted-foreground">Résultats garantis</span>
+              <span className="text-muted-foreground">{t.features.guaranteed}</span>
             </div>
             <div className="flex items-center space-x-2 bg-card/30 backdrop-blur-sm rounded-full px-3 md:px-4 py-2 text-sm md:text-base">
               <Target className="w-4 h-4 text-primary animate-pulse" />
-              <span className="text-muted-foreground">Sur mesure</span>
+              <span className="text-muted-foreground">{t.features.custom}</span>
             </div>
           </div>
 
