@@ -56,22 +56,6 @@ const ModernFAQ = () => {
             </div>
           ))}
         </div>
-
-        {/* Simple CTA */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">
-            Vous avez d'autres questions ?
-          </p>
-          <Button 
-            variant="outline" 
-            size="lg"
-            onClick={() => window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank')}
-            className="hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-          >
-            <MessageCircle className="mr-2 h-4 w-4" />
-            Contactez-nous
-          </Button>
-        </div>
       </div>
     </section>
   );
