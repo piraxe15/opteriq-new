@@ -79,7 +79,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gradient-to-br from-background via-secondary/5 to-background relative overflow-hidden">
+    <section id="contact" className="py-12 md:py-16 bg-gradient-to-br from-background via-secondary/5 to-background relative overflow-hidden">
       {/* Enhanced dynamic background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-10 md:left-20 w-[120px] h-[120px] md:w-[180px] md:h-[180px] rounded-full border border-primary/5 animate-orbit" style={{animationDelay: '1s'}} />
