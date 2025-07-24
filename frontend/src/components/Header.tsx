@@ -61,7 +61,7 @@ const Header = () => {
               window.open('https://calendly.com/aitallaktarik/appel-strategique', '_blank');
             }}>
               <span className="hidden sm:inline">Planifier un appel</span>
-              <span className="sm:hidden">Appel</span>
+              <span className="block sm:hidden">Appel</span>
             </Button>
             <LanguageSelector />
             <Button 
