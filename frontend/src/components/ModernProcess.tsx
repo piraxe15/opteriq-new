@@ -37,7 +37,7 @@ const ModernProcess = () => {
   ];
 
   return (
-    <section id="process" className="py-16 md:py-24 bg-gradient-to-br from-background to-secondary/20 relative overflow-hidden">
+    <section id="process" className="py-12 md:py-16 bg-gradient-to-br from-background to-secondary/20 relative overflow-hidden">
       {/* Enhanced background with dynamic elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-10 md:left-20 w-[120px] h-[120px] md:w-[180px] md:h-[180px] rounded-full border border-primary/5 animate-orbit" style={{animationDelay: '0.5s'}} />
