@@ -52,7 +52,7 @@ const ModernFooter = () => {
             </p>
             
             <div className="flex items-center space-x-4">
-              <div className="text-sm text-muted-foreground">Spécialistes en:</div>
+              <div className="text-sm text-muted-foreground">{t.specialistsIn}:</div>
               <div className="flex flex-wrap gap-2">
                 {headerT.keywords.map((keyword, index) => (
                   <span 
