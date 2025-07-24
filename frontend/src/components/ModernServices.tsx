@@ -64,7 +64,7 @@ const ModernServices = () => {
             <span className="text-sm font-medium text-primary">{t.badge}</span>
           </div>
           
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-shimmer title-safe">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 text-shimmer title-safe text-center">
             {t.title}
           </h2>
           
