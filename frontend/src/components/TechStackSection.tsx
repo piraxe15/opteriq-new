@@ -5,141 +5,16 @@ import { getTranslation } from '@/translations';
 
 const TechStackSection = () => {
   const { language } = useLanguage();
-  
-  // For now, we'll use a simple object. Later we can add this to translations
-  const content = {
-    fr: {
-      badge: "Notre Stack",
-      title: "Technologies de Pointe",
-      subtitle: "Les outils que nous maîtrisons pour créer vos automatisations",
-      tools: [
-        {
-          name: "n8n",
-          description: "Workflows visuels pour automatisations complexes",
-          icon: GitBranch,
-          color: "from-red-500 to-pink-500"
-        },
-        {
-          name: "Make",
-          description: "Intégrations avancées entre applications",
-          icon: Settings,
-          color: "from-purple-500 to-indigo-500"
-        },
-        {
-          name: "Custom APIs",
-          description: "Solutions sur-mesure pour besoins spécifiques",
-          icon: Code,
-          color: "from-green-500 to-teal-500"
-        },
-        {
-          name: "Webhooks",
-          description: "Communications temps réel entre systèmes",
-          icon: Webhook,
-          color: "from-blue-500 to-cyan-500"
-        },
-        {
-          name: "Databases",
-          description: "Stockage et traitement de données optimisés",
-          icon: Database,
-          color: "from-yellow-500 to-orange-500"
-        },
-        {
-          name: "Cursor AI",
-          description: "Développement accéléré par l'intelligence artificielle",
-          icon: Zap,
-          color: "from-pink-500 to-purple-500"
-        }
-      ]
-    },
-    en: {
-      badge: "Our Stack",
-      title: "Cutting-Edge Technologies",
-      subtitle: "The tools we master to create your automations",
-      tools: [
-        {
-          name: "n8n",
-          description: "Visual workflows for complex automations",
-          icon: GitBranch,
-          color: "from-red-500 to-pink-500"
-        },
-        {
-          name: "Make", 
-          description: "Advanced integrations between applications",
-          icon: Settings,
-          color: "from-purple-500 to-indigo-500"
-        },
-        {
-          name: "Custom APIs",
-          description: "Tailor-made solutions for specific needs",
-          icon: Code,
-          color: "from-green-500 to-teal-500"
-        },
-        {
-          name: "Webhooks",
-          description: "Real-time communications between systems",
-          icon: Webhook,
-          color: "from-blue-500 to-cyan-500"
-        },
-        {
-          name: "Databases",
-          description: "Optimized data storage and processing",
-          icon: Database,
-          color: "from-yellow-500 to-orange-500"
-        },
-        {
-          name: "Cursor AI",
-          description: "AI-accelerated development",
-          icon: Zap,
-          color: "from-pink-500 to-purple-500"
-        }
-      ]
-    },
-    es: {
-      badge: "Nuestro Stack",
-      title: "Tecnologías de Vanguardia", 
-      subtitle: "Las herramientas que dominamos para crear tus automatizaciones",
-      tools: [
-        {
-          name: "n8n",
-          description: "Flujos visuales para automatizaciones complejas",
-          icon: GitBranch,
-          color: "from-red-500 to-pink-500"
-        },
-        {
-          name: "Make",
-          description: "Integraciones avanzadas entre aplicaciones", 
-          icon: Settings,
-          color: "from-purple-500 to-indigo-500"
-        },
-        {
-          name: "APIs Personalizadas",
-          description: "Soluciones a medida para necesidades específicas",
-          icon: Code,
-          color: "from-green-500 to-teal-500"
-        },
-        {
-          name: "Webhooks",
-          description: "Comunicaciones en tiempo real entre sistemas",
-          icon: Webhook,
-          color: "from-blue-500 to-cyan-500"
-        },
-        {
-          name: "Bases de Datos",
-          description: "Almacenamiento y procesamiento optimizado de datos",
-          icon: Database,
-          color: "from-yellow-500 to-orange-500"
-        },
-        {
-          name: "Cursor AI",
-          description: "Desarrollo acelerado por inteligencia artificial",
-          icon: Zap,
-          color: "from-pink-500 to-purple-500"
-        }
-      ]
-    }
-  };
+  const t = getTranslation(language).techStack;
 
-  const t = content[language] || content.fr;
+  const techIcons = [
+    { icon: GitBranch, color: "from-red-500 to-pink-500" },
+    { icon: Settings, color: "from-purple-500 to-indigo-500" },
+    { icon: Code, color: "from-green-500 to-teal-500" },
+    { icon: Webhook, color: "from-blue-500 to-cyan-500" },
+    { icon: Database, color: "from-yellow-500 to-orange-500" },
+    { icon: Zap, color: "from-pink-500 to-purple-500" }
+  ];
 
   return (
     <section id="stack" className="py-12 md:py-16 bg-gradient-to-br from-secondary/5 via-background to-secondary/10 relative overflow-hidden section-separator">
