@@ -159,7 +159,7 @@
     animation: morph 8s ease-in-out infinite;
   }
 
-  /* SINGLE PAGE SCROLL - DEFINITIVE FIX FOR DOUBLE SCROLLBAR */
+  /* TARGETED FIX - Only prevent main scroll issues, allow UI elements */
   html {
     overflow-x: hidden !important;
     overflow-y: auto !important;
@@ -168,48 +168,38 @@
 
   body {
     overflow-x: hidden !important;
-    overflow-y: visible !important;
+    overflow-y: auto !important;
     width: 100% !important;
     max-width: 100vw !important;
   }
 
-  /* FORCE ALL ELEMENTS TO NOT CREATE SECONDARY SCROLL - BUT ALLOW UI ELEMENTS */
-  * {
-    box-sizing: border-box !important;
+  /* Only target the elements that were causing double scroll */
+  section {
     overflow-x: hidden !important;
-  }
-
-  /* SECTIONS MUST NEVER CREATE SCROLL CONTEXTS */
-  section, main, article, aside, header, footer {
-    overflow: visible !important;
-    overflow-x: hidden !important;
-    overflow-y: visible !important;
     max-width: 100vw !important;
   }
 
-  /* CONTAINERS MUST NOT SCROLL */
   .container, [class*="container"] {
-    overflow: visible !important;
     overflow-x: hidden !important;
-    overflow-y: visible !important;
     max-width: 100vw !important;
     width: 100% !important;
   }
 
-  /* ALLOW UI ELEMENTS TO WORK PROPERLY */
+  /* Allow ALL UI elements to work normally */
   [role="menu"], [role="listbox"], [role="combobox"], 
-  .dropdown, .menu, .popover, .modal, 
-  [data-radix-popper-content-wrapper],
-  [data-state="open"],
-  .z-50, .fixed, .absolute[class*="z-"],
-  .sheet, .dialog, .toast,
-  [class*="dropdown-"], [class*="popover-"], [class*="menu-"] {
-    overflow: visible !important;
+  .dropdown, .menu, .popover, .modal, .toast, .sheet, .dialog,
+  [data-radix-popper-content-wrapper], [data-state="open"],
+  .z-50, .z-40, .z-30, .fixed, .absolute[class*="z-"],
+  [class*="dropdown-"], [class*="popover-"], [class*="menu-"],
+  .mobile-menu, [class*="mobile"], [class*="nav"],
+  button[aria-expanded="true"] + *, [aria-expanded="true"] + * {
+    overflow: initial !important;
+    overflow-x: initial !important;
+    overflow-y: initial !important;
   }
 
-  /* MOBILE MENU SPECIFIC */
-  .mobile-menu, .hamburger-menu, 
-  [class*="mobile"], [class*="nav"] {
+  /* Specifically allow mobile menu */
+  .md\\:hidden, .lg\\:flex, .sm\\:block {
     overflow: visible !important;
   }
 
