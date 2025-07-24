@@ -10,7 +10,8 @@ const ModernHero = () => {
   const t = getTranslation(language).hero;
 
   return (
-    <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-secondary/10">
+    <section id="accueil" className="relative py-20 flex items-center justify-center bg-gradient-to-br from-background via-background to-secondary/10"
+    style={{ minHeight: '100vh' }}>
       {/* Enhanced background with multiple animation layers */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Concentric circles with varied animations */}
