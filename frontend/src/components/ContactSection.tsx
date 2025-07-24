@@ -69,8 +69,8 @@ const ContactSection = () => {
     } catch (error) {
       console.error('Error sending contact form:', error);
       toast({
-        title: "Erreur",
-        description: "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
+        title: toastTranslation.error,
+        description: toastTranslation.errorDescription,
         variant: "destructive"
       });
     } finally {
