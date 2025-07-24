@@ -171,20 +171,25 @@ const ModernFooter = () => {
           </div>
         </div>
 
-        {/* Enhanced bottom section */}
-        <div className="border-t border-border/50 pt-8 mt-12">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <span>© {currentYear} Opteriq.</span>
-              <span>{t.rights}</span>
-              <div className="flex items-center ml-2">
+        {/* Enhanced bottom section - MOBILE FRIENDLY */}
+        <div className="border-t border-border/50 pt-6 md:pt-8 mt-8 md:mt-12">
+          <div className="flex flex-col justify-center items-center space-y-3 md:space-y-4 text-center">
+            
+            {/* Copyright line - mobile optimized */}
+            <div className="flex flex-col md:flex-row items-center text-sm text-muted-foreground space-y-2 md:space-y-0 md:space-x-2">
+              <div className="flex items-center space-x-2">
+                <span>© {currentYear} Opteriq.</span>
+                <span>{t.rights}</span>
+              </div>
+              <div className="flex items-center space-x-1">
                 <span>Créé avec</span>
-                <Heart className="w-3 h-3 mx-1 text-red-500 animate-pulse" />
+                <Heart className="w-3 h-3 text-red-500 animate-pulse" />
                 <span>au Canada</span>
               </div>
             </div>
             
-            <div className="flex items-center space-x-4">
+            {/* Status indicators - mobile centered */}
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
               <div className="flex items-center space-x-2 text-xs text-muted-foreground">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span>Services disponibles 24/7</span>
