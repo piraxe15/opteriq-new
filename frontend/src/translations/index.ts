@@ -145,7 +145,7 @@ export const translations: Record<Language, Translations> = {
       navigation: {
         home: "Accueil",
         services: "Services", 
-        process: "Process",
+        process: "Processus",
         contact: "Contact"
       },
       cta: "Planifier un appel"
