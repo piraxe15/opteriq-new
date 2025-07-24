@@ -122,7 +122,7 @@ const ModernCTA = () => {
             {/* Additional guarantee */}
             <div className="mt-6 flex items-center justify-center space-x-2 text-sm md:text-base text-muted-foreground">
               <Check className="w-4 h-4 md:w-5 md:h-5 text-green-500" />
-              <span>Prototype gratuit si non satisfait • Sans engagement</span>
+              <span>{t.guarantee}</span>
             </div>
           </div>
         </div>
