@@ -2,6 +2,7 @@ import React from 'react';
 import { ShoppingCart, Users, TrendingUp, MessageSquare, Mail, Calendar, Sparkles, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
+import { getTranslation } from '@/translations';
 
 const PopularAutomations = () => {
   const { language } = useLanguage();
