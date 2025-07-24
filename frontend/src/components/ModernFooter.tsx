@@ -149,7 +149,7 @@ const ModernFooter = () => {
                   <MapPin className="w-4 h-4 text-primary" />
                 </div>
                 <span className="text-sm md:text-base text-muted-foreground group-hover:text-foreground transition-colors">
-                  Canada Québec & International
+                  {t.location}
                 </span>
               </div>
             </div>
