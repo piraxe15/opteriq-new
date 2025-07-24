@@ -159,48 +159,24 @@
     animation: morph 8s ease-in-out infinite;
   }
 
-  /* TARGETED FIX - Only prevent main scroll issues, allow UI elements */
-  html {
+  /* MINIMAL FIX - Only prevent horizontal scroll, leave everything else alone */
+  html, body {
     overflow-x: hidden !important;
-    overflow-y: auto !important;
     scroll-behavior: smooth !important;
-  }
-
-  body {
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    width: 100% !important;
     max-width: 100vw !important;
   }
 
-  /* Only target the elements that were causing double scroll */
-  section {
-    overflow-x: hidden !important;
+  /* Only prevent horizontal overflow on main containers */
+  section, .container, [class*="container"] {
     max-width: 100vw !important;
-  }
-
-  .container, [class*="container"] {
     overflow-x: hidden !important;
-    max-width: 100vw !important;
-    width: 100% !important;
   }
 
-  /* Allow ALL UI elements to work normally */
-  [role="menu"], [role="listbox"], [role="combobox"], 
-  .dropdown, .menu, .popover, .modal, .toast, .sheet, .dialog,
-  [data-radix-popper-content-wrapper], [data-state="open"],
-  .z-50, .z-40, .z-30, .fixed, .absolute[class*="z-"],
-  [class*="dropdown-"], [class*="popover-"], [class*="menu-"],
-  .mobile-menu, [class*="mobile"], [class*="nav"],
-  button[aria-expanded="true"] + *, [aria-expanded="true"] + * {
-    overflow: initial !important;
-    overflow-x: initial !important;
-    overflow-y: initial !important;
-  }
-
-  /* Specifically allow mobile menu */
-  .md\\:hidden, .lg\\:flex, .sm\\:block {
-    overflow: visible !important;
+  /* Keep mobile adaptations */
+  @media (max-width: 768px) {
+    * {
+      max-width: 100vw !important;
+    }
   }
 
   /* AGGRESSIVE FIX for cut-off letters (g, p, q, etc.) */
