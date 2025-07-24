@@ -142,7 +142,19 @@ frontend:
         agent: "main"
         comment: "Updated all components to use centralized translation system instead of local translation objects or hardcoded text. Header button now correctly shows translated text based on language selection."
         
-  - task: "Centralize translation system for all components"
+  - task: "Fix remaining hardcoded French text in all components"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/ModernFooter.tsx, /app/frontend/src/components/ContactSection.tsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Fixed all remaining hardcoded French text: Footer (specialistsIn, bookCall, location, createdWith, inCanada, servicesAvailable) and ContactSection (error messages, quickResponse). All components now use centralized translation system."
+        
+  - task: "Complete missing FAQ translations for English and Spanish"
     implemented: true
     working: true
     file: "/app/frontend/src/translations/index.ts"
@@ -152,7 +164,7 @@ frontend:
     status_history:
       - working: true
         agent: "main"
-        comment: "Extended translation interface and centralized all text content including new sections (techStack, popularAutomations, modernCta with features and guarantee text) for all three languages (FR, EN, ES)."
+        comment: "Completed English FAQ from 3 to 12 questions to match French version. Spanish FAQ was already complete with 12 questions. All FAQ sections now have identical content across all languages."
 
 metadata:
   created_by: "main_agent"
