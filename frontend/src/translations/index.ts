@@ -953,7 +953,9 @@ export const translations: Record<Language, Translations> = {
     },
     toast: {
       success: "¡Mensaje enviado!",
-      description: "Responderemos en 24h."
+      description: "Responderemos en 24h.",
+      error: "Error",
+      errorDescription: "Ocurrió un error. Por favor inténtalo de nuevo o contáctanos directamente."
     },
     modernCta: {
       badge: "Resultados Garantizados",
