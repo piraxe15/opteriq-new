@@ -140,6 +140,8 @@ export interface Translations {
   toast: {
     success: string;
     description: string;
+    error: string;
+    errorDescription: string;
   };
   // Modern CTA Section
   modernCta: {
