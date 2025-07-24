@@ -38,7 +38,7 @@ const ModernServices = () => {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-gradient-to-br from-background via-secondary/10 to-background relative overflow-hidden">
+    <section id="services" className="py-12 md:py-16 bg-gradient-to-br from-background via-secondary/10 to-background relative overflow-hidden">
       {/* Enhanced background with more dynamic elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 md:top-20 right-10 md:right-20 w-[150px] h-[150px] md:w-[200px] md:h-[200px] rounded-full border border-primary/5 animate-orbit" />
