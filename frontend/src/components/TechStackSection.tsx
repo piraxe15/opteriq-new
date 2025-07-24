@@ -142,7 +142,7 @@ const TechStackSection = () => {
   const t = content[language] || content.fr;
 
   return (
-    <section id="stack" className="py-16 md:py-24 bg-gradient-to-br from-secondary/5 via-background to-secondary/10 relative overflow-hidden section-separator">
+    <section id="stack" className="py-12 md:py-16 bg-gradient-to-br from-secondary/5 via-background to-secondary/10 relative overflow-hidden section-separator">
       {/* Enhanced dynamic background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-1/4 w-[120px] h-[120px] md:w-[180px] md:h-[180px] rounded-full border border-primary/5 animate-orbit" style={{animationDelay: '1s'}} />
